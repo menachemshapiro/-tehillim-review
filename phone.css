@@ -124,3 +124,21 @@
   color:var(--blue);text-transform:none;letter-spacing:0;
 }
 .wordbox .transcription .word{-webkit-user-select:text;user-select:text}
+
+#imageMismatch{
+  margin-inline-end:auto;
+  font-size:12px;
+  color:var(--muted);
+}
+#imageMismatch[aria-pressed=true]{
+  background:#fff2d8;
+  border-color:#d6ae5a;
+  color:#6e4d12;
+}
+@media(max-width:920px) and (pointer:coarse){
+  .slide-mode .zoomRow{container-type:inline-size}
+  .slide-mode .zoomRow #imageMismatch{font-size:11px}
+}
+@container (max-width:340px){
+  .slide-mode .zoomRow #zoomLabel{display:none}
+}
