@@ -1,0 +1,2057 @@
+TEHILLIM REVIEW — ALL CORRECTION PATTERNS AND COMPLETE EXAMPLE CATALOG
+Source: tehillim_decisions_all_2026-11-18 (2).json
+Export at: 2026-11-18T12:15:48.824Z | schema: tehillim-review-sqlite.v1 | source file: review_v40(1).json
+Repository: https://github.com/menachemshapiro/-tehillim-review
+====================================================================================
+
+PURPOSE AND LIMITS
+
+This report classifies recurring print/dot/niqqud/taamim recognition symptoms from saved review decisions. It does NOT directly inspect the original scan crops, which are not present in the export. These categories therefore describe repeated CORRECTION PATTERNS, not proven physical shapes of chipped or broken type. Choices such as count:1 need not mean the reconstruction was incorrect. An empty corrected_text field is normal for a mark-count review; it is not evidence of a missing word. Specific words are printed exactly as saved, and notes are preserved verbatim (newlines escaped).
+
+GENERAL NUMERICAL OVERVIEW
+
+Total decisions: 167; distinct word/site IDs: 152; source review items: 400.
+Whole-word Kit selections: 61; Sefaria selections: 12; total: 73.
+Other: 18; other_sign: 3; zero-count decisions: 19; with notes: 45.
+Meteg questions: 28; meteg count:0: 10.
+The strongest recurring candidate rules to test against scans are: (a) false meteg, (b) cholam vs revia, (c) single qamats vs patach+tsere, (d) broken/merged vowel dots, (e) munach mistaken as extra sign or dot, (f) ink artifacts.
+
+PART I — PATTERNS, INTERPRETATIONS, SUGGESTED RULES AND EVERY REFERENCED EXAMPLE
+
+Some decisions occur under several pattern headings because one written note supports more than one interpretation. Pattern headings do not imply all the records represent errors.
+
+------------------------------------------------------------------------------------
+PATTERN 01 — False metegs / over-detection
+Evidence / interpretation: Repeated count:0 decisions, especially where other marks could resemble meteg.
+Rule to evaluate: Treat these as test cases for distinguishing a real מתג from a letter stroke, vowel or munach; confirmation requires original scan.
+Every directly referenced example (10 decisions, 10 text sites):
+    - ID: s47948-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-17T20:24:21+00:00
+    - ID: s60049-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-17T20:25:46+00:00
+    - ID: s8868-meteg
+      choice: count:0
+      detail: [empty]
+      note: Tzeirei followed by a munach
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:00:07.381Z
+    - ID: s9264-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:01:32.294Z
+    - ID: s16916-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:37:57.611Z
+    - ID: s17997-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:42:22.945Z
+    - ID: s24261-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:08:40.966Z
+    - ID: s24834-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:56:56.369Z
+    - ID: s25599-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:58:48.110Z
+    - ID: s28396-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:04:03.186Z
+
+------------------------------------------------------------------------------------
+PATTERN 02 — Dots above: cholam vs revia vs another upper sign
+Evidence / interpretation: Explicit notes identify both directions of cholam/revia confusion; other accents can occur nearby.
+Rule to evaluate: Consult spelling and full cantillation context rather than dot shape alone.
+Every directly referenced example (6 decisions, 6 text sites):
+    - ID: s8659-dot_above
+      choice: other_sign
+      detail: accent:revia
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:55:54.460Z
+    - ID: s399-geresh_muqdam
+      choice: other
+      detail: [empty]
+      note: Geresh mukdam and revia on top of the daled. No cholam 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:12:09.091Z
+    - ID: s1945-dot_above
+      choice: other
+      detail: [empty]
+      note: Regular cholam above the vav, no revia
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:34:04.210Z
+    - ID: s7461-dot_above
+      choice: count:1
+      detail: [empty]
+      note: Revia only. No cholam 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:31:50.629Z
+    - ID: s17533-dot_above
+      choice: other
+      detail: [empty]
+      note: Cholem above the vav,\nNot\nRevia 
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:39:16.205Z
+    - ID: s24999-dot_above
+      choice: count:0
+      detail: [empty]
+      note: New edition does not have a dot above rhe cholem\n
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:57:36.634Z
+
+------------------------------------------------------------------------------------
+PATTERN 03 — Qamats mistaken for patach plus tsere
+Evidence / interpretation: Three sites explicitly note that a qamats-like print was interpreted as distinct vowel strokes.
+Rule to evaluate: Try a combined qamats candidate when the apparent marks visually join.
+Every directly referenced example (7 decisions, 3 text sites):
+    - ID: s14516-dot_below
+      choice: count:3
+      detail: [empty]
+      note: Kometz under the taf, not patach and tzeirei
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:53:06.788Z
+    - ID: s14516-patah
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:53:19.996Z
+    - ID: s15235-dot_below
+      choice: count:2
+      detail: [empty]
+      note: Kometz below bet. Not patach and tzeirei 
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:36:49.040Z
+    - ID: s15235-qamats
+      choice: count:3
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:37:03.635Z
+    - ID: s15235-patah
+      choice: other_sign
+      detail: vowel:hataf-patah
+      note: Kometz - meteg- chataf patach- kometz-kometz- mercha
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:39:05.676Z
+    - ID: s21989-dot_below
+      choice: count:2
+      detail: [empty]
+      note: Kometz under the lamed, not patach and tzeirei 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:02:30.441Z
+    - ID: s21989-qamats
+      choice: count:1
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:02:37.998Z
+
+------------------------------------------------------------------------------------
+PATTERN 04 — Compound vowel / sheva / hiriq / hataf fragmentation
+Evidence / interpretation: Notes discuss damaged חטף קמץ and חטף פתח, triple sheva, overlapping hiriq/sheva, and complex lower-mark sequences.
+Rule to evaluate: Group the marks by target letter and retain uncertain dot counts rather than inventing separate signs.
+Every directly referenced example (11 decisions, 11 text sites):
+    - ID: s8252-qamats
+      choice: count:1
+      detail: [empty]
+      note:  Not sure how accurate the reproduction is, but there are 3 dots under the nun instead of 2
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:53:40.256Z
+    - ID: s8547-dot_below
+      choice: other
+      detail: [empty]
+      note: Shva - tzeirei- munach 
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:55:01.388Z
+    - ID: s2770-dot_below
+      choice: use_sefaria
+      detail: [empty]
+      note: Recreation has a smudged double chitrik part of the chataf kometz 
+      corrected_text: קָ֝דְקֳד֗וֹ
+      updated_at: 2026-11-18T06:23:17.191Z
+    - ID: s4229-dot_below
+      choice: other
+      detail: [empty]
+      note: Bottom: Patach - meseg - chataf patach - mercha\nTop: tzinor - cholam 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:25:19.556Z
+    - ID: s10642-dot_below
+      choice: other
+      detail: [empty]
+      note: Shva - patach - meseg - chataf patach - patach 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:43:15.799Z
+    - ID: s13418-dot_below
+      choice: use_sefaria
+      detail: [empty]
+      note: The reproduction mistakinglu has a Triple shva under the try
+      corrected_text: תִּטְּשֵׁ֥נִי
+      updated_at: 2026-11-18T06:47:07.430Z
+    - ID: s15235-patah
+      choice: other_sign
+      detail: vowel:hataf-patah
+      note: Kometz - meteg- chataf patach- kometz-kometz- mercha
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:39:05.676Z
+    - ID: s16119-dot_below
+      choice: other
+      detail: [empty]
+      note: Chataf kommetz- tzeirei - mercha 
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:49:39.789Z
+    - ID: s22069-dot_below
+      choice: other
+      detail: [empty]
+      note: Cholem over the vav. Under the hey is supposed to be a shva, but one of the dots is missing. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:04:15.491Z
+    - ID: s26124-dot_below
+      choice: count:2
+      detail: [empty]
+      note: The reconstructed image has a chirik on top of a Sheba, not\nEntirely overlapping one of the dots.  
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:00:27.786Z
+    - ID: s29602-patah
+      choice: other
+      detail: [empty]
+      note: 2 patach and 1 chataf patach. \n\nNotes on bottom go: kommetz - meteg - chataf patach - patach. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:10:38.147Z
+
+------------------------------------------------------------------------------------
+PATTERN 05 — Munach misclassified or split into an extra dot
+Evidence / interpretation: Munach is explicitly contrasted with mercha, tevir, meteg and extra dot marks; related examples include munach next to tsere or cholam.
+Rule to evaluate: Identify the full munach stroke in context; distinguish its parts from isolated dots.
+Every directly referenced example (11 decisions, 9 text sites):
+    - ID: s17741-munah
+      choice: other_sign
+      detail: accent:merkha
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-17T20:22:44+00:00
+    - ID: s8547-dot_below
+      choice: other
+      detail: [empty]
+      note: Shva - tzeirei- munach 
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:55:01.388Z
+    - ID: s8868-meteg
+      choice: count:0
+      detail: [empty]
+      note: Tzeirei followed by a munach
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:00:07.381Z
+    - ID: s8932-iluy
+      choice: other
+      detail: [empty]
+      note: Munach on top of the aleph followed by a cholem 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:01:10.322Z
+    - ID: s4248-munah
+      choice: other
+      detail: [empty]
+      note: It is a tevir. Are there any others in the whole book?
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:28:14.662Z
+    - ID: s1821-patah
+      choice: use_kit
+      detail: [empty]
+      note: In the reproduction the munach is on top of the tzeirei 
+      corrected_text: לַֽמְֿנַצֵּ֣ח
+      updated_at: 2026-11-18T06:19:26.395Z
+    - ID: s24261-munah
+      choice: count:1
+      detail: [empty]
+      note: It is not a munach and a dot. Just a munach. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:08:34.141Z
+    - ID: s24261-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:08:40.966Z
+    - ID: s24517-dot_below
+      choice: count:3
+      detail: [empty]
+      note: Under the kaf is a munach. Not a munach and a dot. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:09:41.972Z
+    - ID: s28396-munah
+      choice: count:1
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:03:58.821Z
+    - ID: s28396-meteg
+      choice: count:0
+      detail: [empty]
+      note: [none]
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:04:03.186Z
+
+------------------------------------------------------------------------------------
+PATTERN 06 — Vertical displacement / overlap of niqqud and taamim
+Evidence / interpretation: The reproduction sometimes changes where signs are placed, not just whether they exist.
+Rule to evaluate: Preserve relative position of mark and letter; compare decoded text with rendering.
+Every directly referenced example (4 decisions, 4 text sites):
+    - ID: s1821-patah
+      choice: use_kit
+      detail: [empty]
+      note: In the reproduction the munach is on top of the tzeirei 
+      corrected_text: לַֽמְֿנַצֵּ֣ח
+      updated_at: 2026-11-18T06:19:26.395Z
+    - ID: s10575-meteg
+      choice: count:2
+      detail: [empty]
+      note: In the recreation, besides rhe first Meteg being missing, the shva is in the wrong place. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:42:03.605Z
+    - ID: s26124-dot_below
+      choice: count:2
+      detail: [empty]
+      note: The reconstructed image has a chirik on top of a Sheba, not\nEntirely overlapping one of the dots.  
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:00:27.786Z
+    - ID: s8252-qamats
+      choice: count:1
+      detail: [empty]
+      note:  Not sure how accurate the reproduction is, but there are 3 dots under the nun instead of 2
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:53:40.256Z
+
+------------------------------------------------------------------------------------
+PATTERN 07 — Ink blobs and fragments falsely taken for a sign
+Evidence / interpretation: Explicit accounts of marks below hey, below patach and attached to ע that are only printing artifacts.
+Rule to evaluate: Add a separate no-sign/artifact classification for detached or degraded ink.
+Every directly referenced example (3 decisions, 3 text sites):
+    - ID: s839-dot_below
+      choice: other
+      detail: [empty]
+      note: Not a sign under the hey. It is an ink blotch
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:14:42.807Z
+    - ID: s10138-revia
+      choice: other
+      detail: [empty]
+      note: Underneath the nun is only a patach. The ink underneath the patach is just an ink blotch. No revia. There is a rafa on top of the mem. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:39:58.638Z
+    - ID: s17691-patah
+      choice: count:0
+      detail: [empty]
+      note: It is an artifact from the ע
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:41:42.942Z
+
+------------------------------------------------------------------------------------
+PATTERN 08 — Missing, merged or doubled dots
+Evidence / interpretation: Examples include a missing point in sheva, apparent triple sheva, and shin-dot plus cholam.
+Rule to evaluate: Distinguish a physical dot count from the number of linguistic signs; confirm whether print is damaged.
+Every directly referenced example (10 decisions, 10 text sites):
+    - ID: s8252-qamats
+      choice: count:1
+      detail: [empty]
+      note:  Not sure how accurate the reproduction is, but there are 3 dots under the nun instead of 2
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:53:40.256Z
+    - ID: s8719-dot_above
+      choice: count:1
+      detail: [empty]
+      note: All versions only have one dot 
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:59:34.872Z
+    - ID: s13418-dot_below
+      choice: use_sefaria
+      detail: [empty]
+      note: The reproduction mistakinglu has a Triple shva under the try
+      corrected_text: תִּטְּשֵׁ֥נִי
+      updated_at: 2026-11-18T06:47:07.430Z
+    - ID: s17656-dot_above
+      choice: count:2
+      detail: [empty]
+      note: Shin + cholam == 2 dots. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:41:13.687Z
+    - ID: s21975-dot_below
+      choice: other
+      detail: [empty]
+      note: New edition also has two dots 
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:53:34.998Z
+    - ID: s22069-dot_below
+      choice: other
+      detail: [empty]
+      note: Cholem over the vav. Under the hey is supposed to be a shva, but one of the dots is missing. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:04:15.491Z
+    - ID: s24053-dot_above
+      choice: count:1
+      detail: [empty]
+      note: New edition only has one dot as well. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:07:55.038Z
+    - ID: s24517-dot_below
+      choice: count:3
+      detail: [empty]
+      note: Under the kaf is a munach. Not a munach and a dot. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:09:41.972Z
+    - ID: s24999-dot_above
+      choice: count:0
+      detail: [empty]
+      note: New edition does not have a dot above rhe cholem\n
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:57:36.634Z
+    - ID: s26124-dot_below
+      choice: count:2
+      detail: [empty]
+      note: The reconstructed image has a chirik on top of a Sheba, not\nEntirely overlapping one of the dots.  
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:00:27.786Z
+
+------------------------------------------------------------------------------------
+PATTERN 09 — Multiple adjacent marks treated as one unusual symbol
+Evidence / interpretation: Complex above/below sequences can resemble one rare accent; shalshelet instance is explained by other signs.
+Rule to evaluate: Parse a cluster as separate signs before assigning a single rare taam.
+Every directly referenced example (10 decisions, 10 text sites):
+    - ID: s399-geresh_muqdam
+      choice: other
+      detail: [empty]
+      note: Geresh mukdam and revia on top of the daled. No cholam 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:12:09.091Z
+    - ID: s8932-iluy
+      choice: other
+      detail: [empty]
+      note: Munach on top of the aleph followed by a cholem 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:01:10.322Z
+    - ID: s4229-dot_below
+      choice: other
+      detail: [empty]
+      note: Bottom: Patach - meseg - chataf patach - mercha\nTop: tzinor - cholam 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:25:19.556Z
+    - ID: s10642-dot_below
+      choice: other
+      detail: [empty]
+      note: Shva - patach - meseg - chataf patach - patach 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:43:15.799Z
+    - ID: s15235-patah
+      choice: other_sign
+      detail: vowel:hataf-patah
+      note: Kometz - meteg- chataf patach- kometz-kometz- mercha
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:39:05.676Z
+    - ID: s16119-dot_below
+      choice: other
+      detail: [empty]
+      note: Chataf kommetz- tzeirei - mercha 
+      corrected_text: [none]
+      updated_at: 2026-11-18T07:49:39.789Z
+    - ID: s25303-mahapakh
+      choice: other
+      detail: [empty]
+      note: Reverse mapach at the end of the word. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:58:05.357Z
+    - ID: s29602-patah
+      choice: other
+      detail: [empty]
+      note: 2 patach and 1 chataf patach. \n\nNotes on bottom go: kommetz - meteg - chataf patach - patach. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:10:38.147Z
+    - ID: s31634-meteg
+      choice: count:1
+      detail: [empty]
+      note: Segol- meseg - segol - segol - esnachta 
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:14:08.076Z
+    - ID: s32100-shalshelet
+      choice: count:0
+      detail: [empty]
+      note: Top: geresh mukdam - revia - meteg 
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:15:20.699Z
+
+------------------------------------------------------------------------------------
+PATTERN 10 — Reconstruction image/text rendering inconsistency
+Evidence / interpretation: One record explicitly says Kit reconstructed text and its displayed image disagree. Other records describe positional reconstruction discrepancies.
+Rule to evaluate: Validate candidate text, glyph rendering and scan image independently; treat this as possibly a presentation bug.
+Every directly referenced example (4 decisions, 4 text sites):
+    - ID: s21956-qadma
+      choice: count:1
+      detail: [empty]
+      note: Kit reconstriction text does not match image\nOf kit reconstriction 
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:50:48.853Z
+    - ID: s1821-patah
+      choice: use_kit
+      detail: [empty]
+      note: In the reproduction the munach is on top of the tzeirei 
+      corrected_text: לַֽמְֿנַצֵּ֣ח
+      updated_at: 2026-11-18T06:19:26.395Z
+    - ID: s10575-meteg
+      choice: count:2
+      detail: [empty]
+      note: In the recreation, besides rhe first Meteg being missing, the shva is in the wrong place. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:42:03.605Z
+    - ID: s26124-dot_below
+      choice: count:2
+      detail: [empty]
+      note: The reconstructed image has a chirik on top of a Sheba, not\nEntirely overlapping one of the dots.  
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:00:27.786Z
+
+------------------------------------------------------------------------------------
+PATTERN 11 — Older/newer edition differences
+Evidence / interpretation: Notes compare new-edition dots and other accents against the print under review; some agree, some differ.
+Rule to evaluate: Keep each witness and edition separate rather than normalizing old printing to newer text.
+Every directly referenced example (9 decisions, 9 text sites):
+    - ID: s8252-qamats
+      choice: count:1
+      detail: [empty]
+      note:  Not sure how accurate the reproduction is, but there are 3 dots under the nun instead of 2
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:53:40.256Z
+    - ID: s8719-dot_above
+      choice: count:1
+      detail: [empty]
+      note: All versions only have one dot 
+      corrected_text: [none]
+      updated_at: 2026-11-18T05:59:34.872Z
+    - ID: s16349-dot_above
+      choice: use_kit
+      detail: [empty]
+      note: New edition does not have a dot 
+      corrected_text: בְּנֵ֥בֶל
+      updated_at: 2026-11-18T10:36:59.205Z
+    - ID: s18033-dehi
+      choice: use_sefaria
+      detail: [empty]
+      note: New edition also has it 
+      corrected_text: וְ֭נַפְשִׁי
+      updated_at: 2026-11-18T10:42:57.222Z
+    - ID: s18401-qamats
+      choice: use_kit
+      detail: [empty]
+      note: All versions appear to be\nIdentical
+      corrected_text: אֲהַֽלְלֶֽךָּ
+      updated_at: 2026-11-18T10:43:55.711Z
+    - ID: s21975-dot_below
+      choice: other
+      detail: [empty]
+      note: New edition also has two dots 
+      corrected_text: [none]
+      updated_at: 2026-11-18T10:53:34.998Z
+    - ID: s23993-dot_above
+      choice: use_kit
+      detail: [empty]
+      note: New edition has no dot 
+      corrected_text: אֶל
+      updated_at: 2026-11-18T11:07:20.544Z
+    - ID: s24053-dot_above
+      choice: count:1
+      detail: [empty]
+      note: New edition only has one dot as well. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:07:55.038Z
+    - ID: s24999-dot_above
+      choice: count:0
+      detail: [empty]
+      note: New edition does not have a dot above rhe cholem\n
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:57:36.634Z
+
+------------------------------------------------------------------------------------
+PATTERN 12 — Recurring word לַמְנַצֵּחַ with site-specific accent changes
+Evidence / interpretation: The same heading word appears in multiple review records with differences in marks and accents.
+Rule to evaluate: Use as a search/family match, never overwrite each individual occurrence's accents.
+Every directly referenced example (6 decisions, 5 text sites):
+    - ID: s9342-revia
+      choice: other
+      detail: [empty]
+      note: לַֽ֝מְֿנַצֵּ֗חַ — that is correct. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:02:30.002Z
+    - ID: s990-revia
+      choice: use_kit
+      detail: [empty]
+      note: [none]
+      corrected_text: לַֽמְֿנַצֵּ֥חַ
+      updated_at: 2026-11-18T06:15:27.784Z
+    - ID: s1821-revia
+      choice: use_kit
+      detail: [empty]
+      note: [none]
+      corrected_text: לַֽמְֿנַצֵּ֣ח
+      updated_at: 2026-11-18T06:18:17.468Z
+    - ID: s1821-patah
+      choice: use_kit
+      detail: [empty]
+      note: In the reproduction the munach is on top of the tzeirei 
+      corrected_text: לַֽמְֿנַצֵּ֣ח
+      updated_at: 2026-11-18T06:19:26.395Z
+    - ID: s9680-revia
+      choice: use_kit
+      detail: [empty]
+      note: [none]
+      corrected_text: לַֽ֝מְֿנַצֵּ֗חַ
+      updated_at: 2026-11-18T06:36:30.335Z
+    - ID: s30186-dot_above
+      choice: use_kit
+      detail: [empty]
+      note: [none]
+      corrected_text: לַֽמְֿנַצֵּ֥חַ
+      updated_at: 2026-11-18T12:11:04.169Z
+
+------------------------------------------------------------------------------------
+PATTERN 13 — Unusual accent signs: tevir, reversed mahapakh, shalshelet lookalike
+Evidence / interpretation: These are single observations of distinct unusual signs, NOT yet a frequent recurring pattern.
+Rule to evaluate: Flag for human inspection and seek more examples before learning a general repair rule.
+Every directly referenced example (3 decisions, 3 text sites):
+    - ID: s4248-munah
+      choice: other
+      detail: [empty]
+      note: It is a tevir. Are there any others in the whole book?
+      corrected_text: [none]
+      updated_at: 2026-11-18T06:28:14.662Z
+    - ID: s25303-mahapakh
+      choice: other
+      detail: [empty]
+      note: Reverse mapach at the end of the word. 
+      corrected_text: [none]
+      updated_at: 2026-11-18T11:58:05.357Z
+    - ID: s32100-shalshelet
+      choice: count:0
+      detail: [empty]
+      note: Top: geresh mukdam - revia - meteg 
+      corrected_text: [none]
+      updated_at: 2026-11-18T12:15:20.699Z
+
+PART II — FULL SOURCE LEDGER: EVERY SINGLE RECORDED DECISION (IN EXPORT ORDER)
+
+This section includes all source decisions, not just those cited in a particular pattern. All fields from each exported decision are preserved.
+
+001. s1897-yerah_ben_yomo
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:21:56+00:00
+
+002. s17741-munah
+   choice: other_sign
+   detail: accent:merkha
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:22:44+00:00
+
+003. s29338-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:22:53+00:00
+
+004. s30286-patah
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:23:18+00:00
+
+005. s36973-patah
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:23:43+00:00
+
+006. s46571-dot_inside
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:24:12+00:00
+
+007. s47948-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:24:21+00:00
+
+008. s55076-dot_below
+   choice: other
+   detail: [empty]
+   note: וּלְִזַמֵּ֖ר
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:25:15+00:00
+
+009. s60049-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:25:46+00:00
+
+010. s74048-dot_above
+   choice: count:1
+   detail: [empty]
+   note: meteg under tof
+   corrected_text: [empty]
+   updated_at: 2026-11-17T20:26:48+00:00
+
+011. s143-dot_above
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:45:22.945Z
+
+012. s165-dot_above
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:45:44.103Z
+
+013. s2339-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:46:32.385Z
+
+014. s3505-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:50:55.463Z
+
+015. s6444-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:51:09.590Z
+
+016. s7079-dot_inside
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:51:17.895Z
+
+017. s8055-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:51:40.368Z
+
+018. s8088-dot_above
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:51:55.999Z
+
+019. s8252-qamats
+   choice: count:1
+   detail: [empty]
+   note:  Not sure how accurate the reproduction is, but there are 3 dots under the nun instead of 2
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:53:40.256Z
+
+020. s8547-dot_below
+   choice: other
+   detail: [empty]
+   note: Shva - tzeirei- munach 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:55:01.388Z
+
+021. s8659-dot_above
+   choice: other_sign
+   detail: accent:revia
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:55:54.460Z
+
+022. s8719-dot_above
+   choice: count:1
+   detail: [empty]
+   note: All versions only have one dot 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T05:59:34.872Z
+
+023. s8868-meteg
+   choice: count:0
+   detail: [empty]
+   note: Tzeirei followed by a munach
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:00:07.381Z
+
+024. s8932-iluy
+   choice: other
+   detail: [empty]
+   note: Munach on top of the aleph followed by a cholem 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:01:10.322Z
+
+025. s9162-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:01:25.863Z
+
+026. s9264-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:01:32.294Z
+
+027. s9342-revia
+   choice: other
+   detail: [empty]
+   note: לַֽ֝מְֿנַצֵּ֗חַ — that is correct. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:02:30.002Z
+
+028. s355-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֶת
+   updated_at: 2026-11-18T06:10:37.806Z
+
+029. s399-geresh_muqdam
+   choice: other
+   detail: [empty]
+   note: Geresh mukdam and revia on top of the daled. No cholam 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:12:09.091Z
+
+030. s403-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: יִלְעַג
+   updated_at: 2026-11-18T06:12:24.075Z
+
+031. s408-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לָֽמוֹ
+   updated_at: 2026-11-18T06:12:34.322Z
+
+032. s419-munah
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֵלֵ֣ימוֹ
+   updated_at: 2026-11-18T06:12:47.386Z
+
+033. s459-revia
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: צִ֝יּ֗וֹן
+   updated_at: 2026-11-18T06:12:59.036Z
+
+034. s839-dot_below
+   choice: other
+   detail: [empty]
+   note: Not a sign under the hey. It is an ink blotch
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:14:42.807Z
+
+035. s990-revia
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לַֽמְֿנַצֵּ֥חַ
+   updated_at: 2026-11-18T06:15:27.784Z
+
+036. s1569-dot_above
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:15:50.492Z
+
+037. s1583-dot_above
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: קָ֝דְשְׁךָ֗
+   updated_at: 2026-11-18T06:16:17.094Z
+
+038. s1821-revia
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לַֽמְֿנַצֵּ֣ח
+   updated_at: 2026-11-18T06:18:17.468Z
+
+039. s1821-patah
+   choice: use_kit
+   detail: [empty]
+   note: In the reproduction the munach is on top of the tzeirei 
+   corrected_text: לַֽמְֿנַצֵּ֣ח
+   updated_at: 2026-11-18T06:19:26.395Z
+
+040. s1945-dot_above
+   choice: other
+   detail: [empty]
+   note: Regular cholam above the vav, no revia
+   corrected_text: [empty]
+   updated_at: 2026-11-18T07:34:04.210Z
+
+041. s2467-qamats
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: תְּסֽוֹבְבֶ֑ךָּ
+   updated_at: 2026-11-18T06:21:50.111Z
+
+042. s2580-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: עַל
+   updated_at: 2026-11-18T06:22:06.213Z
+
+043. s2770-dot_below
+   choice: use_sefaria
+   detail: [empty]
+   note: Recreation has a smudged double chitrik part of the chataf kometz 
+   corrected_text: קָ֝דְקֳד֗וֹ
+   updated_at: 2026-11-18T06:23:17.191Z
+
+044. s3680-dot_above
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: בְּשַׁ֣חַת
+   updated_at: 2026-11-18T06:23:26.324Z
+
+045. s4229-dot_below
+   choice: other
+   detail: [empty]
+   note: Bottom: Patach - meseg - chataf patach - mercha\nTop: tzinor - cholam 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:25:19.556Z
+
+046. s4248-munah
+   choice: other
+   detail: [empty]
+   note: It is a tevir. Are there any others in the whole book?
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:28:14.662Z
+
+047. s4413-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:28:38.169Z
+
+048. s5893-dot_above
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:28:52.348Z
+
+049. s5906-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לֽא
+   updated_at: 2026-11-18T06:29:06.296Z
+
+050. s5944-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לְעוֹלָֽם
+   updated_at: 2026-11-18T06:29:18.528Z
+
+051. s6309-dot_below
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לִרְא֥וֹת
+   updated_at: 2026-11-18T06:29:35.719Z
+
+052. s6682-merkha
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: ז֥וּ
+   updated_at: 2026-11-18T06:29:44.862Z
+
+053. s6864-merkha
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: מִֽמְֿתִ֥֬ים
+   updated_at: 2026-11-18T06:29:57.403Z
+
+054. s7014-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:30:27.891Z
+
+055. s7461-dot_above
+   choice: count:1
+   detail: [empty]
+   note: Revia only. No cholam 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:31:50.629Z
+
+056. s7905-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: תִּֽתְחַסָּ֑ד
+   updated_at: 2026-11-18T06:32:15.930Z
+
+057. s9410-qamats
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: יִסְעָדֶֽךָּ
+   updated_at: 2026-11-18T06:32:30.391Z
+
+058. s9649-munah
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: יְהוָֹ֣ה
+   updated_at: 2026-11-18T06:36:14.184Z
+
+059. s9680-revia
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לַֽ֝מְֿנַצֵּ֗חַ
+   updated_at: 2026-11-18T06:36:30.335Z
+
+060. s9787-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לְ֝רֹאשׁ֗וֹ
+   updated_at: 2026-11-18T06:36:50.432Z
+
+061. s10091-revia
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: תְ֝כוֹנֵן
+   updated_at: 2026-11-18T06:37:29.337Z
+
+062. s10138-revia
+   choice: other
+   detail: [empty]
+   note: Underneath the nun is only a patach. The ink underneath the patach is just an ink blotch. No revia. There is a rafa on top of the mem. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:39:58.638Z
+
+063. s10214-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: וְלֹ֣א
+   updated_at: 2026-11-18T06:40:23.438Z
+
+064. s10466-merkha
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֵ֮לִי֥
+   updated_at: 2026-11-18T06:40:40.384Z
+
+065. s10575-meteg
+   choice: count:2
+   detail: [empty]
+   note: In the recreation, besides rhe first Meteg being missing, the shva is in the wrong place. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:42:03.605Z
+
+066. s10642-dot_below
+   choice: other
+   detail: [empty]
+   note: Shva - patach - meseg - chataf patach - patach 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:43:15.799Z
+
+067. s10642-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:43:32.856Z
+
+068. s10724-dot_below
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: יִרְאוּ
+   updated_at: 2026-11-18T06:43:41.875Z
+
+069. s10881-qamats
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֲהַלְלֶֽךָּ
+   updated_at: 2026-11-18T06:43:57.138Z
+
+070. s11764-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: מֶלֶ֪ךְ
+   updated_at: 2026-11-18T06:44:16.887Z
+
+071. s13065-revia
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:44:34.834Z
+
+072. s13418-dot_below
+   choice: use_sefaria
+   detail: [empty]
+   note: The reproduction mistakinglu has a Triple shva under the try
+   corrected_text: תִּטְּשֵׁ֥נִי
+   updated_at: 2026-11-18T06:47:07.430Z
+
+073. s13427-dot_inside
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: תַּֽ֝עַזְבֵ֗נִי
+   updated_at: 2026-11-18T06:47:28.378Z
+
+074. s13464-dot_below
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: יַֽאַסְפֵֽנִי
+   updated_at: 2026-11-18T06:48:03.449Z
+
+075. s13464-patah
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: יַֽאַסְפֵֽנִי
+   updated_at: 2026-11-18T06:48:29.964Z
+
+076. s13600-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: וְיַאֲמֵ֣ץ
+   updated_at: 2026-11-18T06:49:14.862Z
+
+077. s13813-merkha
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: תֵּ֥ן
+   updated_at: 2026-11-18T06:49:59.151Z
+
+078. s14156-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: בַּכֹּֽחַ
+   updated_at: 2026-11-18T06:50:29.891Z
+
+079. s14175-dehi
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: יְ֭הוָֹה
+   updated_at: 2026-11-18T06:51:49.686Z
+
+080. s14516-dot_below
+   choice: count:3
+   detail: [empty]
+   note: Kometz under the taf, not patach and tzeirei
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:53:06.788Z
+
+081. s14516-patah
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:53:19.996Z
+
+082. s14537-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לַיהוָֹ֣ה
+   updated_at: 2026-11-18T06:53:37.943Z
+
+083. s14720-qamats
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T06:53:53.596Z
+
+084. s14833-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֱ֝להַ֗י
+   updated_at: 2026-11-18T06:54:27.228Z
+
+085. s14837-munah
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T07:34:48.382Z
+
+086. s14842-qamats
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אוֹדֶֽךָּ
+   updated_at: 2026-11-18T07:35:07.734Z
+
+087. s15109-dot_inside
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: בְּחַ֫סְדֶ֥ךָ
+   updated_at: 2026-11-18T07:35:34.797Z
+
+088. s15192-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: עָֽשְׁשָ֣ה
+   updated_at: 2026-11-18T07:35:46.225Z
+
+089. s15235-dot_below
+   choice: count:2
+   detail: [empty]
+   note: Kometz below bet. Not patach and tzeirei 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T07:36:49.040Z
+
+090. s15235-qamats
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T07:37:03.635Z
+
+091. s15235-patah
+   choice: other_sign
+   detail: vowel:hataf-patah
+   note: Kometz - meteg- chataf patach- kometz-kometz- mercha
+   corrected_text: [empty]
+   updated_at: 2026-11-18T07:39:05.676Z
+
+092. s15327-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: מִלֵּ֑ב
+   updated_at: 2026-11-18T07:47:33.138Z
+
+093. s15716-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: מִנֶּֽגֶד
+   updated_at: 2026-11-18T07:47:45.093Z
+
+094. s15720-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: עֵֽ֫ינֶ֥יךָ
+   updated_at: 2026-11-18T07:48:10.145Z
+
+095. s15940-zinor
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T07:48:27.961Z
+
+096. s16119-dot_below
+   choice: other
+   detail: [empty]
+   note: Chataf kommetz- tzeirei - mercha 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T07:49:39.789Z
+
+097. s16304-dot_inside
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: רַֽנְנ֣וּ
+   updated_at: 2026-11-18T07:50:05.118Z
+
+098. s16304-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: רַֽנְנ֣וּ
+   updated_at: 2026-11-18T07:50:31.846Z
+
+099. s16349-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: New edition does not have a dot 
+   corrected_text: בְּנֵ֥בֶל
+   updated_at: 2026-11-18T10:36:59.205Z
+
+100. s16718-dot_inside
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: מִֽמְכֽוֹן
+   updated_at: 2026-11-18T10:37:19.516Z
+
+101. s16718-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: מִֽמְכֽוֹן
+   updated_at: 2026-11-18T10:37:32.559Z
+
+102. s16916-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:37:57.611Z
+
+103. s17288-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: יֶחֱסֶה
+   updated_at: 2026-11-18T10:38:13.522Z
+
+104. s17396-meteg
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֲלַמֶּדְכֶֽם
+   updated_at: 2026-11-18T10:38:30.822Z
+
+105. s17533-dot_above
+   choice: other
+   detail: [empty]
+   note: Cholem above the vav,\nNot\nRevia 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:39:16.205Z
+
+106. s17533-pazer
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:40:21.768Z
+
+107. s17656-dot_above
+   choice: count:2
+   detail: [empty]
+   note: Shin + cholam == 2 dots. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:41:13.687Z
+
+108. s17691-patah
+   choice: count:0
+   detail: [empty]
+   note: It is an artifact from the ע
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:41:42.942Z
+
+109. s17997-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:42:22.945Z
+
+110. s18033-dehi
+   choice: use_sefaria
+   detail: [empty]
+   note: New edition also has it 
+   corrected_text: וְ֭נַפְשִׁי
+   updated_at: 2026-11-18T10:42:57.222Z
+
+111. s18401-qamats
+   choice: use_kit
+   detail: [empty]
+   note: All versions appear to be\nIdentical
+   corrected_text: אֲהַֽלְלֶֽךָּ
+   updated_at: 2026-11-18T10:43:55.711Z
+
+112. s18541-dot_below
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֲ֝דֹנָ֗י
+   updated_at: 2026-11-18T10:44:13.443Z
+
+113. s18607-patah
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:44:46.819Z
+
+114. s18709-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: עָלָי
+   updated_at: 2026-11-18T10:44:56.874Z
+
+115. s18945-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: דֶּֽרֶךְ
+   updated_at: 2026-11-18T10:45:02.689Z
+
+116. s19371-dot_inside
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: דַרְכֶּ֑ךָ
+   updated_at: 2026-11-18T10:45:14.523Z
+
+117. s19437-ole
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: ל֥וֹ
+   updated_at: 2026-11-18T10:45:21.035Z
+
+118. s19710-dot_inside
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: דָּֽרֶךְ
+   updated_at: 2026-11-18T10:45:27.020Z
+
+119. s20056-dehi
+   choice: other
+   detail: [empty]
+   note: Meteg I’d under the lamed. No dechi. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:45:48.598Z
+
+120. s20290-dehi
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: צוֹפֶ֣ה
+   updated_at: 2026-11-18T10:46:01.186Z
+
+121. s21956-qadma
+   choice: count:1
+   detail: [empty]
+   note: Kit reconstriction text does not match image\nOf kit reconstriction 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:50:48.853Z
+
+122. s21975-dot_below
+   choice: other
+   detail: [empty]
+   note: New edition also has two dots 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T10:53:34.998Z
+
+123. s21989-dot_below
+   choice: count:2
+   detail: [empty]
+   note: Kometz under the lamed, not patach and tzeirei 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:02:30.441Z
+
+124. s21989-qamats
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:02:37.998Z
+
+125. s22069-dot_below
+   choice: other
+   detail: [empty]
+   note: Cholem over the vav. Under the hey is supposed to be a shva, but one of the dots is missing. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:04:15.491Z
+
+126. s22627-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: הֶאָח
+   updated_at: 2026-11-18T11:04:22.363Z
+
+127. s22753-dot_above
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: אַ֭שְׁרֵי
+   updated_at: 2026-11-18T11:04:33.544Z
+
+128. s22918-yerah_ben_yomo
+   choice: use_sefaria
+   detail: [empty]
+   note: [empty]
+   corrected_text: לִ֪י
+   updated_at: 2026-11-18T11:04:40.858Z
+
+129. s23004-merkha
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: יַחְשְׁב֥וּ
+   updated_at: 2026-11-18T11:05:05.224Z
+
+130. s23105-munah
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:05:20.867Z
+
+131. s23993-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: New edition has no dot 
+   corrected_text: אֶל
+   updated_at: 2026-11-18T11:07:20.544Z
+
+132. s24053-dot_above
+   choice: count:1
+   detail: [empty]
+   note: New edition only has one dot as well. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:07:55.038Z
+
+133. s24261-munah
+   choice: count:1
+   detail: [empty]
+   note: It is not a munach and a dot. Just a munach. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:08:34.141Z
+
+134. s24261-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:08:40.966Z
+
+135. s24517-dot_below
+   choice: count:3
+   detail: [empty]
+   note: Under the kaf is a munach. Not a munach and a dot. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:09:41.972Z
+
+136. s24834-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:56:56.369Z
+
+137. s24999-dot_above
+   choice: count:0
+   detail: [empty]
+   note: New edition does not have a dot above rhe cholem\n
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:57:36.634Z
+
+138. s25303-mahapakh
+   choice: other
+   detail: [empty]
+   note: Reverse mapach at the end of the word. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:58:05.357Z
+
+139. s25588-dot_below
+   choice: count:5
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:58:41.316Z
+
+140. s25599-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T11:58:48.110Z
+
+141. s26124-dot_below
+   choice: count:2
+   detail: [empty]
+   note: The reconstructed image has a chirik on top of a Sheba, not\nEntirely overlapping one of the dots.  
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:00:27.786Z
+
+142. s26732-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:00:37.941Z
+
+143. s26751-revia
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:00:57.887Z
+
+144. s27456-yerah_ben_yomo
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: מָ֑וֶת
+   updated_at: 2026-11-18T12:01:10.926Z
+
+145. s27584-dot_below
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:01:43.648Z
+
+146. s27584-patah
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:01:58.054Z
+
+147. s27796-dot_below
+   choice: count:8
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:02:20.600Z
+
+148. s27796-qamats
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:02:28.423Z
+
+149. s27836-revia
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: הַשָּׁמַ֣֗יִם
+   updated_at: 2026-11-18T12:03:42.782Z
+
+150. s28396-munah
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:03:58.821Z
+
+151. s28396-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:04:03.186Z
+
+152. s28401-dot_below
+   choice: count:11
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:06:40.998Z
+
+153. s28838-dot_above
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:07:40.797Z
+
+154. s28866-merkha
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:07:54.478Z
+
+155. s29155-dot_above
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:08:12.729Z
+
+156. s29398-zinor
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:08:28.667Z
+
+157. s29433-merkha
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: וְיִרְא֥וּ
+   updated_at: 2026-11-18T12:08:45.178Z
+
+158. s29469-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לֹֽא
+   updated_at: 2026-11-18T12:08:49.190Z
+
+159. s29480-zinor
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:09:10.561Z
+
+160. s29602-patah
+   choice: other
+   detail: [empty]
+   note: 2 patach and 1 chataf patach. \n\nNotes on bottom go: kommetz - meteg - chataf patach - patach. 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:10:38.147Z
+
+161. s29602-qamats
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:10:49.475Z
+
+162. s30186-dot_above
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לַֽמְֿנַצֵּ֥חַ
+   updated_at: 2026-11-18T12:11:04.169Z
+
+163. s30629-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:12:43.752Z
+
+164. s30783-merkha
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: פָּ֘דָ֥ה
+   updated_at: 2026-11-18T12:12:59.843Z
+
+165. s31634-meteg
+   choice: count:1
+   detail: [empty]
+   note: Segol- meseg - segol - segol - esnachta 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:14:08.076Z
+
+166. s31915-meteg
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אָעִֽירָה
+   updated_at: 2026-11-18T12:14:18.808Z
+
+167. s32100-shalshelet
+   choice: count:0
+   detail: [empty]
+   note: Top: geresh mukdam - revia - meteg 
+   corrected_text: [empty]
+   updated_at: 2026-11-18T12:15:20.699Z
+
+PART III — ALL DECISION IDs ORGANIZED BY SIGN TYPE
+
+dot_above (35 decisions)
+    s74048-dot_above => count:1
+    s143-dot_above => count:1
+    s165-dot_above => count:1
+    s8088-dot_above => count:1
+    s8659-dot_above => other_sign | accent:revia
+    s8719-dot_above => count:1
+    s355-dot_above => use_kit
+    s403-dot_above => use_kit
+    s408-dot_above => use_kit
+    s1569-dot_above => count:1
+    s1583-dot_above => use_sefaria
+    s1945-dot_above => other
+    s2580-dot_above => use_kit
+    s3680-dot_above => use_sefaria
+    s5893-dot_above => count:1
+    s5906-dot_above => use_kit
+    s5944-dot_above => use_kit
+    s7461-dot_above => count:1
+    s9787-dot_above => use_kit
+    s10214-dot_above => use_kit
+    s11764-dot_above => use_kit
+    s14833-dot_above => use_kit
+    s15192-dot_above => use_kit
+    s15327-dot_above => use_kit
+    s16349-dot_above => use_kit
+    s17533-dot_above => other
+    s17656-dot_above => count:2
+    s22753-dot_above => use_sefaria
+    s23993-dot_above => use_kit
+    s24053-dot_above => count:1
+    s24999-dot_above => count:0
+    s28838-dot_above => count:3
+    s29155-dot_above => count:3
+    s29469-dot_above => use_kit
+    s30186-dot_above => use_kit
+meteg (28 decisions)
+    s47948-meteg => count:0
+    s60049-meteg => count:0
+    s8868-meteg => count:0
+    s9264-meteg => count:0
+    s7905-meteg => use_kit
+    s10575-meteg => count:2
+    s10642-meteg => count:1
+    s13600-meteg => use_kit
+    s14156-meteg => use_kit
+    s14537-meteg => use_kit
+    s15716-meteg => use_kit
+    s15720-meteg => use_kit
+    s16304-meteg => use_kit
+    s16718-meteg => use_kit
+    s16916-meteg => count:0
+    s17288-meteg => use_kit
+    s17396-meteg => use_sefaria
+    s17997-meteg => count:0
+    s18709-meteg => use_kit
+    s18945-meteg => use_kit
+    s22627-meteg => use_kit
+    s24261-meteg => count:0
+    s24834-meteg => count:0
+    s25599-meteg => count:0
+    s26732-meteg => count:1
+    s28396-meteg => count:0
+    s31634-meteg => count:1
+    s31915-meteg => use_kit
+dot_below (24 decisions)
+    s55076-dot_below => other
+    s8547-dot_below => other
+    s839-dot_below => other
+    s2770-dot_below => use_sefaria
+    s4229-dot_below => other
+    s4413-dot_below => count:4
+    s6309-dot_below => use_kit
+    s10642-dot_below => other
+    s10724-dot_below => use_kit
+    s13418-dot_below => use_sefaria
+    s13464-dot_below => use_sefaria
+    s14516-dot_below => count:3
+    s15235-dot_below => count:2
+    s16119-dot_below => other
+    s18541-dot_below => use_sefaria
+    s21975-dot_below => other
+    s21989-dot_below => count:2
+    s22069-dot_below => other
+    s24517-dot_below => count:3
+    s25588-dot_below => count:5
+    s26124-dot_below => count:2
+    s27584-dot_below => count:1
+    s27796-dot_below => count:8
+    s28401-dot_below => count:11
+dot_inside (14 decisions)
+    s46571-dot_inside => count:3
+    s2339-dot_inside => count:1
+    s3505-dot_inside => count:1
+    s6444-dot_inside => count:1
+    s7079-dot_inside => count:2
+    s8055-dot_inside => count:1
+    s9162-dot_inside => count:1
+    s13427-dot_inside => use_kit
+    s15109-dot_inside => use_kit
+    s16304-dot_inside => use_kit
+    s16718-dot_inside => use_kit
+    s19371-dot_inside => use_kit
+    s19710-dot_inside => use_kit
+    s30629-dot_inside => count:1
+qamats (11 decisions)
+    s8252-qamats => count:1
+    s2467-qamats => use_kit
+    s9410-qamats => use_kit
+    s10881-qamats => use_kit
+    s14720-qamats => count:0
+    s14842-qamats => use_kit
+    s15235-qamats => count:3
+    s18401-qamats => use_kit
+    s21989-qamats => count:1
+    s27796-qamats => count:1
+    s29602-qamats => count:0
+merkha (10 decisions)
+    s29338-merkha => count:1
+    s6682-merkha => use_kit
+    s6864-merkha => use_kit
+    s7014-merkha => count:1
+    s10466-merkha => use_kit
+    s13813-merkha => use_kit
+    s23004-merkha => use_kit
+    s28866-merkha => count:0
+    s29433-merkha => use_kit
+    s30783-merkha => use_kit
+patah (10 decisions)
+    s30286-patah => count:0
+    s36973-patah => count:0
+    s1821-patah => use_kit
+    s13464-patah => use_sefaria
+    s14516-patah => count:0
+    s15235-patah => other_sign | vowel:hataf-patah
+    s17691-patah => count:0
+    s18607-patah => count:1
+    s27584-patah => count:1
+    s29602-patah => other
+revia (10 decisions)
+    s9342-revia => other
+    s459-revia => use_kit
+    s990-revia => use_kit
+    s1821-revia => use_kit
+    s9680-revia => use_kit
+    s10091-revia => use_kit
+    s10138-revia => other
+    s13065-revia => count:1
+    s26751-revia => count:1
+    s27836-revia => use_kit
+munah (8 decisions)
+    s17741-munah => other_sign | accent:merkha
+    s419-munah => use_kit
+    s4248-munah => other
+    s9649-munah => use_kit
+    s14837-munah => count:1
+    s23105-munah => count:1
+    s24261-munah => count:1
+    s28396-munah => count:1
+dehi (4 decisions)
+    s14175-dehi => use_kit
+    s18033-dehi => use_sefaria
+    s20056-dehi => other
+    s20290-dehi => use_sefaria
+yerah_ben_yomo (3 decisions)
+    s1897-yerah_ben_yomo => count:1
+    s22918-yerah_ben_yomo => use_sefaria
+    s27456-yerah_ben_yomo => use_kit
+zinor (3 decisions)
+    s15940-zinor => count:1
+    s29398-zinor => count:1
+    s29480-zinor => count:1
+geresh_muqdam (1 decisions)
+    s399-geresh_muqdam => other
+iluy (1 decisions)
+    s8932-iluy => other
+mahapakh (1 decisions)
+    s25303-mahapakh => other
+ole (1 decisions)
+    s19437-ole => use_kit
+pazer (1 decisions)
+    s17533-pazer => count:1
+qadma (1 decisions)
+    s21956-qadma => count:1
+shalshelet (1 decisions)
+    s32100-shalshelet => count:0
+
+PART IV — ALL ZERO-COUNT RESPONSES
+
+s30286-patah
+s36973-patah
+s47948-meteg
+s60049-meteg
+s8868-meteg | note: Tzeirei followed by a munach
+s9264-meteg
+s14516-patah
+s14720-qamats
+s16916-meteg
+s17691-patah | note: It is an artifact from the ע
+s17997-meteg
+s24261-meteg
+s24834-meteg
+s24999-dot_above | note: New edition does not have a dot above rhe cholem\n
+s25599-meteg
+s28396-meteg
+s28866-merkha
+s29602-qamats
+s32100-shalshelet | note: Top: geresh mukdam - revia - meteg 
+
+PART V — CHECKS BEFORE TRAINING AUTOMATED CHIP/PRINT RECOGNITION
+
+1. Attach exact original scan crop, scan edition, scan coordinates, and all original candidates to each ID; they are NOT in this file.
+2. Use multiple review questions from the same word/site jointly, e.g. s14516, s15235, s21989, s24261, s28396.
+3. Separate real historical editions, damaged or missing ink, rendering/encoding problems, and human uncertainty into different labels.
+4. Verify a candidate's actual glyph output versus encoded Unicode before treating it as a typo in the scanned source.
+5. Repeat-word families may have different cantillation, and should never be normalized automatically.
+
+END OF REPORT. 167 of 167 source decisions reproduced in Part II.
