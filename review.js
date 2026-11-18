@@ -10,6 +10,10 @@ const SUB={
 const safe=(str)=>String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const countWord=n=>Number(n)===0?'no':Number(n)===1?'one':Number(n)===2?'two':String(n);
 const isAnswered=id=>!!state.decisions[id]?.choice;
+const transcriptionChoices={
+  use_sefaria:{label:'Sefaria',field:'sef'},
+  use_kit:{label:'Kit reconstruction',field:'kit'}
+};
 const decision=id=>state.decisions[id]||{choice:'',detail:'',note:'',corrected_text:''};
 const cur=()=>state.items.find(x=>x.id===state.selected);
 function msg(t,err=false){$('statusMsg').textContent=t;if(err) console.warn(t)}
@@ -95,6 +99,9 @@ function saveDecision(id,patch,eventType){
   return update(draft=>{
     const old=draft.decisions[id]??null;
     const record={choice:'',detail:'',note:'',corrected_text:'',...old,...patch,updated_at:now()};
+    if(eventType==='answer' && Object.hasOwn(transcriptionChoices,old?.choice) && !Object.hasOwn(transcriptionChoices,record.choice)){
+      record.corrected_text='';
+    }
     if(old && ['choice','detail','note','corrected_text'].every(k=>old[k]===record[k]))return old;
     draft.decisions[id]=record;
     if(eventType==='answer')draft.history.push({item_id:id,before:old,event_type:eventType,undone:false,time:now()});
@@ -107,7 +114,7 @@ function undoDecision(){
     if(!event)return null;
     const current=draft.decisions[event.item_id]??{};
     const prior=event.before??{};
-    const record={choice:prior.choice||'',detail:prior.detail||'',note:current.note||'',corrected_text:current.corrected_text||'',updated_at:now()};
+    const record={choice:prior.choice||'',detail:prior.detail||'',note:current.note||'',corrected_text:prior.corrected_text||'',updated_at:now()};
     if(record.choice||record.detail||record.note||record.corrected_text)draft.decisions[event.item_id]=record;
     else delete draft.decisions[event.item_id];
     event.undone=true;
@@ -160,12 +167,30 @@ function placeComparison(){
 landscapePhone.addEventListener('change',placeComparison);
 function chosen(it,o){const d=decision(it.id);return d.choice===o.key}
 function gallery(it){const examples=[['scan','Old print · scanned'],['ned','New edition'],['reb','Kit reconstruction']];return `<div class="gallery" id="gallery" style="--zoom:${state.zoom}">${examples.map(([key,name])=>`<figure class="${key==='reb'?'kitfigure':''}"><figcaption>${name}</figcaption><div class="crop ${!it[key]?'noimage':''}" data-zoom-image="${key}" role="${it[key]?'button':'generic'}" tabindex="${it[key]?'0':'-1'}" aria-label="Enlarge ${name}">${it[key]?`<img loading="eager" alt="${safe(name)} ${safe(it.heref)}" src="${it[key]}">`:'Image not available'}</div></figure>`).join('')}</div><div class="zoomRow"><label id="zoomLabel">${Math.round(state.zoom*100)}% zoom</label><button type="button" id="zminus" aria-label="Zoom out">−</button><button type="button" id="zplus" aria-label="Zoom in">+</button><button type="button" id="zreset">Reset</button></div>`}
+function transcriptionOptions(item,selected){
+  return `<div class="wordbox">${Object.entries(transcriptionChoices).map(([choice,{label,field}])=>{
+    const word=item[field];
+    const available=typeof word==='string'&&word.trim()!=='';
+    return `<div class="transcription" data-transcription="${choice}" data-accepted="${selected===choice}">
+      <button type="button" class="label" aria-pressed="${selected===choice}" ${available?'':'disabled'}>${selected===choice?'Accepted':'Use'} ${label}</button>
+      <div class="word" lang="he" dir="rtl">${safe(available?word:'—')}</div>
+    </div>`;
+  }).join('')}</div>`;
+}
 function renderSlide(){const box=$('slideView');if(!state.selected){box.innerHTML='<div class="empty">No items match these filters. Change a filter to see more.</div>';progress();return}const it=cur();if(!it){box.innerHTML='<div class="empty">Select an item.</div>';return}const d=decision(it.id);const opts=options(it);
 box.innerHTML=`<article class="review" data-id="${safe(it.id)}"><div class="reviewHead"><span class="ref">Psalm ${it.ps}:${it.v}</span><span class="hebref" lang="he" dir="rtl">${safe(it.heref)}</span><span class="badge ${it.verdict==='C'?'c':''}">Verdict ${safe(it.verdict)}</span>${isAnswered(it.id)?'<span class="badge done">Answered</span>':''}<span class="page">Page ${it.page} · ${safe(it.id)}</span></div>
-<div class="slidegrid"><div class="visuals">${gallery(it)}<div id="comparisonLandscape"></div></div><div class="inspector"><div class="signline"><b>${safe(it.he||it.kind)}</b><span class="signhe" dir="rtl">${safe(it.kind)}</span></div><div id="comparisonDefault"><div id="comparison"><div class="wordbox"><div><div class="label">Sefaria</div><div class="word" lang="he">${safe(it.sef)}</div></div><div><div class="label">Kit reconstruction</div><div class="word" lang="he">${safe(it.kit)}</div></div></div></div></div><div class="counts"><div>Sefaria<b>${safe(it.T)}</b></div><div>Old print (kit)<b>${safe(it.P)}</b></div><div>New edition<b>${safe(it.N)}</b></div></div><div class="pattern">${safe(it.pattern)}</div><div class="question">What does the original print actually show?</div><div class="choices" role="group" aria-label="Choose what the old print shows">${opts.map((o,i)=>`<button type="button" class="answer" data-choice="${safe(o.key)}" aria-pressed="${chosen(it,o)}"><span class="digit">${i+1}</span><span><b class="full-choice">${safe(o.label)}</b><b class="compact-choice">${safe(o.key.startsWith('count:') ? o.key.slice(6)+(o.key==='count:1'?' mark':' marks') : ({other_sign:'Different sign',other:'Other / note',unclear:'Unclear'}[o.key]))}</b>${o.sources?`<span class="source-hint">${safe(o.sources)}</span>`:''}<span class="hint">${safe(o.sub)}</span></span></button>`).join('')}</div><div id="subpick" class="subpicker" ${!state.sub&&!d.detail?'hidden':''}></div>
+<div class="slidegrid"><div class="visuals">${gallery(it)}<div id="comparisonLandscape"></div></div><div class="inspector"><div class="signline"><b>${safe(it.he||it.kind)}</b><span class="signhe" dir="rtl">${safe(it.kind)}</span></div><div id="comparisonDefault"><div id="comparison">${transcriptionOptions(it,d.choice)}</div></div><div class="counts"><div>Sefaria<b>${safe(it.T)}</b></div><div>Old print (kit)<b>${safe(it.P)}</b></div><div>New edition<b>${safe(it.N)}</b></div></div><div class="pattern">${safe(it.pattern)}</div><div class="question">What does the original print actually show?</div><div class="choices" role="group" aria-label="Choose what the old print shows">${opts.map((o,i)=>`<button type="button" class="answer" data-choice="${safe(o.key)}" aria-pressed="${chosen(it,o)}"><span class="digit">${i+1}</span><span><b class="full-choice">${safe(o.label)}</b><b class="compact-choice">${safe(o.key.startsWith('count:') ? o.key.slice(6)+(o.key==='count:1'?' mark':' marks') : ({other_sign:'Different sign',other:'Other / note',unclear:'Unclear'}[o.key]))}</b>${o.sources?`<span class="source-hint">${safe(o.sources)}</span>`:''}<span class="hint">${safe(o.sub)}</span></span></button>`).join('')}</div><div id="subpick" class="subpicker" ${!state.sub&&!d.detail?'hidden':''}></div>
 <details class="note-panel"><summary>Note</summary><div class="notehead"><label for="note">Note (optional, saved locally)</label><span id="noteStatus" class="small"></span></div><textarea class="notes" id="note" placeholder="For example: appears to be a munah, not a merkha."></textarea>
-<div class="footactions"><span class="meta" id="selectionLabel">${isAnswered(it.id)?'Recorded answer: '+safe(d.choice+(d.detail?' / '+d.detail:'')):'Not answered yet'}</span><button type="button" id="saveNote">Save note</button></div></details></div></div></article>`;
+<div class="footactions"><span class="meta" id="selectionLabel">${isAnswered(it.id)?'Recorded answer: '+safe(transcriptionChoices[d.choice]?.label??(d.choice+(d.detail?' / '+d.detail:''))):'Not answered yet'}</span><button type="button" id="saveNote">Save note</button></div></details></div></div></article>`;
 placeComparison();
+for(const tile of box.querySelectorAll('[data-transcription]')){
+  const button=tile.querySelector('button');
+  tile.addEventListener('click',event=>{
+    if(button.disabled)return;
+    if(event.target!==button && window.getSelection()?.toString())return;
+    choose(tile.dataset.transcription);
+  });
+}
 $('note').value=d.note||'';$('note').addEventListener('input',()=>{state.changed=true;saved('Unsaved note');$('noteStatus').textContent='Editing…';clearTimeout(state.noteTimer);state.noteTimer=setTimeout(()=>saveNote(),700)});
 $('note').addEventListener('blur',()=>{if(state.changed)saveNote()});$('saveNote').addEventListener('click',()=>saveNote());
 for(const el of box.querySelectorAll('[data-choice]'))el.addEventListener('click',()=>choose(el.dataset.choice));
@@ -230,12 +255,15 @@ async function choose(choice,detail=''){
     renderSubpicker();
     return;
   }
+  const transcription=Object.hasOwn(transcriptionChoices,choice)?transcriptionChoices[choice]:null;
+  const correctedText=transcription?item[transcription.field]:null;
+  if(transcription&&(typeof correctedText!=='string'||!correctedText.trim()))return;
   clearTimeout(state.noteTimer);
   state.busy=true;
   const note=$('note')?.value??decision(item.id).note;
   saved('Saving answer…');
   try{
-    await saveDecision(item.id,{choice,detail,note},'answer');
+    await saveDecision(item.id,{choice,detail,note,...(transcription?{corrected_text:correctedText}:{})},'answer');
     state.decisions=backing.decisions;
     state.changed=false;
     state.sub=false;
