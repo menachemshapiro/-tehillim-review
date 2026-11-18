@@ -27,22 +27,34 @@ function showSaved(){
   if(storageMode==='IndexedDB')saved('Saved on this device');
   else saved('Unsaved on device · back up before closing',true);
 }
-async function loadItems(){
-  const response=await fetch('review-source.html');
+async function fetchReviewFile(path,type){
+  const response=await fetch(path);
   if(!response.ok)throw Error('Could not download the question set.');
-  const source=await response.text();
+  return response[type]();
+}
+async function loadItems(){
+  const batchPath='review-v980/';
+  const [source,manifest]=await Promise.all([
+    fetchReviewFile('review-source.html','text'),
+    fetchReviewFile(batchPath+'manifest.json','json')
+  ]);
   const start='<script type="application/json" id="embeddedItems">';
   const at=source.indexOf(start);
   if(at<0)throw Error('Question set is missing.');
   const end=source.indexOf('</script>',at);
-  const items=JSON.parse(source.slice(at+start.length,end));
-  if(items.length!==400)throw Error('Incomplete question set.');
+  const earlier=JSON.parse(source.slice(at+start.length,end));
+  const parts=await Promise.all(manifest.parts.map(part=>fetchReviewFile(batchPath+part,'json')));
+  const itemsById=new Map(earlier.concat(...parts).map(item=>[item.id,item]));
+  const items=manifest.ids.map(id=>itemsById.get(id));
+  if(items.length!==itemsById.size||new Set(manifest.ids).size!==items.length||items.some(item=>!item)){
+    throw Error('Incomplete question set.');
+  }
   return items;
 }
 const initialAnswers=JSON.parse($('seedAnswers').textContent);
 const DBNAME='TehillimSignReviewPortable-v2', LOCALKEY=DBNAME+'/state';
 const seed=Object.fromEntries(initialAnswers.map(({id,...record})=>[id,record]));
-let currentSource='review_v40(1).json';
+let currentSource='review_v980.json';
 let storageMode='memory';
 let idb=null;
 let backing={decisions:{...seed},history:[]};
@@ -102,7 +114,7 @@ function saveDecision(id,patch,eventType){
     if(eventType==='answer' && Object.hasOwn(transcriptionChoices,old?.choice) && !Object.hasOwn(transcriptionChoices,record.choice)){
       record.corrected_text='';
     }
-    if(old && ['choice','detail','note','corrected_text'].every(k=>old[k]===record[k]))return old;
+    if(old && ['choice','detail','note','corrected_text','new_edition_count_wrong'].every(k=>old[k]===record[k]))return old;
     draft.decisions[id]=record;
     if(eventType==='answer')draft.history.push({item_id:id,before:old,event_type:eventType,undone:false,time:now()});
     return record;
@@ -115,7 +127,8 @@ function undoDecision(){
     const current=draft.decisions[event.item_id]??{};
     const prior=event.before??{};
     const record={choice:prior.choice||'',detail:prior.detail||'',note:current.note||'',corrected_text:prior.corrected_text||'',updated_at:now()};
-    if(record.choice||record.detail||record.note||record.corrected_text)draft.decisions[event.item_id]=record;
+    if(typeof current.new_edition_count_wrong==='boolean')record.new_edition_count_wrong=current.new_edition_count_wrong;
+    if(record.choice||record.detail||record.note||record.corrected_text||record.new_edition_count_wrong)draft.decisions[event.item_id]=record;
     else delete draft.decisions[event.item_id];
     event.undone=true;
     return event.item_id;
@@ -127,15 +140,26 @@ function restoreDecisions(body){
     let imported=0,skipped=0;
     for(const raw of body.decisions){
       const id=raw?.id||raw?.item_id;
-      if(typeof id!=='string'||!id||Object.hasOwn(Object.prototype,id)||draft.decisions[id]?.choice){skipped++;continue}
-      const record={choice:'',detail:'',note:'',corrected_text:'',...draft.decisions[id]};
+      if(typeof id!=='string'||!id||Object.hasOwn(Object.prototype,id)){skipped++;continue}
+      const existing=draft.decisions[id];
+      const importFlag=typeof raw.new_edition_count_wrong==='boolean' &&
+        typeof existing?.new_edition_count_wrong!=='boolean';
+      if(existing?.choice){
+        if(importFlag){
+          existing.new_edition_count_wrong=raw.new_edition_count_wrong;
+          imported++;
+        }else skipped++;
+        continue;
+      }
+      const record={choice:'',detail:'',note:'',corrected_text:'',...existing};
+      if(importFlag)record.new_edition_count_wrong=raw.new_edition_count_wrong;
       for(const key of ['choice','detail','note','corrected_text','updated_at']){
         if(typeof raw[key]==='string')record[key]=raw[key];
       }
       if(typeof raw.correctedText==='string')record.corrected_text=raw.correctedText;
       if(typeof raw.notes==='string')record.note=raw.notes;
       if(typeof raw.status==='string'&&!record.choice)record.choice=raw.status;
-      if(!record.choice&&!record.note&&!record.detail&&!record.corrected_text){skipped++;continue}
+      if(!record.choice&&!record.note&&!record.detail&&!record.corrected_text&&!record.new_edition_count_wrong){skipped++;continue}
       record.updated_at ||= now();
       draft.decisions[id]=record;
       imported++;
@@ -155,7 +179,19 @@ async function exportDecisions(){
   msg('Backup includes '+obj.decisions.length+' decisions across all batches. Keep this file as a backup.');
 }
 
-function filters(){const s=$('search').value.trim().toLocaleLowerCase();state.filtered=state.items.filter(x=>{if($('statusFilter').value==='open'&&isAnswered(x.id))return false;if($('statusFilter').value==='answered'&&!isAnswered(x.id))return false;if($('verdictFilter').value!=='all'&&x.verdict!==$('verdictFilter').value)return false;if($('groupFilter').value!=='all'&&x.group!==$('groupFilter').value)return false;return !s||[x.id,x.heref,x.he,x.kind,x.group,String(x.ps),String(x.v)].some(v=>String(v||'').toLocaleLowerCase().includes(s))});if(!state.filtered.some(x=>x.id===state.selected))state.selected=state.filtered[0]?.id||null}
+const signLabels={munah:'Munach',patah:'Patach',qamats:'Kamatz',meteg:'Meteg (Meseg)'};
+function populateFilters(items){
+  const groups=[...new Set(items.map(item=>item.group))].sort();
+  const signs=new Map(items.filter(item=>item.kind).map(item=>[item.kind,item.he]));
+  $('groupFilter').replaceChildren(new Option('All groups','all'),
+    ...groups.map(group=>new Option(group,group)));
+  $('issueFilter').replaceChildren(new Option('All issues','all'),
+    ...[...signs].sort(([a],[b])=>a.localeCompare(b)).map(([kind,he])=>{
+      const label=signLabels[kind]??kind[0].toUpperCase()+kind.slice(1);
+      return new Option(he?label+' · '+he:label,kind);
+    }));
+}
+function filters(){const s=$('search').value.trim().toLocaleLowerCase();state.filtered=state.items.filter(x=>{if($('statusFilter').value==='open'&&isAnswered(x.id))return false;if($('statusFilter').value==='answered'&&!isAnswered(x.id))return false;if($('verdictFilter').value!=='all'&&x.verdict!==$('verdictFilter').value)return false;if($('groupFilter').value!=='all'&&x.group!==$('groupFilter').value)return false;if($('issueFilter').value!=='all'&&x.kind!==$('issueFilter').value)return false;return !s||[x.id,x.heref,x.he,x.kind,x.group,String(x.ps),String(x.v)].some(v=>String(v||'').toLocaleLowerCase().includes(s))});if(!state.filtered.some(x=>x.id===state.selected))state.selected=state.filtered[0]?.id||null}
 function progress(){const n=state.items.filter(x=>isAnswered(x.id)).length;$('counter').textContent=n+' / '+state.items.length+' answered';$('meterFill').style.width=(state.items.length?(100*n/state.items.length):0)+'%';const i=state.filtered.findIndex(x=>x.id===state.selected);$('position').textContent=state.filtered.length?`${i+1} / ${state.filtered.length}`:'0 / 0';$('prev').disabled=i<=0;$('next').disabled=i<0||i>=state.filtered.length-1}
 function options(it){const sources=[['P','old print (kit)'],['T','Sefaria'],['N','new edition']];const map=new Map();for(const [key,label] of sources){const n=String(it[key]??'');if(!map.has(n))map.set(n,[]);map.get(n).push(label)}const result=Array.from(map.entries()).sort((a,b)=>Number(a[0])-Number(b[0])).map(([n,labels])=>({key:'count:'+n,sources:labels.map(label=>label==='old print (kit)'?'Kit':label).join(' + '),label:`The old print has ${countWord(n)} ${it.he||it.kind||'sign'}${Number(n)>1?' marks':''}`,sub:`As ${labels.join(' & ')} indicate${labels.length>1?'':'s'}`}));result.push({key:'other_sign',label:'It is a different sign',sub:'Choose the vowel or accent you see in the original scan'});result.push({key:'other',label:'Something else',sub:'Explain in a note'});result.push({key:'unclear',label:'Cannot tell from this scan',sub:'Requires closer examination of the book'});return result}
 const landscapePhone=matchMedia('(max-width: 920px) and (pointer: coarse) and (orientation: landscape)');
@@ -179,10 +215,11 @@ function transcriptionOptions(item,selected){
 }
 function renderSlide(){const box=$('slideView');if(!state.selected){box.innerHTML='<div class="empty">No items match these filters. Change a filter to see more.</div>';progress();return}const it=cur();if(!it){box.innerHTML='<div class="empty">Select an item.</div>';return}const d=decision(it.id);const opts=options(it);
 box.innerHTML=`<article class="review" data-id="${safe(it.id)}"><div class="reviewHead"><span class="ref">Psalm ${it.ps}:${it.v}</span><span class="hebref" lang="he" dir="rtl">${safe(it.heref)}</span><span class="badge ${it.verdict==='C'?'c':''}">Verdict ${safe(it.verdict)}</span>${isAnswered(it.id)?'<span class="badge done">Answered</span>':''}<span class="page">Page ${it.page} · ${safe(it.id)}</span></div>
-<div class="slidegrid"><div class="visuals">${gallery(it)}<div id="comparisonLandscape"></div></div><div class="inspector"><div class="signline"><b>${safe(it.he||it.kind)}</b><span class="signhe" dir="rtl">${safe(it.kind)}</span></div><div id="comparisonDefault"><div id="comparison">${transcriptionOptions(it,d.choice)}</div></div><div class="counts"><div>Sefaria<b>${safe(it.T)}</b></div><div>Old print (kit)<b>${safe(it.P)}</b></div><div>New edition<b>${safe(it.N)}</b></div></div><div class="pattern">${safe(it.pattern)}</div><div class="question">What does the original print actually show?</div><div class="choices" role="group" aria-label="Choose what the old print shows">${opts.map((o,i)=>`<button type="button" class="answer" data-choice="${safe(o.key)}" aria-pressed="${chosen(it,o)}"><span class="digit">${i+1}</span><span><b class="full-choice">${safe(o.label)}</b><b class="compact-choice">${safe(o.key.startsWith('count:') ? o.key.slice(6)+(o.key==='count:1'?' mark':' marks') : ({other_sign:'Different sign',other:'Other / note',unclear:'Unclear'}[o.key]))}</b>${o.sources?`<span class="source-hint">${safe(o.sources)}</span>`:''}<span class="hint">${safe(o.sub)}</span></span></button>`).join('')}</div><div id="subpick" class="subpicker" ${!state.sub&&!d.detail?'hidden':''}></div>
+<div class="slidegrid"><div class="visuals">${gallery(it)}<div id="comparisonLandscape"></div></div><div class="inspector"><div class="signline"><b>${safe(it.he||it.kind)}</b><span class="signhe" dir="rtl">${safe(it.kind)}</span></div><div id="comparisonDefault"><div id="comparison">${transcriptionOptions(it,d.choice)}</div></div><div class="counts"><div>Sefaria<b>${safe(it.T)}</b></div><div>Old print (kit)<b>${safe(it.P)}</b></div><button type="button" id="newEditionFlag" aria-pressed="${Boolean(d.new_edition_count_wrong)}" aria-label="Flag incorrect new-edition count, reported as ${safe(it.N)}" title="Flag an incorrect count for the new edition">New edition<span><b>${safe(it.N)}</b> <small>${d.new_edition_count_wrong?'Flagged':'Flag count'}</small></span></button></div><div class="pattern">${safe(it.pattern)}</div><div class="question">What does the original print actually show?</div><div class="choices" role="group" aria-label="Choose what the old print shows">${opts.map((o,i)=>`<button type="button" class="answer" data-choice="${safe(o.key)}" aria-pressed="${chosen(it,o)}"><span class="digit">${i+1}</span><span><b class="full-choice">${safe(o.label)}</b><b class="compact-choice">${safe(o.key.startsWith('count:') ? o.key.slice(6)+(o.key==='count:1'?' mark':' marks') : ({other_sign:'Different sign',other:'Other / note',unclear:'Unclear'}[o.key]))}</b>${o.sources?`<span class="source-hint">${safe(o.sources)}</span>`:''}<span class="hint">${safe(o.sub)}</span></span></button>`).join('')}</div><div id="subpick" class="subpicker" ${!state.sub&&!d.detail?'hidden':''}></div>
 <details class="note-panel"><summary>Note</summary><div class="notehead"><label for="note">Note (optional, saved locally)</label><span id="noteStatus" class="small"></span></div><textarea class="notes" id="note" placeholder="For example: appears to be a munah, not a merkha."></textarea>
 <div class="footactions"><span class="meta" id="selectionLabel">${isAnswered(it.id)?'Recorded answer: '+safe(transcriptionChoices[d.choice]?.label??(d.choice==='image_mismatch'?'Pictures don’t match':d.choice+(d.detail?' / '+d.detail:''))):'Not answered yet'}</span><button type="button" id="saveNote">Save note</button></div></details></div></div></article>`;
 placeComparison();
+$('newEditionFlag').addEventListener('click',toggleNewEditionFlag);
 $('imageMismatch').addEventListener('click',()=>choose('image_mismatch'));
 for(const tile of box.querySelectorAll('[data-transcription]')){
   const button=tile.querySelector('button');
@@ -247,6 +284,28 @@ function nextOpen(id){
   }
   return null;
 }
+async function toggleNewEditionFlag(){
+  if(state.busy)return;
+  const item=cur();
+  if(!item)return;
+  const button=$('newEditionFlag');
+  const flagged=!decision(item.id).new_edition_count_wrong;
+  state.busy=true;
+  saved('Saving flag…');
+  try{
+    await saveDecision(item.id,{new_edition_count_wrong:flagged},'flag');
+    state.decisions=backing.decisions;
+    button.setAttribute('aria-pressed',String(flagged));
+    button.querySelector('small').textContent=flagged?'Flagged':'Flag count';
+    showSaved();
+  }catch(error){
+    saved('Flag could not be saved · tap to retry',true);
+    msg('Could not save new-edition count flag: '+error.message,true);
+  }finally{
+    state.busy=false;
+    if(state.changed)saveNote();
+  }
+}
 async function choose(choice,detail=''){
   const item=cur();
   if(!item||state.busy)return;
@@ -308,6 +367,7 @@ async function undo(){
       $('statusFilter').value='all';
       $('search').value='';
       $('groupFilter').value='all';
+      $('issueFilter').value='all';
       $('verdictFilter').value='all';
       state.selected=id;
       state.mode='slide';
@@ -355,7 +415,7 @@ function toggleAuto(){
 function isTyping(e){const t=e.target;return t&&(['INPUT','TEXTAREA','SELECT'].includes(t.tagName)||t.isContentEditable)}
 function keyboard(e){if(e.ctrlKey||e.metaKey||e.altKey||state.busy||isTyping(e)||$('imgModal').open)return;const k=e.key;if(k==='ArrowRight'||k.toLowerCase()==='j'){e.preventDefault();move(1)}else if(k==='ArrowLeft'||k.toLowerCase()==='k'){e.preventDefault();move(-1)}else if(k.toLowerCase()==='u'||k==='Backspace'){e.preventDefault();undo()}else if(k.toLowerCase()==='a'){e.preventDefault();toggleAuto()}else if(k.toLowerCase()==='s'){e.preventDefault();toggleMode()}
 else if(k==='Escape'){state.sub=false;if($('subpick'))$('subpick').hidden=true}else if(/^[1-9]$/.test(k)&&state.mode==='slide'){e.preventDefault();if(state.sub){const signs=$('subpick')?.querySelectorAll('[data-sign]');const el=signs?.[Number(k)-1];if(el)el.click()}else{const opts=$('slideView').querySelectorAll('[data-choice]');const el=opts[Number(k)-1];if(el)el.click()}}}
-$('modeBtn').addEventListener('click',toggleMode);$('autoBtn').addEventListener('click',()=>{toggleAuto()});$('prev').addEventListener('click',()=>move(-1));$('next').addEventListener('click',()=>move(1));$('undoBtn').addEventListener('click',undo);for(const id of ['statusFilter','groupFilter','verdictFilter','search'])$(id).addEventListener('input',()=>changeView(()=>{state.sub=false}));
+$('modeBtn').addEventListener('click',toggleMode);$('autoBtn').addEventListener('click',()=>{toggleAuto()});$('prev').addEventListener('click',()=>move(-1));$('next').addEventListener('click',()=>move(1));$('undoBtn').addEventListener('click',undo);for(const id of ['statusFilter','groupFilter','issueFilter','verdictFilter','search'])$(id).addEventListener('input',()=>changeView(()=>{state.sub=false}));
 $('exportBtn').addEventListener('click',exportDecisions);$('importBtn').addEventListener('click',()=> $('importFile').click());$('importFile').addEventListener('change',async e=>{await doImport(e.target.files[0]);e.target.value='' });
 $('batchBtn').addEventListener('click',()=>$('batchFile').click());
 $('batchFile').addEventListener('change',async e=>{
@@ -363,10 +423,9 @@ $('batchFile').addEventListener('change',async e=>{
   try{await saveNote();if(state.changed||state.busy)return;const items=JSON.parse(await file.text());if(!Array.isArray(items)||!items.length)throw Error('Not a review-item JSON array');
     if(new Set(items.map(x=>x.id)).size!==items.length||items.some(x=>!x.id||typeof x.id!=='string'))throw Error('Review item IDs must be unique and non-empty');
     state.items=items;currentSource=file.name;
-    $('groupFilter').innerHTML='<option value="all">All groups</option>';
-    for(const group of [...new Set(items.map(x=>x.group))].sort()){const op=document.createElement('option');op.value=group;op.textContent=group;$('groupFilter').appendChild(op)}
+    populateFilters(items);
     $('statusFilter').value='open';$('verdictFilter').value='all';$('search').value='';state.selected=items.find(x=>!isAnswered(x.id))?.id||items[0].id;
-    state.sub=false;render();msg('Loaded '+items.length+' questions from '+file.name+' for this session. Saved answers follow by ID. Reload restores the embedded 400-item batch.');
+    state.sub=false;render();msg('Loaded '+items.length+' questions from '+file.name+' for this session. Saved answers follow by ID. Reload restores the website’s default batch.');
   }catch(err){msg('Could not open batch: '+err.message,true)}
   e.target.value='';
 });
@@ -374,5 +433,5 @@ document.addEventListener('keydown',keyboard);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)saveNote()});
 $('modalClose').addEventListener('click',()=> $('imgModal').close());$('modalPlus').addEventListener('click',()=>{state.modalZoom=Math.min(6,state.modalZoom+.5);modalApply()});$('modalMinus').addEventListener('click',()=>{state.modalZoom=Math.max(.5,state.modalZoom-.5);modalApply()});$('imgModal').addEventListener('click',e=>{if(e.target===$('imgModal'))$('imgModal').close()});
 let sx=0,sy=0;const slide=$('slideView');slide.addEventListener('touchstart',e=>{if(e.touches.length===1){sx=e.touches[0].clientX;sy=e.touches[0].clientY}},{passive:true});slide.addEventListener('touchend',e=>{if(e.changedTouches.length!==1||state.sub||state.changed)return;const target=e.target;if(target.closest('button,textarea,input,.crop,.gallery'))return;const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>95&&Math.abs(dx)>Math.abs(dy)*2)move(dx<0?1:-1)},{passive:true});
-(async()=>{try{const [items]=await Promise.all([loadItems(),initStorage()]);state.items=items;state.decisions=backing.decisions;const groups=[...new Set(items.map(x=>x.group))].sort();for(const group of groups){const o=document.createElement('option');o.value=group;o.textContent=group;$('groupFilter').appendChild(o)}state.selected=items.find(x=>!isAnswered(x.id))?.id||items[0]?.id;render();showSaved();msg('Loaded '+items.length+' review items; '+items.filter(x=>isAnswered(x.id)).length+' already answered from earlier work.')}catch(e){saved('Cannot open local review data',true);$('slideView').innerHTML='<div class="empty">Review data could not be loaded. '+safe(e.message)+'</div>'}})();
+(async()=>{try{const [items]=await Promise.all([loadItems(),initStorage()]);state.items=items;state.decisions=backing.decisions;populateFilters(items);state.selected=items.find(x=>!isAnswered(x.id))?.id||items[0]?.id;render();showSaved();msg('Loaded '+items.length+' review items; '+items.filter(x=>isAnswered(x.id)).length+' already answered from earlier work.')}catch(e){saved('Cannot open local review data',true);$('slideView').innerHTML='<div class="empty">Review data could not be loaded. '+safe(e.message)+'</div>'}})();
 })();
