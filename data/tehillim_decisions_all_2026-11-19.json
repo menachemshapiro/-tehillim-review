@@ -1,7 +1,7 @@
 {
   "schema": "tehillim-review-sqlite.v1",
   "source": "review_v980.json",
-  "exported_at": "2026-11-19T08:23:05.928Z",
+  "exported_at": "2026-11-19T08:56:13.227Z",
   "items_in_source": 678,
   "decisions": [
     {
@@ -4211,6 +4211,1265 @@
       "note": "",
       "corrected_text": "",
       "updated_at": "2026-11-19T08:22:48.087Z"
+    },
+    {
+      "id": "s15562-ole",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:27:20.481Z"
+    },
+    {
+      "id": "s46973-ole",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:27:34.272Z"
+    },
+    {
+      "id": "s77679-ole",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:27:36.580Z"
+    },
+    {
+      "id": "s39653-zinor",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:27:44.987Z"
+    },
+    {
+      "id": "s4866-revia",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:28:11.236Z"
+    },
+    {
+      "id": "s14256-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:28:23.472Z"
+    },
+    {
+      "id": "s21198-revia",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:28:32.783Z"
+    },
+    {
+      "id": "s25017-revia",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:28:56.686Z"
+    },
+    {
+      "id": "s26169-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:29:12.873Z"
+    },
+    {
+      "id": "s31448-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:29:38.198Z"
+    },
+    {
+      "id": "s32447-revia",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:29:42.540Z"
+    },
+    {
+      "id": "s33681-revia",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:29:48.211Z"
+    },
+    {
+      "id": "s39462-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:29:58.593Z"
+    },
+    {
+      "id": "s39850-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "One cholam and one revia ",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:30:51.822Z"
+    },
+    {
+      "id": "s41197-revia",
+      "choice": "unclear",
+      "detail": "",
+      "note": "There is something there. Almost like the word has both a sin and shin dot. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:32:17.078Z"
+    },
+    {
+      "id": "s43406-revia",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:32:22.366Z"
+    },
+    {
+      "id": "s70765-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "One revia and one cholam. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:32:47.601Z"
+    },
+    {
+      "id": "s7212-qadma",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לִ֨י",
+      "updated_at": "2026-11-19T08:33:00.052Z"
+    },
+    {
+      "id": "s1861-merkha",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:19.253Z"
+    },
+    {
+      "id": "s8398-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:24.206Z"
+    },
+    {
+      "id": "s18896-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:28.095Z"
+    },
+    {
+      "id": "s23179-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:32.046Z"
+    },
+    {
+      "id": "s25349-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:35.717Z"
+    },
+    {
+      "id": "s28624-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:38.511Z"
+    },
+    {
+      "id": "s37814-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:33:44.596Z"
+    },
+    {
+      "id": "s47501-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:46.924Z"
+    },
+    {
+      "id": "s54992-merkha",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:54.994Z"
+    },
+    {
+      "id": "s57328-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:33:58.603Z"
+    },
+    {
+      "id": "s77921-merkha",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:34:08.796Z"
+    },
+    {
+      "id": "s15856-geresh_muqdam",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:34:31.873Z"
+    },
+    {
+      "id": "s26169-iluy",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "קֹ֝רַ֗ח",
+      "updated_at": "2026-11-19T08:34:59.842Z"
+    },
+    {
+      "id": "s8929-mahapakh",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:35:08.044Z"
+    },
+    {
+      "id": "s9470-mahapakh",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Backwards mapach ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:35:28.232Z"
+    },
+    {
+      "id": "s25346-mahapakh",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:35:32.103Z"
+    },
+    {
+      "id": "s31508-mahapakh",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:35:34.084Z"
+    },
+    {
+      "id": "s250-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:36:36.499Z"
+    },
+    {
+      "id": "s5431-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:36:46.434Z"
+    },
+    {
+      "id": "s8152-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:36:52.117Z"
+    },
+    {
+      "id": "s19178-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:37:01.647Z"
+    },
+    {
+      "id": "s19728-dot_inside",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:37:19.185Z"
+    },
+    {
+      "id": "s21568-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:37:22.697Z"
+    },
+    {
+      "id": "s22737-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:37:33.326Z"
+    },
+    {
+      "id": "s25204-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:37:38.745Z"
+    },
+    {
+      "id": "s28927-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:37:41.258Z"
+    },
+    {
+      "id": "s32019-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:37:48.714Z"
+    },
+    {
+      "id": "s32113-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Recreation placement of letters is messed up. Please take a look. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:38:53.384Z"
+    },
+    {
+      "id": "s34976-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:38:55.674Z"
+    },
+    {
+      "id": "s38238-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:39:15.826Z"
+    },
+    {
+      "id": "s45789-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:39:18.956Z"
+    },
+    {
+      "id": "s47364-dot_inside",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:39:25.138Z"
+    },
+    {
+      "id": "s47601-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:39:29.368Z"
+    },
+    {
+      "id": "s56091-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:40:00.311Z"
+    },
+    {
+      "id": "s74134-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:40:12.815Z"
+    },
+    {
+      "id": "s76291-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:40:16.740Z"
+    },
+    {
+      "id": "s79528-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:40:29.402Z"
+    },
+    {
+      "id": "s81910-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:40:34.632Z"
+    },
+    {
+      "id": "s87691-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:40:45.147Z"
+    },
+    {
+      "id": "s87816-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:40:51.002Z"
+    },
+    {
+      "id": "s6813-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:02.766Z"
+    },
+    {
+      "id": "s8042-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:04.966Z"
+    },
+    {
+      "id": "s8929-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:07.147Z"
+    },
+    {
+      "id": "s13179-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:13.182Z"
+    },
+    {
+      "id": "s13765-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:15.315Z"
+    },
+    {
+      "id": "s14259-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:21.114Z"
+    },
+    {
+      "id": "s14323-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:27.346Z"
+    },
+    {
+      "id": "s15831-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:32.331Z"
+    },
+    {
+      "id": "s16468-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:41:43.215Z"
+    },
+    {
+      "id": "s17746-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Colon is messed up. In recreation. Take a look. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:13.802Z"
+    },
+    {
+      "id": "s20323-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:17.958Z"
+    },
+    {
+      "id": "s21956-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:23.940Z"
+    },
+    {
+      "id": "s22078-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:30.468Z"
+    },
+    {
+      "id": "s22815-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:33.601Z"
+    },
+    {
+      "id": "s25346-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:35.486Z"
+    },
+    {
+      "id": "s25399-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:39.955Z"
+    },
+    {
+      "id": "s31433-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:42.459Z"
+    },
+    {
+      "id": "s31680-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:44.608Z"
+    },
+    {
+      "id": "s33440-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:42:49.774Z"
+    },
+    {
+      "id": "s33778-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:43:06.066Z"
+    },
+    {
+      "id": "s35208-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:43:40.917Z"
+    },
+    {
+      "id": "s35730-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Nikkud in recreation needs to be looked at. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:13.280Z"
+    },
+    {
+      "id": "s38505-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:15.228Z"
+    },
+    {
+      "id": "s40047-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:17.594Z"
+    },
+    {
+      "id": "s43364-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:21.847Z"
+    },
+    {
+      "id": "s46395-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:24.411Z"
+    },
+    {
+      "id": "s46522-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:26.413Z"
+    },
+    {
+      "id": "s46727-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:29.134Z"
+    },
+    {
+      "id": "s46745-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:31.682Z"
+    },
+    {
+      "id": "s52392-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:38.388Z"
+    },
+    {
+      "id": "s52473-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:41.363Z"
+    },
+    {
+      "id": "s52682-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:45.694Z"
+    },
+    {
+      "id": "s54988-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:49.631Z"
+    },
+    {
+      "id": "s56885-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:44:55.135Z"
+    },
+    {
+      "id": "s56954-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:00.106Z"
+    },
+    {
+      "id": "s58377-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:13.696Z"
+    },
+    {
+      "id": "s60449-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:18.931Z"
+    },
+    {
+      "id": "s63877-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:21.224Z"
+    },
+    {
+      "id": "s63992-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:25.485Z"
+    },
+    {
+      "id": "s64430-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:36.847Z"
+    },
+    {
+      "id": "s65183-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:38.810Z"
+    },
+    {
+      "id": "s65305-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:42.811Z"
+    },
+    {
+      "id": "s67085-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:45.764Z"
+    },
+    {
+      "id": "s70736-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:47.762Z"
+    },
+    {
+      "id": "s70996-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:45:50.298Z"
+    },
+    {
+      "id": "s71128-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:46:02.042Z"
+    },
+    {
+      "id": "s72809-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:46:04.508Z"
+    },
+    {
+      "id": "s74421-meteg",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:46:51.641Z"
+    },
+    {
+      "id": "s76460-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:47:01.760Z"
+    },
+    {
+      "id": "s77524-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:47:04.360Z"
+    },
+    {
+      "id": "s82332-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:47:12.618Z"
+    },
+    {
+      "id": "s83790-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:47:16.658Z"
+    },
+    {
+      "id": "s83876-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:47:18.732Z"
+    },
+    {
+      "id": "s84834-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:47:27.417Z"
+    },
+    {
+      "id": "s85188-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:47:29.755Z"
+    },
+    {
+      "id": "s86056-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:47:33.752Z"
+    },
+    {
+      "id": "s355-dot_below",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֶת",
+      "updated_at": "2026-11-19T08:48:20.968Z"
+    },
+    {
+      "id": "s67632-dot_below",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:48:47.766Z"
+    },
+    {
+      "id": "s8252-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:49:16.499Z"
+    },
+    {
+      "id": "s8868-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:49:21.090Z"
+    },
+    {
+      "id": "s10138-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "Under the nun is an ink blotch ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:49:55.789Z"
+    },
+    {
+      "id": "s12961-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:50:06.129Z"
+    },
+    {
+      "id": "s13267-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:50:19.792Z"
+    },
+    {
+      "id": "s13271-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:50:32.070Z"
+    },
+    {
+      "id": "s13303-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:50:39.096Z"
+    },
+    {
+      "id": "s13459-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:50:45.209Z"
+    },
+    {
+      "id": "s15807-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:50:48.661Z"
+    },
+    {
+      "id": "s16078-dot_below",
+      "choice": "count:8",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:51:03.023Z"
+    },
+    {
+      "id": "s17205-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "2 dots == 1 shva",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:51:35.139Z"
+    },
+    {
+      "id": "s17718-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:51:51.294Z"
+    },
+    {
+      "id": "s18231-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:51:55.670Z"
+    },
+    {
+      "id": "s19611-dot_below",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:52:06.921Z"
+    },
+    {
+      "id": "s21528-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:52:12.794Z"
+    },
+    {
+      "id": "s22078-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:52:17.285Z"
+    },
+    {
+      "id": "s24261-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:52:26.150Z"
+    },
+    {
+      "id": "s28396-dot_below",
+      "choice": "count:5",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:52:30.570Z"
+    },
+    {
+      "id": "s29000-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:52:40.662Z"
+    },
+    {
+      "id": "s29977-dot_below",
+      "choice": "count:5",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:52:53.369Z"
+    },
+    {
+      "id": "s30279-dot_below",
+      "choice": "count:5",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:53:09.514Z"
+    },
+    {
+      "id": "s31634-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "9 — three segols",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:53:35.100Z"
+    },
+    {
+      "id": "s35835-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:54:17.995Z"
+    },
+    {
+      "id": "s43242-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:54:35.001Z"
+    },
+    {
+      "id": "s44942-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:54:43.193Z"
+    },
+    {
+      "id": "s46363-dot_below",
+      "choice": "count:5",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:54:49.632Z"
+    },
+    {
+      "id": "s48922-dot_below",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:54:54.776Z"
+    },
+    {
+      "id": "s49802-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:02.625Z"
+    },
+    {
+      "id": "s60763-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:06.310Z"
+    },
+    {
+      "id": "s61494-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:10.051Z"
+    },
+    {
+      "id": "s61631-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:14.116Z"
+    },
+    {
+      "id": "s62282-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:18.641Z"
+    },
+    {
+      "id": "s63163-dot_below",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:21.140Z"
+    },
+    {
+      "id": "s66072-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:27.037Z"
+    },
+    {
+      "id": "s70765-dot_below",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:31.665Z"
+    },
+    {
+      "id": "s71631-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:38.408Z"
+    },
+    {
+      "id": "s79499-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:42.270Z"
+    },
+    {
+      "id": "s80473-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:53.146Z"
+    },
+    {
+      "id": "s82149-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:55:59.257Z"
+    },
+    {
+      "id": "s82432-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:56:06.720Z"
     }
   ]
 }
