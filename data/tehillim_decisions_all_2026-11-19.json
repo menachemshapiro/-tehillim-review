@@ -1,0 +1,4216 @@
+{
+  "schema": "tehillim-review-sqlite.v1",
+  "source": "review_v980.json",
+  "exported_at": "2026-11-19T08:23:05.928Z",
+  "items_in_source": 678,
+  "decisions": [
+    {
+      "id": "s1897-yerah_ben_yomo",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:21:56+00:00"
+    },
+    {
+      "id": "s17741-munah",
+      "choice": "other_sign",
+      "detail": "accent:merkha",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:22:44+00:00"
+    },
+    {
+      "id": "s29338-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:22:53+00:00"
+    },
+    {
+      "id": "s30286-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:23:18+00:00"
+    },
+    {
+      "id": "s36973-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:23:43+00:00"
+    },
+    {
+      "id": "s46571-dot_inside",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:24:12+00:00"
+    },
+    {
+      "id": "s47948-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:24:21+00:00"
+    },
+    {
+      "id": "s55076-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "וּלְִזַמֵּ֖ר",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:25:15+00:00"
+    },
+    {
+      "id": "s60049-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:25:46+00:00"
+    },
+    {
+      "id": "s74048-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "meteg under tof",
+      "corrected_text": "",
+      "updated_at": "2026-11-17T20:26:48+00:00"
+    },
+    {
+      "id": "s143-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "New edition same. I think the scan is misdiagnosing the top of the lamed as a dot\n ",
+      "corrected_text": "יִבּ֑וֹל",
+      "updated_at": "2026-11-18T13:13:43.719Z"
+    },
+    {
+      "id": "s165-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:45:44.103Z"
+    },
+    {
+      "id": "s2339-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:46:32.385Z"
+    },
+    {
+      "id": "s3505-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:50:55.463Z"
+    },
+    {
+      "id": "s6444-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:51:09.590Z"
+    },
+    {
+      "id": "s7079-dot_inside",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:51:17.895Z"
+    },
+    {
+      "id": "s8055-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:51:40.368Z"
+    },
+    {
+      "id": "s8088-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:51:55.999Z"
+    },
+    {
+      "id": "s8252-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": " Not sure how accurate the reproduction is, but there are 3 dots under the nun instead of 2",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:53:40.256Z"
+    },
+    {
+      "id": "s8547-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "Shva - tzeirei- munach ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:55:01.388Z"
+    },
+    {
+      "id": "s8659-dot_above",
+      "choice": "other_sign",
+      "detail": "accent:revia",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:55:54.460Z"
+    },
+    {
+      "id": "s8719-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "All versions only have one dot ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T05:59:34.872Z"
+    },
+    {
+      "id": "s8868-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Tzeirei followed by a munach",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:00:07.381Z"
+    },
+    {
+      "id": "s8932-iluy",
+      "choice": "other",
+      "detail": "",
+      "note": "Munach on top of the aleph followed by a cholem ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:01:10.322Z"
+    },
+    {
+      "id": "s9162-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:01:25.863Z"
+    },
+    {
+      "id": "s9264-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:01:32.294Z"
+    },
+    {
+      "id": "s9342-revia",
+      "choice": "other",
+      "detail": "",
+      "note": "לַֽ֝מְֿנַצֵּ֗חַ — that is correct. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:02:30.002Z"
+    },
+    {
+      "id": "s355-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֶת",
+      "updated_at": "2026-11-18T06:10:37.806Z"
+    },
+    {
+      "id": "s399-geresh_muqdam",
+      "choice": "other",
+      "detail": "",
+      "note": "Geresh mukdam and revia on top of the daled. No cholam ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:12:09.091Z"
+    },
+    {
+      "id": "s403-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יִלְעַג",
+      "updated_at": "2026-11-18T06:12:24.075Z"
+    },
+    {
+      "id": "s408-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לָֽמוֹ",
+      "updated_at": "2026-11-18T06:12:34.322Z"
+    },
+    {
+      "id": "s419-munah",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֵלֵ֣ימוֹ",
+      "updated_at": "2026-11-18T06:12:47.386Z"
+    },
+    {
+      "id": "s459-revia",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "צִ֝יּ֗וֹן",
+      "updated_at": "2026-11-18T06:12:59.036Z"
+    },
+    {
+      "id": "s839-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "Not a sign under the hey. It is an ink blotch",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:14:42.807Z"
+    },
+    {
+      "id": "s990-revia",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לַֽמְֿנַצֵּ֥חַ",
+      "updated_at": "2026-11-18T06:15:27.784Z"
+    },
+    {
+      "id": "s1569-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:15:50.492Z"
+    },
+    {
+      "id": "s1583-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "קָ֝דְשְׁךָ֗",
+      "updated_at": "2026-11-18T06:16:17.094Z"
+    },
+    {
+      "id": "s1821-revia",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לַֽמְֿנַצֵּ֣ח",
+      "updated_at": "2026-11-18T06:18:17.468Z"
+    },
+    {
+      "id": "s1821-patah",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "In the reproduction the munach is on top of the tzeirei ",
+      "corrected_text": "לַֽמְֿנַצֵּ֣ח",
+      "updated_at": "2026-11-18T06:19:26.395Z"
+    },
+    {
+      "id": "s1945-dot_above",
+      "choice": "other",
+      "detail": "",
+      "note": "Regular cholam above the vav, no revia",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T07:34:04.210Z"
+    },
+    {
+      "id": "s2467-qamats",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "תְּסֽוֹבְבֶ֑ךָּ",
+      "updated_at": "2026-11-18T06:21:50.111Z"
+    },
+    {
+      "id": "s2580-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "עַל",
+      "updated_at": "2026-11-18T06:22:06.213Z"
+    },
+    {
+      "id": "s2770-dot_below",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "Recreation has a smudged double chitrik part of the chataf kometz ",
+      "corrected_text": "קָ֝דְקֳד֗וֹ",
+      "updated_at": "2026-11-18T06:23:17.191Z"
+    },
+    {
+      "id": "s3680-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "בְּשַׁ֣חַת",
+      "updated_at": "2026-11-18T06:23:26.324Z"
+    },
+    {
+      "id": "s4229-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "Bottom: Patach - meseg - chataf patach - mercha\nTop: tzinor - cholam ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:25:19.556Z"
+    },
+    {
+      "id": "s4248-munah",
+      "choice": "other",
+      "detail": "",
+      "note": "It is a tevir. Are there any others in the whole book?",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:28:14.662Z"
+    },
+    {
+      "id": "s4413-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:28:38.169Z"
+    },
+    {
+      "id": "s5893-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:28:52.348Z"
+    },
+    {
+      "id": "s5906-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לֽא",
+      "updated_at": "2026-11-18T06:29:06.296Z"
+    },
+    {
+      "id": "s5944-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לְעוֹלָֽם",
+      "updated_at": "2026-11-18T06:29:18.528Z"
+    },
+    {
+      "id": "s6309-dot_below",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לִרְא֥וֹת",
+      "updated_at": "2026-11-18T06:29:35.719Z"
+    },
+    {
+      "id": "s6682-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "ז֥וּ",
+      "updated_at": "2026-11-18T06:29:44.862Z"
+    },
+    {
+      "id": "s6864-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מִֽמְֿתִ֥֬ים",
+      "updated_at": "2026-11-18T06:29:57.403Z"
+    },
+    {
+      "id": "s7014-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:30:27.891Z"
+    },
+    {
+      "id": "s7461-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Revia only. No cholam ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:31:50.629Z"
+    },
+    {
+      "id": "s7905-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "תִּֽתְחַסָּ֑ד",
+      "updated_at": "2026-11-18T06:32:15.930Z"
+    },
+    {
+      "id": "s9410-qamats",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יִסְעָדֶֽךָּ",
+      "updated_at": "2026-11-18T06:32:30.391Z"
+    },
+    {
+      "id": "s9649-munah",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יְהוָֹ֣ה",
+      "updated_at": "2026-11-18T06:36:14.184Z"
+    },
+    {
+      "id": "s9680-revia",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לַֽ֝מְֿנַצֵּ֗חַ",
+      "updated_at": "2026-11-18T06:36:30.335Z"
+    },
+    {
+      "id": "s9787-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לְ֝רֹאשׁ֗וֹ",
+      "updated_at": "2026-11-18T06:36:50.432Z"
+    },
+    {
+      "id": "s10091-revia",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "תְ֝כוֹנֵן",
+      "updated_at": "2026-11-18T06:37:29.337Z"
+    },
+    {
+      "id": "s10138-revia",
+      "choice": "other",
+      "detail": "",
+      "note": "Underneath the nun is only a patach. The ink underneath the patach is just an ink blotch. No revia. There is a rafa on top of the mem. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:39:58.638Z"
+    },
+    {
+      "id": "s10214-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וְלֹ֣א",
+      "updated_at": "2026-11-18T06:40:23.438Z"
+    },
+    {
+      "id": "s10466-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֵ֮לִי֥",
+      "updated_at": "2026-11-18T06:40:40.384Z"
+    },
+    {
+      "id": "s10575-meteg",
+      "choice": "count:2",
+      "detail": "",
+      "note": "In the recreation, besides rhe first Meteg being missing, the shva is in the wrong place. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:42:03.605Z"
+    },
+    {
+      "id": "s10642-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "Shva - patach - meseg - chataf patach - patach ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:43:15.799Z"
+    },
+    {
+      "id": "s10642-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:43:32.856Z"
+    },
+    {
+      "id": "s10724-dot_below",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יִרְאוּ",
+      "updated_at": "2026-11-18T06:43:41.875Z"
+    },
+    {
+      "id": "s10881-qamats",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֲהַלְלֶֽךָּ",
+      "updated_at": "2026-11-18T06:43:57.138Z"
+    },
+    {
+      "id": "s11764-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מֶלֶ֪ךְ",
+      "updated_at": "2026-11-18T06:44:16.887Z"
+    },
+    {
+      "id": "s13065-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:44:34.834Z"
+    },
+    {
+      "id": "s13418-dot_below",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "The reproduction mistakinglu has a Triple shva under the try",
+      "corrected_text": "תִּטְּשֵׁ֥נִי",
+      "updated_at": "2026-11-18T06:47:07.430Z"
+    },
+    {
+      "id": "s13427-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "תַּֽ֝עַזְבֵ֗נִי",
+      "updated_at": "2026-11-18T06:47:28.378Z"
+    },
+    {
+      "id": "s13464-dot_below",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יַֽאַסְפֵֽנִי",
+      "updated_at": "2026-11-18T06:48:03.449Z"
+    },
+    {
+      "id": "s13464-patah",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יַֽאַסְפֵֽנִי",
+      "updated_at": "2026-11-18T06:48:29.964Z"
+    },
+    {
+      "id": "s13600-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וְיַאֲמֵ֣ץ",
+      "updated_at": "2026-11-18T06:49:14.862Z"
+    },
+    {
+      "id": "s13813-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "תֵּ֥ן",
+      "updated_at": "2026-11-18T06:49:59.151Z"
+    },
+    {
+      "id": "s14156-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "בַּכֹּֽחַ",
+      "updated_at": "2026-11-18T06:50:29.891Z"
+    },
+    {
+      "id": "s14175-dehi",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יְ֭הוָֹה",
+      "updated_at": "2026-11-18T06:51:49.686Z"
+    },
+    {
+      "id": "s14516-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "Kometz under the taf, not patach and tzeirei",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:53:06.788Z"
+    },
+    {
+      "id": "s14516-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:53:19.996Z"
+    },
+    {
+      "id": "s14537-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לַיהוָֹ֣ה",
+      "updated_at": "2026-11-18T06:53:37.943Z"
+    },
+    {
+      "id": "s14720-qamats",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T06:53:53.596Z"
+    },
+    {
+      "id": "s14833-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֱ֝להַ֗י",
+      "updated_at": "2026-11-18T06:54:27.228Z"
+    },
+    {
+      "id": "s14837-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T07:34:48.382Z"
+    },
+    {
+      "id": "s14842-qamats",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אוֹדֶֽךָּ",
+      "updated_at": "2026-11-18T07:35:07.734Z"
+    },
+    {
+      "id": "s15109-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "בְּחַ֫סְדֶ֥ךָ",
+      "updated_at": "2026-11-18T07:35:34.797Z"
+    },
+    {
+      "id": "s15192-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "עָֽשְׁשָ֣ה",
+      "updated_at": "2026-11-18T07:35:46.225Z"
+    },
+    {
+      "id": "s15235-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "Kometz below bet. Not patach and tzeirei ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T07:36:49.040Z"
+    },
+    {
+      "id": "s15235-qamats",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T07:37:03.635Z"
+    },
+    {
+      "id": "s15235-patah",
+      "choice": "other_sign",
+      "detail": "vowel:hataf-patah",
+      "note": "Kometz - meteg- chataf patach- kometz-kometz- mercha",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T07:39:05.676Z"
+    },
+    {
+      "id": "s15327-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מִלֵּ֑ב",
+      "updated_at": "2026-11-18T07:47:33.138Z"
+    },
+    {
+      "id": "s15716-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מִנֶּֽגֶד",
+      "updated_at": "2026-11-18T07:47:45.093Z"
+    },
+    {
+      "id": "s15720-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "עֵֽ֫ינֶ֥יךָ",
+      "updated_at": "2026-11-18T07:48:10.145Z"
+    },
+    {
+      "id": "s15940-zinor",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T07:48:27.961Z"
+    },
+    {
+      "id": "s16119-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "Chataf kommetz- tzeirei - mercha ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T07:49:39.789Z"
+    },
+    {
+      "id": "s16304-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "רַֽנְנ֣וּ",
+      "updated_at": "2026-11-18T07:50:05.118Z"
+    },
+    {
+      "id": "s16304-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "רַֽנְנ֣וּ",
+      "updated_at": "2026-11-18T07:50:31.846Z"
+    },
+    {
+      "id": "s16349-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "New edition does not have a dot ",
+      "corrected_text": "בְּנֵ֥בֶל",
+      "updated_at": "2026-11-18T10:36:59.205Z"
+    },
+    {
+      "id": "s16718-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מִֽמְכֽוֹן",
+      "updated_at": "2026-11-18T10:37:19.516Z"
+    },
+    {
+      "id": "s16718-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מִֽמְכֽוֹן",
+      "updated_at": "2026-11-18T10:37:32.559Z"
+    },
+    {
+      "id": "s16916-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:37:57.611Z"
+    },
+    {
+      "id": "s17288-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יֶחֱסֶה",
+      "updated_at": "2026-11-18T10:38:13.522Z"
+    },
+    {
+      "id": "s17396-meteg",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֲלַמֶּדְכֶֽם",
+      "updated_at": "2026-11-18T10:38:30.822Z"
+    },
+    {
+      "id": "s17533-dot_above",
+      "choice": "other",
+      "detail": "",
+      "note": "Cholem above the vav,\nNot\nRevia ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:39:16.205Z"
+    },
+    {
+      "id": "s17533-pazer",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:40:21.768Z"
+    },
+    {
+      "id": "s17656-dot_above",
+      "choice": "count:2",
+      "detail": "",
+      "note": "Shin + cholam == 2 dots. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:41:13.687Z"
+    },
+    {
+      "id": "s17691-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "It is an artifact from the ע",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:41:42.942Z"
+    },
+    {
+      "id": "s17997-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:42:22.945Z"
+    },
+    {
+      "id": "s18033-dehi",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "New edition also has it ",
+      "corrected_text": "וְ֭נַפְשִׁי",
+      "updated_at": "2026-11-18T10:42:57.222Z"
+    },
+    {
+      "id": "s18401-qamats",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "All versions appear to be\nIdentical",
+      "corrected_text": "אֲהַֽלְלֶֽךָּ",
+      "updated_at": "2026-11-18T10:43:55.711Z"
+    },
+    {
+      "id": "s18541-dot_below",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֲ֝דֹנָ֗י",
+      "updated_at": "2026-11-18T10:44:13.443Z"
+    },
+    {
+      "id": "s18607-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:44:46.819Z"
+    },
+    {
+      "id": "s18709-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "עָלָי",
+      "updated_at": "2026-11-18T10:44:56.874Z"
+    },
+    {
+      "id": "s18945-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "דֶּֽרֶךְ",
+      "updated_at": "2026-11-18T10:45:02.689Z"
+    },
+    {
+      "id": "s19371-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "דַרְכֶּ֑ךָ",
+      "updated_at": "2026-11-18T10:45:14.523Z"
+    },
+    {
+      "id": "s19437-ole",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "ל֥וֹ",
+      "updated_at": "2026-11-18T10:45:21.035Z"
+    },
+    {
+      "id": "s19710-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "דָּֽרֶךְ",
+      "updated_at": "2026-11-18T10:45:27.020Z"
+    },
+    {
+      "id": "s20056-dehi",
+      "choice": "other",
+      "detail": "",
+      "note": "Meteg I’d under the lamed. No dechi. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:45:48.598Z"
+    },
+    {
+      "id": "s20290-dehi",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "צוֹפֶ֣ה",
+      "updated_at": "2026-11-18T10:46:01.186Z"
+    },
+    {
+      "id": "s21956-qadma",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Kit reconstriction text does not match image\nOf kit reconstriction ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:50:48.853Z"
+    },
+    {
+      "id": "s21975-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "New edition also has two dots ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T10:53:34.998Z"
+    },
+    {
+      "id": "s21989-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "Kometz under the lamed, not patach and tzeirei ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:02:30.441Z"
+    },
+    {
+      "id": "s21989-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:02:37.998Z"
+    },
+    {
+      "id": "s22069-dot_below",
+      "choice": "other",
+      "detail": "",
+      "note": "Cholem over the vav. Under the hey is supposed to be a shva, but one of the dots is missing. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:04:15.491Z"
+    },
+    {
+      "id": "s22627-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "הֶאָח",
+      "updated_at": "2026-11-18T11:04:22.363Z"
+    },
+    {
+      "id": "s22753-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אַ֭שְׁרֵי",
+      "updated_at": "2026-11-18T11:04:33.544Z"
+    },
+    {
+      "id": "s22918-yerah_ben_yomo",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לִ֪י",
+      "updated_at": "2026-11-18T11:04:40.858Z"
+    },
+    {
+      "id": "s23004-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יַחְשְׁב֥וּ",
+      "updated_at": "2026-11-18T11:05:05.224Z"
+    },
+    {
+      "id": "s23105-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:05:20.867Z"
+    },
+    {
+      "id": "s23993-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "New edition has no dot ",
+      "corrected_text": "אֶל",
+      "updated_at": "2026-11-18T11:07:20.544Z"
+    },
+    {
+      "id": "s24053-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "New edition only has one dot as well. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:07:55.038Z"
+    },
+    {
+      "id": "s24261-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "It is not a munach and a dot. Just a munach. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:08:34.141Z"
+    },
+    {
+      "id": "s24261-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:08:40.966Z"
+    },
+    {
+      "id": "s24517-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "Under the kaf is a munach. Not a munach and a dot. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:09:41.972Z"
+    },
+    {
+      "id": "s24834-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:56:56.369Z"
+    },
+    {
+      "id": "s24999-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "New edition does not have a dot above rhe cholem\n",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:57:36.634Z"
+    },
+    {
+      "id": "s25303-mahapakh",
+      "choice": "other",
+      "detail": "",
+      "note": "Reverse mapach at the end of the word. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:58:05.357Z"
+    },
+    {
+      "id": "s25588-dot_below",
+      "choice": "count:5",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:58:41.316Z"
+    },
+    {
+      "id": "s25599-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T11:58:48.110Z"
+    },
+    {
+      "id": "s26124-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "The reconstructed image has a chirik on top of a Sheba, not\nEntirely overlapping one of the dots.  ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:00:27.786Z"
+    },
+    {
+      "id": "s26732-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:00:37.941Z"
+    },
+    {
+      "id": "s26751-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:00:57.887Z"
+    },
+    {
+      "id": "s27456-yerah_ben_yomo",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מָ֑וֶת",
+      "updated_at": "2026-11-18T12:01:10.926Z"
+    },
+    {
+      "id": "s27584-dot_below",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:01:43.648Z"
+    },
+    {
+      "id": "s27584-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:01:58.054Z"
+    },
+    {
+      "id": "s27796-dot_below",
+      "choice": "count:8",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:02:20.600Z"
+    },
+    {
+      "id": "s27796-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:02:28.423Z"
+    },
+    {
+      "id": "s27836-revia",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "הַשָּׁמַ֣֗יִם",
+      "updated_at": "2026-11-18T12:03:42.782Z"
+    },
+    {
+      "id": "s28396-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:03:58.821Z"
+    },
+    {
+      "id": "s28396-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:04:03.186Z"
+    },
+    {
+      "id": "s28401-dot_below",
+      "choice": "count:11",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:06:40.998Z"
+    },
+    {
+      "id": "s28838-dot_above",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:07:40.797Z"
+    },
+    {
+      "id": "s28866-merkha",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:07:54.478Z"
+    },
+    {
+      "id": "s29155-dot_above",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:08:12.729Z"
+    },
+    {
+      "id": "s29398-zinor",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:08:28.667Z"
+    },
+    {
+      "id": "s29433-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וְיִרְא֥וּ",
+      "updated_at": "2026-11-18T12:08:45.178Z"
+    },
+    {
+      "id": "s29469-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לֹֽא",
+      "updated_at": "2026-11-18T12:08:49.190Z"
+    },
+    {
+      "id": "s29480-zinor",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:09:10.561Z"
+    },
+    {
+      "id": "s29602-patah",
+      "choice": "other",
+      "detail": "",
+      "note": "2 patach and 1 chataf patach. \n\nNotes on bottom go: kommetz - meteg - chataf patach - patach. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:10:38.147Z"
+    },
+    {
+      "id": "s29602-qamats",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:10:49.475Z"
+    },
+    {
+      "id": "s30186-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לַֽמְֿנַצֵּ֥חַ",
+      "updated_at": "2026-11-18T12:11:04.169Z"
+    },
+    {
+      "id": "s30629-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:12:43.752Z"
+    },
+    {
+      "id": "s30783-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "פָּ֘דָ֥ה",
+      "updated_at": "2026-11-18T12:12:59.843Z"
+    },
+    {
+      "id": "s31634-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Segol- meseg - segol - segol - esnachta ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:14:08.076Z"
+    },
+    {
+      "id": "s31915-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אָעִֽירָה",
+      "updated_at": "2026-11-18T12:14:18.808Z"
+    },
+    {
+      "id": "s32100-shalshelet",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Top: geresh mukdam - revia - meteg ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:15:20.699Z"
+    },
+    {
+      "id": "s32229-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "בְפִ֑ימוֹ",
+      "updated_at": "2026-11-18T12:18:14.429Z"
+    },
+    {
+      "id": "s32583-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:18:25.409Z"
+    },
+    {
+      "id": "s32873-qadma",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:18:38.841Z"
+    },
+    {
+      "id": "s33102-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לַבֹּ֗קֶר",
+      "updated_at": "2026-11-18T12:21:09.893Z"
+    },
+    {
+      "id": "s33121-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לִ֑י",
+      "updated_at": "2026-11-18T12:21:15.506Z"
+    },
+    {
+      "id": "s33135-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "New edition does not have dot either ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:22:02.559Z"
+    },
+    {
+      "id": "s33365-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:36:52.754Z"
+    },
+    {
+      "id": "s33953-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:37:13.381Z"
+    },
+    {
+      "id": "s34507-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:39:45.388Z"
+    },
+    {
+      "id": "s34725-meteg",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֲרַנֵּֽן",
+      "updated_at": "2026-11-18T12:39:59.305Z"
+    },
+    {
+      "id": "s34939-dot_above",
+      "choice": "other",
+      "detail": "",
+      "note": "Dot for shin and dot for revia ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:40:40.747Z"
+    },
+    {
+      "id": "s35021-zinor",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:40:58.303Z"
+    },
+    {
+      "id": "s35102-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Reverse mapach on top ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:41:34.956Z"
+    },
+    {
+      "id": "s35277-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וּ֝לְךָ֗",
+      "updated_at": "2026-11-18T12:41:52.949Z"
+    },
+    {
+      "id": "s35415-qamats",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:42:07.930Z"
+    },
+    {
+      "id": "s35730-dot_below",
+      "choice": "count:5",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:42:22.368Z"
+    },
+    {
+      "id": "s35835-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:42:29.406Z"
+    },
+    {
+      "id": "s36675-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:42:53.431Z"
+    },
+    {
+      "id": "s37870-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:43:39.069Z"
+    },
+    {
+      "id": "s40531-dot_inside",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:43:46.007Z"
+    },
+    {
+      "id": "s40831-dot_inside",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:44:17.667Z"
+    },
+    {
+      "id": "s41319-dot_inside",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:44:30.445Z"
+    },
+    {
+      "id": "s44305-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:44:36.541Z"
+    },
+    {
+      "id": "s45803-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:44:47.311Z"
+    },
+    {
+      "id": "s47085-dot_inside",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:44:59.327Z"
+    },
+    {
+      "id": "s47122-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:45:04.225Z"
+    },
+    {
+      "id": "s50566-dot_inside",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:45:20.142Z"
+    },
+    {
+      "id": "s63187-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:45:25.206Z"
+    },
+    {
+      "id": "s80973-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:45:28.827Z"
+    },
+    {
+      "id": "s81777-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:45:46.478Z"
+    },
+    {
+      "id": "s86751-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:46:04.957Z"
+    },
+    {
+      "id": "s86857-dot_inside",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:46:14.503Z"
+    },
+    {
+      "id": "s42134-dot_inside",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:46:51.880Z"
+    },
+    {
+      "id": "s49140-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לָּ֑ךְ",
+      "updated_at": "2026-11-18T12:48:47.289Z"
+    },
+    {
+      "id": "s82258-dot_inside",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "דַּ֣עַת",
+      "updated_at": "2026-11-18T12:48:56.246Z"
+    },
+    {
+      "id": "s42181-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Dot above and below rhe vov",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:50:34.670Z"
+    },
+    {
+      "id": "s49682-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "New edition also doesn’t have a dot ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:51:15.463Z"
+    },
+    {
+      "id": "s49686-dot_above",
+      "choice": "other",
+      "detail": "",
+      "note": "One cholam and one revia ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:51:49.222Z"
+    },
+    {
+      "id": "s51114-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "עָלַ֗י",
+      "updated_at": "2026-11-18T12:52:06.318Z"
+    },
+    {
+      "id": "s53842-dot_above",
+      "choice": "unclear",
+      "detail": "",
+      "note": "New edition also doesn’t have a dot ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:52:20.266Z"
+    },
+    {
+      "id": "s54499-dot_above",
+      "choice": "other",
+      "detail": "",
+      "note": "One cholam, one revia",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:53:32.274Z"
+    },
+    {
+      "id": "s56300-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "One cholam ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:54:09.125Z"
+    },
+    {
+      "id": "s56550-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "New edition also doesn’t have a dot ",
+      "corrected_text": "וּמֶ֥לֶךְ",
+      "updated_at": "2026-11-18T12:54:31.641Z"
+    },
+    {
+      "id": "s57191-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Cholem on vav",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:55:04.449Z"
+    },
+    {
+      "id": "s59011-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "New edition also  have  one dot ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T12:56:05.497Z"
+    },
+    {
+      "id": "s63329-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יְ֭מַלֵּל",
+      "updated_at": "2026-11-18T12:56:17.278Z"
+    },
+    {
+      "id": "s66613-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "הֲלֹֽא",
+      "updated_at": "2026-11-18T12:56:26.577Z"
+    },
+    {
+      "id": "s68706-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "הַ֝לְל֗וּ",
+      "updated_at": "2026-11-18T12:56:46.532Z"
+    },
+    {
+      "id": "s82087-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "New edition also have one dot ",
+      "corrected_text": "לְעוֹלָ֑ם",
+      "updated_at": "2026-11-18T12:59:53.470Z"
+    },
+    {
+      "id": "s84218-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "New edition also doesn’t have a dot ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:00:24.047Z"
+    },
+    {
+      "id": "s38318-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֱ֝להִ֗ים",
+      "updated_at": "2026-11-18T13:01:11.929Z"
+    },
+    {
+      "id": "s42196-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "Part of the aleph, just smudged ",
+      "corrected_text": "מַלְאֲכוֹתֶֽיךָ",
+      "updated_at": "2026-11-18T13:02:37.243Z"
+    },
+    {
+      "id": "s44340-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֱלהִ֗ים",
+      "updated_at": "2026-11-18T13:03:12.893Z"
+    },
+    {
+      "id": "s44376-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:03:32.475Z"
+    },
+    {
+      "id": "s45934-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:03:42.755Z"
+    },
+    {
+      "id": "s46005-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:03:46.233Z"
+    },
+    {
+      "id": "s48616-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "Only revia, no cholem. ",
+      "corrected_text": "אֱלהֶ֗יךָ",
+      "updated_at": "2026-11-18T13:04:21.326Z"
+    },
+    {
+      "id": "s50764-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֲ֝דנָ֗י",
+      "updated_at": "2026-11-18T13:04:30.037Z"
+    },
+    {
+      "id": "s52550-dot_above",
+      "choice": "count:2",
+      "detail": "",
+      "note": "Slight possibility the first dot is a revia",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:07:31.423Z"
+    },
+    {
+      "id": "s52814-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:07:43.445Z"
+    },
+    {
+      "id": "s53786-dot_above",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:07:59.688Z"
+    },
+    {
+      "id": "s54068-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:08:07.054Z"
+    },
+    {
+      "id": "s54818-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:08:09.895Z"
+    },
+    {
+      "id": "s55279-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:08:23.714Z"
+    },
+    {
+      "id": "s61465-dot_above",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:08:36.492Z"
+    },
+    {
+      "id": "s64584-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:08:44.347Z"
+    },
+    {
+      "id": "s69665-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:08:52.359Z"
+    },
+    {
+      "id": "s75255-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:08:59.040Z"
+    },
+    {
+      "id": "s75363-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:09:07.404Z"
+    },
+    {
+      "id": "s80201-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "מֵאֽוֹצְרוֹתָֽיו",
+      "updated_at": "2026-11-18T13:10:51.877Z"
+    },
+    {
+      "id": "s80732-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "חַסְדּֽוֹ",
+      "updated_at": "2026-11-18T13:11:03.404Z"
+    },
+    {
+      "id": "s80786-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לְעוֹלָ֣ם",
+      "updated_at": "2026-11-18T13:11:24.841Z"
+    },
+    {
+      "id": "s80819-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "חַסְדּֽוֹ",
+      "updated_at": "2026-11-18T13:12:51.238Z"
+    },
+    {
+      "id": "s37817-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:14:36.604Z"
+    },
+    {
+      "id": "s46824-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:14:42.933Z"
+    },
+    {
+      "id": "s87418-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Rebuild has 2 patach es. All these are because of the wrong ayin being used, causing a ghost line, interpreted as a patach. I think. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:16:36.319Z"
+    },
+    {
+      "id": "s39670-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:16:59.938Z"
+    },
+    {
+      "id": "s39670-qamats",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:17:08.090Z"
+    },
+    {
+      "id": "s42146-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:17:18.583Z"
+    },
+    {
+      "id": "s43242-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Many of these are kometz mistakinglu interpreted as patach over a chirik",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:18:08.472Z"
+    },
+    {
+      "id": "s43242-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:18:16.810Z"
+    },
+    {
+      "id": "s43722-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:18:35.017Z"
+    },
+    {
+      "id": "s46363-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:18:38.690Z"
+    },
+    {
+      "id": "s48230-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:18:53.828Z"
+    },
+    {
+      "id": "s48508-qamats",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:19:08.509Z"
+    },
+    {
+      "id": "s48922-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:19:16.648Z"
+    },
+    {
+      "id": "s48922-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:19:33.592Z"
+    },
+    {
+      "id": "s49531-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:19:44.091Z"
+    },
+    {
+      "id": "s51420-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Mistakinglu reading the shva as a chataf patach ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:22:48.968Z"
+    },
+    {
+      "id": "s52015-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:23:02.054Z"
+    },
+    {
+      "id": "s56908-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Mistakingly reading shva as chataf patach ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:23:54.185Z"
+    },
+    {
+      "id": "s60671-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:24:01.500Z"
+    },
+    {
+      "id": "s60720-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:24:26.126Z"
+    },
+    {
+      "id": "s61580-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:24:35.026Z"
+    },
+    {
+      "id": "s61580-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:24:42.101Z"
+    },
+    {
+      "id": "s70765-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:24:55.215Z"
+    },
+    {
+      "id": "s70765-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:25:00.594Z"
+    },
+    {
+      "id": "s71227-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:25:08.230Z"
+    },
+    {
+      "id": "s71236-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:25:13.879Z"
+    },
+    {
+      "id": "s71631-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:25:28.640Z"
+    },
+    {
+      "id": "s72602-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:25:34.594Z"
+    },
+    {
+      "id": "s76005-patah",
+      "choice": "count:2",
+      "detail": "",
+      "note": "One chataf patach one patach ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:26:11.398Z"
+    },
+    {
+      "id": "s76367-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Not sure why it says consistently thay sefaria doesn’t have a kommetz. It is there at the end of rhe word. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:26:59.617Z"
+    },
+    {
+      "id": "s76379-patah",
+      "choice": "count:2",
+      "detail": "",
+      "note": " NO chataf patachs only patachs with a meseg in between. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:29:50.868Z"
+    },
+    {
+      "id": "s78491-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:30:00.981Z"
+    },
+    {
+      "id": "s85243-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:30:23.993Z"
+    },
+    {
+      "id": "s85304-qamats",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:30:38.587Z"
+    },
+    {
+      "id": "s85565-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:30:47.215Z"
+    },
+    {
+      "id": "s86193-qamats",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:30:59.329Z"
+    },
+    {
+      "id": "s86193-patah",
+      "choice": "count:2",
+      "detail": "",
+      "note": "One patach and one chataf patach. With a meseg in between ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T13:31:40.966Z"
+    },
+    {
+      "id": "s39622-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T14:08:52.087Z"
+    },
+    {
+      "id": "s40234-revia",
+      "choice": "other",
+      "detail": "",
+      "note": "Cholam not\nRevia",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:15:32.853Z"
+    },
+    {
+      "id": "s42157-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:16:09.830Z"
+    },
+    {
+      "id": "s42181-revia",
+      "choice": "other",
+      "detail": "",
+      "note": "Cholam not revia ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:16:39.950Z"
+    },
+    {
+      "id": "s42376-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:16:59.274Z"
+    },
+    {
+      "id": "s44722-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:17:17.861Z"
+    },
+    {
+      "id": "s45203-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:17:22.708Z"
+    },
+    {
+      "id": "s45287-dehi",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:18:21.780Z"
+    },
+    {
+      "id": "s45873-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:18:25.648Z"
+    },
+    {
+      "id": "s46714-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:18:35.022Z"
+    },
+    {
+      "id": "s47204-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:18:40.479Z"
+    },
+    {
+      "id": "s48766-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:18:46.060Z"
+    },
+    {
+      "id": "s49167-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:18:48.562Z"
+    },
+    {
+      "id": "s51337-merkha",
+      "choice": "other_sign",
+      "detail": "accent:munah",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:19:01.455Z"
+    },
+    {
+      "id": "s51337-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:19:27.135Z"
+    },
+    {
+      "id": "s51478-revia",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:19:38.755Z"
+    },
+    {
+      "id": "s52098-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:19:46.333Z"
+    },
+    {
+      "id": "s53006-dot_below",
+      "choice": "count:9",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:20:05.556Z"
+    },
+    {
+      "id": "s55105-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:20:30.370Z"
+    },
+    {
+      "id": "s55177-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:20:35.918Z"
+    },
+    {
+      "id": "s56418-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:20:37.957Z"
+    },
+    {
+      "id": "s37132-merkha",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "בְּטוֹבָֽתְךָ֥",
+      "updated_at": "2026-11-18T16:21:34.317Z"
+    },
+    {
+      "id": "s37309-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:22:02.688Z"
+    },
+    {
+      "id": "s39206-revia",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֱלֹהִ֣֗ים",
+      "updated_at": "2026-11-18T16:22:28.880Z"
+    },
+    {
+      "id": "s39670-dot_below",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Kometz esnachta kommetz ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:23:34.418Z"
+    },
+    {
+      "id": "s40112-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:23:51.248Z"
+    },
+    {
+      "id": "s40116-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:24:05.997Z"
+    },
+    {
+      "id": "s40116-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:24:27.256Z"
+    },
+    {
+      "id": "s41050-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:24:35.277Z"
+    },
+    {
+      "id": "s41214-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T16:24:47.662Z"
+    },
+    {
+      "id": "s57328-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:03:27.521Z"
+    },
+    {
+      "id": "s58524-zinor",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "יְהוָֹ֣ה",
+      "updated_at": "2026-11-18T22:03:52.509Z"
+    },
+    {
+      "id": "s61759-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:00.314Z"
+    },
+    {
+      "id": "s61892-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:03.911Z"
+    },
+    {
+      "id": "s61986-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:10.091Z"
+    },
+    {
+      "id": "s62282-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:18.923Z"
+    },
+    {
+      "id": "s62282-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:26.060Z"
+    },
+    {
+      "id": "s63163-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:35.570Z"
+    },
+    {
+      "id": "s63163-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:39.151Z"
+    },
+    {
+      "id": "s64110-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:47.634Z"
+    },
+    {
+      "id": "s66585-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:50.560Z"
+    },
+    {
+      "id": "s67786-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:56.086Z"
+    },
+    {
+      "id": "s72065-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:04:58.737Z"
+    },
+    {
+      "id": "s73220-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:05:16.320Z"
+    },
+    {
+      "id": "s74002-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:05:29.685Z"
+    },
+    {
+      "id": "s74120-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:05:44.397Z"
+    },
+    {
+      "id": "s75604-meteg",
+      "choice": "other",
+      "detail": "",
+      "note": "One Meteg after the kommetz ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:06:20.495Z"
+    },
+    {
+      "id": "s75844-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:06:40.460Z"
+    },
+    {
+      "id": "s76899-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:06:42.765Z"
+    },
+    {
+      "id": "s77761-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:07:03.635Z"
+    },
+    {
+      "id": "s77761-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:07:09.750Z"
+    },
+    {
+      "id": "s78133-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:07:14.182Z"
+    },
+    {
+      "id": "s79473-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:07:17.006Z"
+    },
+    {
+      "id": "s79664-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:07:18.826Z"
+    },
+    {
+      "id": "s80226-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:07:22.795Z"
+    },
+    {
+      "id": "s82021-mahapakh",
+      "choice": "count:1",
+      "detail": "",
+      "note": "There are many cases where we are improperly interpreting the new edition.  New sedition has a mapach. Just like the old edition. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:09:00.546Z"
+    },
+    {
+      "id": "s85096-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:09:04.027Z"
+    },
+    {
+      "id": "s85663-dot_below",
+      "choice": "count:9",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:09:28.788Z"
+    },
+    {
+      "id": "s86493-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:09:33.020Z"
+    },
+    {
+      "id": "s86882-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:09:35.430Z"
+    },
+    {
+      "id": "s42124-dot_below",
+      "choice": "count:7",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:10:35.083Z"
+    },
+    {
+      "id": "s42157-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:10:44.227Z"
+    },
+    {
+      "id": "s42376-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:10:52.877Z"
+    },
+    {
+      "id": "s43093-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:10:57.734Z"
+    },
+    {
+      "id": "s43776-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:11:06.549Z"
+    },
+    {
+      "id": "s44084-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:11:15.992Z"
+    },
+    {
+      "id": "s44199-dot_below",
+      "choice": "count:7",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:11:45.175Z"
+    },
+    {
+      "id": "s46471-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:12:08.472Z"
+    },
+    {
+      "id": "s46781-mahapakh",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:12:20.616Z"
+    },
+    {
+      "id": "s46808-dehi",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:14:05.773Z"
+    },
+    {
+      "id": "s47130-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:14:30.262Z"
+    },
+    {
+      "id": "s47879-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:14:33.380Z"
+    },
+    {
+      "id": "s47934-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:14:38.451Z"
+    },
+    {
+      "id": "s47968-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:14:54.114Z"
+    },
+    {
+      "id": "s48269-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:15:04.399Z"
+    },
+    {
+      "id": "s48522-dot_below",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:15:13.380Z"
+    },
+    {
+      "id": "s49432-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:15:20.002Z"
+    },
+    {
+      "id": "s49505-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:15:24.264Z"
+    },
+    {
+      "id": "s49531-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:15:38.665Z"
+    },
+    {
+      "id": "s52462-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:15:47.497Z"
+    },
+    {
+      "id": "s53467-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:15:53.229Z"
+    },
+    {
+      "id": "s54040-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:16:03.562Z"
+    },
+    {
+      "id": "s54988-dot_below",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:16:12.597Z"
+    },
+    {
+      "id": "s55382-meteg",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:16:46.865Z"
+    },
+    {
+      "id": "s55815-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:16:57.385Z"
+    },
+    {
+      "id": "s57333-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:02.988Z"
+    },
+    {
+      "id": "s57688-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:10.927Z"
+    },
+    {
+      "id": "s57821-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:15.328Z"
+    },
+    {
+      "id": "s58096-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:22.284Z"
+    },
+    {
+      "id": "s58101-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:43.301Z"
+    },
+    {
+      "id": "s58558-yerah_ben_yomo",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:47.226Z"
+    },
+    {
+      "id": "s59589-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:53.701Z"
+    },
+    {
+      "id": "s60117-merkha",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:17:57.914Z"
+    },
+    {
+      "id": "s61631-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:18:04.591Z"
+    },
+    {
+      "id": "s62448-dehi",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לֶ֖חֶם",
+      "updated_at": "2026-11-18T22:20:01.229Z"
+    },
+    {
+      "id": "s63597-dehi",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "ס֥וּף",
+      "updated_at": "2026-11-18T22:20:10.990Z"
+    },
+    {
+      "id": "s65562-dot_below",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וִ֭יִזְבְּחוּ",
+      "updated_at": "2026-11-18T22:21:35.842Z"
+    },
+    {
+      "id": "s66328-munah",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֽוֹדְךָ֣",
+      "updated_at": "2026-11-18T22:22:10.092Z"
+    },
+    {
+      "id": "s68446-mahapakh",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "זָ֘רַח",
+      "updated_at": "2026-11-18T22:22:52.383Z"
+    },
+    {
+      "id": "s70871-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:22:57.830Z"
+    },
+    {
+      "id": "s72065-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:23:05.995Z"
+    },
+    {
+      "id": "s73071-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:23:16.214Z"
+    },
+    {
+      "id": "s73176-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:23:19.951Z"
+    },
+    {
+      "id": "s73301-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:23:48.441Z"
+    },
+    {
+      "id": "s73334-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:24:40.263Z"
+    },
+    {
+      "id": "s73360-etnahta",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:25:01.395Z"
+    },
+    {
+      "id": "s74890-dot_below",
+      "choice": "count:6",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:25:26.490Z"
+    },
+    {
+      "id": "s75055-dot_below",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:25:37.963Z"
+    },
+    {
+      "id": "s76005-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:25:54.204Z"
+    },
+    {
+      "id": "s76302-meteg",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:25:59.556Z"
+    },
+    {
+      "id": "s76460-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:26:07.804Z"
+    },
+    {
+      "id": "s78491-dot_below",
+      "choice": "count:3",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:26:28.815Z"
+    },
+    {
+      "id": "s79203-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:26:37.907Z"
+    },
+    {
+      "id": "s79702-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:26:46.430Z"
+    },
+    {
+      "id": "s81742-ole",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:26:57.122Z"
+    },
+    {
+      "id": "s81777-dot_below",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:28:10.442Z"
+    },
+    {
+      "id": "s82212-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:28:14.569Z"
+    },
+    {
+      "id": "s83224-dot_below",
+      "choice": "unclear",
+      "detail": "",
+      "note": "There is some\nThing under rhe mem, after the patach. It kind of looks like a tipcha that is half erased. We need to do more research of different editions. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:30:39.914Z"
+    },
+    {
+      "id": "s83672-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:30:56.271Z"
+    },
+    {
+      "id": "s84917-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:30:59.346Z"
+    },
+    {
+      "id": "s85044-meteg",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:31:02.256Z"
+    },
+    {
+      "id": "s85188-dot_below",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:31:17.868Z"
+    },
+    {
+      "id": "s85318-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:31:21.414Z"
+    },
+    {
+      "id": "s85721-dot_below",
+      "choice": "count:4",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:31:30.070Z"
+    },
+    {
+      "id": "s85969-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:32:09.099Z"
+    },
+    {
+      "id": "s86056-dot_below",
+      "choice": "count:5",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T22:32:24.690Z"
+    },
+    {
+      "id": "s5630-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:14:17.833Z"
+    },
+    {
+      "id": "s8252-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:14:52.404Z"
+    },
+    {
+      "id": "s8433-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:15:08.194Z"
+    },
+    {
+      "id": "s14017-patah",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "עַד",
+      "updated_at": "2026-11-18T23:15:42.500Z"
+    },
+    {
+      "id": "s14720-patah",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:16:05.473Z"
+    },
+    {
+      "id": "s17038-patah",
+      "choice": "other",
+      "detail": "",
+      "note": "One chataf patach ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:16:39.913Z"
+    },
+    {
+      "id": "s21989-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:17:10.350Z"
+    },
+    {
+      "id": "s27796-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:17:19.275Z"
+    },
+    {
+      "id": "s30909-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:17:39.298Z"
+    },
+    {
+      "id": "s35415-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:17:48.268Z"
+    },
+    {
+      "id": "s42694-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:17:58.592Z"
+    },
+    {
+      "id": "s46363-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:18:06.481Z"
+    },
+    {
+      "id": "s48522-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:18:16.486Z"
+    },
+    {
+      "id": "s49500-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:18:22.899Z"
+    },
+    {
+      "id": "s49531-patah",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:18:33.072Z"
+    },
+    {
+      "id": "s58629-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:18:39.364Z"
+    },
+    {
+      "id": "s60001-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:18:44.911Z"
+    },
+    {
+      "id": "s68656-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "It seems like the program is taking nekudot from the other sources without cross checking to see if they match the print. This seems like a general issue we may need to take care of c ",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:20:40.567Z"
+    },
+    {
+      "id": "s71631-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:20:44.851Z"
+    },
+    {
+      "id": "s79203-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:20:48.188Z"
+    },
+    {
+      "id": "s79916-patah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:20:54.898Z"
+    },
+    {
+      "id": "s85278-patah",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:21:16.179Z"
+    },
+    {
+      "id": "s85663-patah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-18T23:21:36.267Z"
+    },
+    {
+      "id": "s408-qamats",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "לָֽמוֹ",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:49:33.058Z"
+    },
+    {
+      "id": "s14516-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:49:49.593Z"
+    },
+    {
+      "id": "s18607-qamats",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:50:01.424Z"
+    },
+    {
+      "id": "s21975-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:50:21.355Z"
+    },
+    {
+      "id": "s42694-qamats",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:50:25.451Z"
+    },
+    {
+      "id": "s48522-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:50:35.890Z"
+    },
+    {
+      "id": "s48836-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:51:13.052Z"
+    },
+    {
+      "id": "s50856-qamats",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:51:36.706Z"
+    },
+    {
+      "id": "s68656-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:51:47.481Z"
+    },
+    {
+      "id": "s72602-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:51:57.752Z"
+    },
+    {
+      "id": "s76005-qamats",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:52:04.780Z"
+    },
+    {
+      "id": "s78491-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:52:08.550Z"
+    },
+    {
+      "id": "s79203-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:52:12.341Z"
+    },
+    {
+      "id": "s81815-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:52:19.033Z"
+    },
+    {
+      "id": "s82332-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:52:22.979Z"
+    },
+    {
+      "id": "s82437-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:52:25.259Z"
+    },
+    {
+      "id": "s82554-qamats",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:52:28.877Z"
+    },
+    {
+      "id": "s428-munah",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וּבַ֖חֲרוֹנ֣וֹ",
+      "updated_at": "2026-11-19T07:53:10.845Z"
+    },
+    {
+      "id": "s447-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:53:25.958Z"
+    },
+    {
+      "id": "s8868-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:53:29.678Z"
+    },
+    {
+      "id": "s14587-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:53:49.068Z"
+    },
+    {
+      "id": "s14731-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:53:52.795Z"
+    },
+    {
+      "id": "s30279-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:54:00.116Z"
+    },
+    {
+      "id": "s39660-munah",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:54:09.809Z"
+    },
+    {
+      "id": "s41050-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:54:19.901Z"
+    },
+    {
+      "id": "s44076-munah",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וְלֹ֣א",
+      "updated_at": "2026-11-19T07:54:28.409Z"
+    },
+    {
+      "id": "s54988-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:54:35.672Z"
+    },
+    {
+      "id": "s54992-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:54:52.323Z"
+    },
+    {
+      "id": "s59035-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:54:58.515Z"
+    },
+    {
+      "id": "s59907-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:55:02.127Z"
+    },
+    {
+      "id": "s66811-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:55:07.409Z"
+    },
+    {
+      "id": "s75604-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:55:10.652Z"
+    },
+    {
+      "id": "s78634-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:55:17.351Z"
+    },
+    {
+      "id": "s85188-munah",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:55:25.085Z"
+    },
+    {
+      "id": "s3965-dehi",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:56:27.538Z"
+    },
+    {
+      "id": "s45975-dehi",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:56:42.159Z"
+    },
+    {
+      "id": "s59269-dehi",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:56:52.402Z"
+    },
+    {
+      "id": "s72384-dehi",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:57:01.036Z"
+    },
+    {
+      "id": "s72674-dehi",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:57:08.626Z"
+    },
+    {
+      "id": "s84804-dehi",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T07:57:12.667Z"
+    },
+    {
+      "id": "s87039-dehi",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T07:57:19.056Z"
+    },
+    {
+      "id": "s1691-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֱלהִ֗ים",
+      "updated_at": "2026-11-19T08:06:18.414Z"
+    },
+    {
+      "id": "s2301-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:06:29.486Z"
+    },
+    {
+      "id": "s7486-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "אֵֽש",
+      "updated_at": "2026-11-19T08:07:12.366Z"
+    },
+    {
+      "id": "s9483-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וּבְשֵֽם",
+      "updated_at": "2026-11-19T08:07:22.428Z"
+    },
+    {
+      "id": "s11745-dot_above",
+      "choice": "count:2",
+      "detail": "",
+      "note": "2 cholems and a revia",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:08:45.893Z"
+    },
+    {
+      "id": "s12238-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:08:53.240Z"
+    },
+    {
+      "id": "s20320-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:09:20.073Z"
+    },
+    {
+      "id": "s20795-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:09:36.468Z"
+    },
+    {
+      "id": "s22078-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:09:57.821Z"
+    },
+    {
+      "id": "s22106-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:10:05.448Z"
+    },
+    {
+      "id": "s23956-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "Reconstruction is finding a dot before the kuf that isn’t there.  1 cholam and one revia ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:11:22.878Z"
+    },
+    {
+      "id": "s23964-dot_above",
+      "choice": "count:2",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:11:33.316Z"
+    },
+    {
+      "id": "s34318-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Reverse mapach on top ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:12:07.540Z"
+    },
+    {
+      "id": "s36495-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "Ink smudge ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:12:40.949Z"
+    },
+    {
+      "id": "s48310-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:12:51.786Z"
+    },
+    {
+      "id": "s53411-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "בַּ֝שַּׁ֗חַק",
+      "updated_at": "2026-11-19T08:13:05.527Z"
+    },
+    {
+      "id": "s54130-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:13:13.273Z"
+    },
+    {
+      "id": "s63675-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:13:15.574Z"
+    },
+    {
+      "id": "s68453-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:13:18.679Z"
+    },
+    {
+      "id": "s73973-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:13:22.405Z"
+    },
+    {
+      "id": "s74299-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "וְ֝א֗וֹר",
+      "updated_at": "2026-11-19T08:13:32.758Z"
+    },
+    {
+      "id": "s78604-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "One revia where cholam should be ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:14:40.167Z"
+    },
+    {
+      "id": "s80311-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:14:43.667Z"
+    },
+    {
+      "id": "s81724-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:15:04.720Z"
+    },
+    {
+      "id": "s87092-dot_above",
+      "choice": "use_sefaria",
+      "detail": "",
+      "note": "",
+      "corrected_text": "כּ֥וֹכְבֵי",
+      "updated_at": "2026-11-19T08:15:18.279Z"
+    },
+    {
+      "id": "s53-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:16:19.213Z"
+    },
+    {
+      "id": "s147-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:16:25.859Z"
+    },
+    {
+      "id": "s198-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:16:31.528Z"
+    },
+    {
+      "id": "s204-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:16:43.759Z"
+    },
+    {
+      "id": "s477-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:17:02.531Z"
+    },
+    {
+      "id": "s488-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:17:12.850Z"
+    },
+    {
+      "id": "s3521-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:17:28.099Z"
+    },
+    {
+      "id": "s8761-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:17:35.688Z"
+    },
+    {
+      "id": "s11831-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:17:44.602Z"
+    },
+    {
+      "id": "s11848-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:17:48.303Z"
+    },
+    {
+      "id": "s14632-dot_above",
+      "choice": "unclear",
+      "detail": "",
+      "note": "Only cholam. No revia ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:18:56.975Z"
+    },
+    {
+      "id": "s18286-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:19:05.539Z"
+    },
+    {
+      "id": "s18293-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:19:14.678Z"
+    },
+    {
+      "id": "s18305-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:19:23.048Z"
+    },
+    {
+      "id": "s20316-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:19:35.395Z"
+    },
+    {
+      "id": "s20887-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:19:43.296Z"
+    },
+    {
+      "id": "s24059-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:20:05.831Z"
+    },
+    {
+      "id": "s29376-dot_above",
+      "choice": "use_kit",
+      "detail": "",
+      "note": "",
+      "corrected_text": "בָ֗֝לַע",
+      "updated_at": "2026-11-19T08:20:17.346Z"
+    },
+    {
+      "id": "s31508-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:20:28.827Z"
+    },
+    {
+      "id": "s33365-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:20:38.629Z"
+    },
+    {
+      "id": "s44031-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:21:08.845Z"
+    },
+    {
+      "id": "s49613-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:21:15.519Z"
+    },
+    {
+      "id": "s58873-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:21:20.156Z"
+    },
+    {
+      "id": "s65874-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:21:24.191Z"
+    },
+    {
+      "id": "s69144-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:21:28.566Z"
+    },
+    {
+      "id": "s71131-dot_above",
+      "choice": "other",
+      "detail": "",
+      "note": "Cholam only. No revia. ",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:22:06.800Z"
+    },
+    {
+      "id": "s77154-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:22:24.557Z"
+    },
+    {
+      "id": "s77241-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:22:33.728Z"
+    },
+    {
+      "id": "s77898-dot_above",
+      "choice": "count:0",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "new_edition_count_wrong": true,
+      "updated_at": "2026-11-19T08:22:36.948Z"
+    },
+    {
+      "id": "s79324-dot_above",
+      "choice": "count:1",
+      "detail": "",
+      "note": "",
+      "corrected_text": "",
+      "updated_at": "2026-11-19T08:22:48.087Z"
+    }
+  ]
+}
