@@ -1,28 +1,30 @@
 {
   "schema": "tehillim-correction-pattern-index.v1",
-  "updated_at": "2026-11-19T08:23:05.928Z",
+  "updated_at": "2026-11-19T08:56:13.227Z",
   "source_json": "data/tehillim_decisions_all_2026-11-19.json",
   "data_counts": {
     "items_in_source": 678,
-    "decision_count": 522,
-    "unique_text_sites": 459,
-    "new_decisions": 119,
-    "prior_decisions_preserved": 403,
-    "flagged_new_edition_count_wrong": 32,
-    "pattern_count": 23
+    "decision_count": 678,
+    "unique_text_sites": 582,
+    "new_decisions": 156,
+    "prior_decisions_preserved": 522,
+    "flagged_new_edition_count_wrong": 43,
+    "pattern_count": 27
   },
   "notes": [
     "Each pattern's evidence_ids are exact IDs in source_json. IDs can occur in more than one pattern.",
     "A count:0 is a selected count, not a proven common printing defect.",
-    "Original scan crops are not included; visual attribution requires checking the scanned print."
+    "Original scan crops are not included; visual attribution requires checking the scanned print.",
+    "The completed 678-question source manifest was compared by exact ID to every decision, with no missing or extra IDs.",
+    "Reconstruction layout/punctuation reports are user observations; original crops and live browser tests were not included in this export."
   ],
   "patterns": [
     {
       "id": "01",
       "title": "False metegs / over-detection",
-      "interpretation": "Meteg count:0 has grown sharply from 11 in the prior snapshot to 48 now. This makes it an important recurring recognition symptom. The count itself means the user found no meteg in those reviewed spots; the export cannot establish a single common physical chip, font, or detection mechanism for all 48.",
-      "review_rule": "Treat every apparent meteg as a distinct object candidate; compare to actual short strokes of nearby letterforms, vowels and accents. Link the original crop before training from count:0 labels.",
-      "evidence_count": 48,
+      "interpretation": "The completed 678-question export has 90 meteg records answered count:0 out of 137 meteg questions (48 zero counts in the prior 522-answer snapshot). This is the largest zero-sign cluster. These answers mean that the reviewer chose zero at those specific locations; they do NOT prove all 90 arose from one printing/chipping mechanism.",
+      "review_rule": "Investigate whether suggested meteg marks actually appear in the scan, separating missing marks, nearby munach, letter strokes, and source-transfer issues. Avoid claiming a common cause without original crops.",
+      "evidence_count": 90,
       "evidence_ids": [
         "s47948-meteg",
         "s60049-meteg",
@@ -71,15 +73,57 @@
         "s49432-meteg",
         "s79702-meteg",
         "s84917-meteg",
-        "s85044-meteg"
+        "s85044-meteg",
+        "s6813-meteg",
+        "s8042-meteg",
+        "s8929-meteg",
+        "s13765-meteg",
+        "s14259-meteg",
+        "s16468-meteg",
+        "s17746-meteg",
+        "s20323-meteg",
+        "s21956-meteg",
+        "s25346-meteg",
+        "s31433-meteg",
+        "s33778-meteg",
+        "s35208-meteg",
+        "s38505-meteg",
+        "s40047-meteg",
+        "s46395-meteg",
+        "s46522-meteg",
+        "s46727-meteg",
+        "s46745-meteg",
+        "s52392-meteg",
+        "s52682-meteg",
+        "s54988-meteg",
+        "s56885-meteg",
+        "s56954-meteg",
+        "s58377-meteg",
+        "s60449-meteg",
+        "s63877-meteg",
+        "s63992-meteg",
+        "s64430-meteg",
+        "s65183-meteg",
+        "s65305-meteg",
+        "s67085-meteg",
+        "s70736-meteg",
+        "s70996-meteg",
+        "s71128-meteg",
+        "s72809-meteg",
+        "s76460-meteg",
+        "s77524-meteg",
+        "s83790-meteg",
+        "s83876-meteg",
+        "s85188-meteg",
+        "s86056-meteg"
       ]
     },
     {
       "id": "02",
       "title": "Dots above: cholam vs revia vs another upper sign",
-      "interpretation": "Recorded observations distinguish cholam from revia, including cases where both marks are present and cases where one is specifically denied. Newly reviewed sites include s78604 (one revia where cholam should be), s14632 (unclear choice; note says cholam only), and s71131 (cholam only). Counts of upper marks require knowledge of which sign was being counted.",
+      "interpretation": "Explicit notes distinguish cholam from revia, sometimes identifying one of each. New examples include s39850 (one cholam and one revia, new-edition count flagged) and s70765 (one revia and one cholam); s41197 remains unclear about sin/shin dot positioning and should not be resolved automatically.",
       "review_rule": "Consult spelling and full cantillation context rather than dot shape alone.",
-      "evidence_count": 20,
+      "evidence_count": 23,
       "evidence_ids": [
         "s8659-dot_above",
         "s399-geresh_muqdam",
@@ -100,7 +144,10 @@
         "s23956-dot_above",
         "s78604-dot_above",
         "s14632-dot_above",
-        "s71131-dot_above"
+        "s71131-dot_above",
+        "s39850-revia",
+        "s41197-revia",
+        "s70765-revia"
       ]
     },
     {
@@ -167,7 +214,7 @@
       "title": "Munach misclassified or split into an extra dot",
       "interpretation": "Multiple explicit munach misclassifications and dot-splitting issues are recorded. The latest batch adds a direct merkha→munach reclassification (s51337) and two paired cases where munach count:1 corresponds to meteg count:0 (s62282 and s63163). These are strong paired diagnostic examples.",
       "review_rule": "Identify the full munach stroke in context; distinguish its parts from isolated dots.",
-      "evidence_count": 20,
+      "evidence_count": 21,
       "evidence_ids": [
         "s17741-munah",
         "s8547-dot_below",
@@ -188,15 +235,16 @@
         "s63163-meteg",
         "s8868-munah",
         "s75604-munah",
-        "s75604-meteg"
+        "s75604-meteg",
+        "s63163-dot_below"
       ]
     },
     {
       "id": "06",
       "title": "Vertical displacement / overlap of niqqud and taamim",
-      "interpretation": "Reported signs are sometimes positioned beside or above another vowel, and some are partly damaged. The new s75604 note places a meteg after qamats; s83224 is still unclear, describing a possibly half-erased tipcha below mem. Neither alone proves an OCR positioning bug.",
+      "interpretation": "The user reports reconstruction placement problems, including the spacing of letters and adjacent marks. New records explicitly say letter placement is messed up (s32113), punctuation/colon is messed up (s17746), and nikud needs visual inspection (s35730). These are rendering issues reported by the reviewer, not conclusively isolated code defects.",
       "review_rule": "Preserve relative position of mark and letter; compare decoded text with rendering.",
-      "evidence_count": 9,
+      "evidence_count": 12,
       "evidence_ids": [
         "s1821-patah",
         "s10575-meteg",
@@ -206,7 +254,10 @@
         "s76379-patah",
         "s86193-patah",
         "s75604-meteg",
-        "s83224-dot_below"
+        "s83224-dot_below",
+        "s32113-dot_inside",
+        "s17746-meteg",
+        "s35730-meteg"
       ]
     },
     {
@@ -214,7 +265,7 @@
       "title": "Ink artifacts AND letter-stroke lookalikes (ל, ע, א) falsely treated as signs",
       "interpretation": "User notes explicitly mark ink blots or letter fragments as false punctuation, including the top of ל, a smudged part of א, and strokes of ע. New examples: s36495 is called an ink smudge; s23956 reports an invented dot before ק. The original scan crops are still needed to establish precise physical causes.",
       "review_rule": "Use letter-shape-aware rejection for marks that can belong to the glyph; keep ink blob versus font/reconstruction stroke as separate subtypes.",
-      "evidence_count": 8,
+      "evidence_count": 9,
       "evidence_ids": [
         "s839-dot_below",
         "s10138-revia",
@@ -223,7 +274,8 @@
         "s42196-dot_above",
         "s87418-patah",
         "s23956-dot_above",
-        "s36495-dot_above"
+        "s36495-dot_above",
+        "s10138-dot_below"
       ]
     },
     {
@@ -231,7 +283,7 @@
       "title": "Missing, merged or doubled dots",
       "interpretation": "Examples include a missing point in sheva, apparent triple sheva, and shin-dot plus cholam.",
       "review_rule": "Distinguish a physical dot count from the number of linguistic signs; confirm whether print is damaged.",
-      "evidence_count": 18,
+      "evidence_count": 21,
       "evidence_ids": [
         "s8252-qamats",
         "s8719-dot_above",
@@ -250,7 +302,10 @@
         "s42181-dot_above",
         "s83224-dot_below",
         "s23956-dot_above",
-        "s11745-dot_above"
+        "s11745-dot_above",
+        "s17205-dot_below",
+        "s31634-dot_below",
+        "s41197-revia"
       ]
     },
     {
@@ -258,7 +313,7 @@
       "title": "Multiple adjacent marks treated as one unusual symbol",
       "interpretation": "Complex above/below sequences can resemble one rare accent; shalshelet instance is explained by other signs.",
       "review_rule": "Parse a cluster as separate signs before assigning a single rare taam.",
-      "evidence_count": 19,
+      "evidence_count": 21,
       "evidence_ids": [
         "s399-geresh_muqdam",
         "s8932-iluy",
@@ -278,15 +333,17 @@
         "s86193-patah",
         "s75604-meteg",
         "s11745-dot_above",
-        "s23956-dot_above"
+        "s23956-dot_above",
+        "s17205-dot_below",
+        "s31634-dot_below"
       ]
     },
     {
       "id": "10",
       "title": "Reconstruction image/text rendering inconsistency",
-      "interpretation": "The user has reported reconstruction text/image disagreement (s21956), source comparison mismatches (s76367 and s82021), and now a suspected failure to cross-check borrowed source niqqud against the print (s68656). These are distinct diagnoses; a shared software mechanism has not been verified.",
+      "interpretation": "Separately documented problems include disagreement between displayed Kit text and image, suspect comparison-source claims, source-to-scan validation concerns, and new reports that the reconstruction's letter positions, punctuation and nikud are visually wrong. These symptoms should remain distinct when debugging.",
       "review_rule": "Validate candidate text, glyph rendering and scan image independently; treat this as possibly a presentation bug.",
-      "evidence_count": 7,
+      "evidence_count": 10,
       "evidence_ids": [
         "s21956-qadma",
         "s1821-patah",
@@ -294,15 +351,18 @@
         "s26124-dot_below",
         "s82021-mahapakh",
         "s68656-patah",
-        "s23956-dot_above"
+        "s23956-dot_above",
+        "s32113-dot_inside",
+        "s17746-meteg",
+        "s35730-meteg"
       ]
     },
     {
       "id": "11",
       "title": "Older/newer edition differences",
-      "interpretation": "Comparisons of the original print, reconstruction and newer edition can differ in either direction. The latest export includes 32 explicit new_edition_count_wrong=true flags, recorded by the reviewer; these are user-confirmed disagreements with an automated new-edition mark count, not necessarily 32 genuine differences between editions. Preserve the flag independently from the decision.",
+      "interpretation": "The finished export has 43 explicit new_edition_count_wrong=true records, versus 32 previously. The flag signifies a reviewer-identified count discrepancy in the newer edition as represented by the application, not a proven difference between the physical editions.",
       "review_rule": "Keep each witness and edition separate rather than normalizing old printing to newer text.",
-      "evidence_count": 50,
+      "evidence_count": 61,
       "evidence_ids": [
         "s8252-qamats",
         "s8719-dot_above",
@@ -353,7 +413,18 @@
         "s69144-dot_above",
         "s77154-dot_above",
         "s77241-dot_above",
-        "s77898-dot_above"
+        "s77898-dot_above",
+        "s4866-revia",
+        "s25017-revia",
+        "s32447-revia",
+        "s33681-revia",
+        "s39462-revia",
+        "s39850-revia",
+        "s43406-revia",
+        "s37814-merkha",
+        "s74134-dot_inside",
+        "s82332-meteg",
+        "s67632-dot_below"
       ]
     },
     {
@@ -374,9 +445,9 @@
     {
       "id": "13",
       "title": "Unusual accent signs: tevir, reversed mahapakh, shalshelet lookalike",
-      "interpretation": "The export includes specific observations of tevir and reversed mahapakh, and now several confirmations of mahapakh, including s82021 with an explicit warning about reading the new edition incorrectly. A confirmed sign occurrence is not automatically an error pattern.",
+      "interpretation": "Recorded unusual signs include tevir, reversed mahapakh, and signs initially resembling rare accents. New note s9470 explicitly says 'Backwards mapach'. A correct rare sign occurrence does not in itself establish an extraction error.",
       "review_rule": "Flag for human inspection and seek more examples before learning a general repair rule.",
-      "evidence_count": 8,
+      "evidence_count": 9,
       "evidence_ids": [
         "s4248-munah",
         "s25303-mahapakh",
@@ -385,15 +456,16 @@
         "s82021-mahapakh",
         "s46781-mahapakh",
         "s68446-mahapakh",
-        "s34318-dot_above"
+        "s34318-dot_above",
+        "s9470-mahapakh"
       ]
     },
     {
       "id": "14",
       "title": "Zero inner-dot count: spurious dagesh / mappiq / internal-dot candidates",
-      "interpretation": "Ten dot_inside questions in the cumulative export have count:0. They are all new in this batch and establish repeated absence of an inner dot at flagged locations. The export lacks images and specific notes on these ten cases, so the physical mechanism (glyph hole, noise, or parser) is unknown; do not assume all were dagesh.",
+      "interpretation": "There are 21 dot_inside count:0 responses in the completed export, up from ten. These should be checked as possible false interior-dot candidates. The choice alone does not explain whether the cause is damage, a letter stroke, or a text-source discrepancy.",
       "review_rule": "Add an inner-dot false-positive check, verifying the dot is actually inked within the correct letter. Prefer human review until original crops are attached.",
-      "evidence_count": 10,
+      "evidence_count": 21,
       "evidence_ids": [
         "s33365-dot_inside",
         "s37870-dot_inside",
@@ -404,13 +476,24 @@
         "s80973-dot_inside",
         "s81777-dot_inside",
         "s86751-dot_inside",
-        "s86857-dot_inside"
+        "s86857-dot_inside",
+        "s250-dot_inside",
+        "s19178-dot_inside",
+        "s21568-dot_inside",
+        "s28927-dot_inside",
+        "s32019-dot_inside",
+        "s34976-dot_inside",
+        "s38238-dot_inside",
+        "s45789-dot_inside",
+        "s47601-dot_inside",
+        "s76291-dot_inside",
+        "s87816-dot_inside"
       ]
     },
     {
       "id": "15",
       "title": "Zero above-dot count / no dot in newer edition",
-      "interpretation": "Thirty-two above-dot review decisions are marked count:0, compared with ten in the prior snapshot. Some notes cite comparison with a newer edition; others lack an explanation. An unclear note s14632 says cholam only, no revia. Count:0 is not proof of a common physical defect.",
+      "interpretation": "There are 32 dot_above count:0 responses. Some other notes distinguish no dot at all versus a real cholam/revia that had been misclassified. Keep those apart; a zero count is specific to the asked sign or mark.",
       "review_rule": "Flag above-dot false positives separately from cholam/revia substitution; retain an explicit uncertain class when the original crop is ambiguous.",
       "evidence_count": 36,
       "evidence_ids": [
@@ -455,7 +538,7 @@
     {
       "id": "16",
       "title": "Zero patach count with competing qamats / sheva / ayin-stroke explanations",
-      "interpretation": "Twenty-eight patah questions have count:0 (formerly 17). Several describe qamats, sheva vs hataf-patah, or letter-stroke alternatives, while s68656 raises the possibility of a general source-cross-check flaw. Missing patach in a specific reviewed question is not evidence of any single universal mechanism.",
+      "interpretation": "There are 28 patah count:0 responses. Earlier notes explicitly describe qamats-vs-patah, sheva-vs-hataf-patah, and mistaken letter strokes. Preserve the exact local reason when given and leave unspecified causes unknown.",
       "review_rule": "Separate patach false positives into (a) ayin/letter artifact, (b) qamats stroke, (c) sheva vs hataf-patah, and (d) unknown. Use paired qamats decisions when available.",
       "evidence_count": 37,
       "evidence_ids": [
@@ -526,7 +609,7 @@
     {
       "id": "19",
       "title": "Munach absent, or confused with merkha and meteg",
-      "interpretation": "Eight reviewed munah candidates now have count:0, and there are explicit munach/merkha substitutions (s51337) and same-site munach/meteg comparisons (s62282, s63163, s8868). A new s75604-munah count:1 also pairs with a separate meteg note, but should not be treated as an error without inspecting the scan.",
+      "interpretation": "Eight munah questions have count:0; multiple sites contain paired munah versus meteg/merkha decisions. Where a site carries two questions, the two decisions should be interpreted jointly.",
       "review_rule": "Validate the full shape and position of munach vs merkha and meteg. Where multiple questions share the same site ID, use them as joint ground truth rather than independent decisions.",
       "evidence_count": 18,
       "evidence_ids": [
@@ -566,11 +649,12 @@
     {
       "id": "21",
       "title": "Unresolved damaged or partly erased lower accent",
-      "interpretation": "The decision at s83224-dot_below is explicitly marked unclear. The note describes something beneath mem after patach, possibly a half-erased tipcha, and calls for examination of additional editions. This is a single uncertain case, NOT a proven recurring defect.",
+      "interpretation": "Unresolved marks continue to require inspection against other editions: s83224 suggests a possibly half-erased tipcha; s41197 is unclear and notes a sign that resembles both sin and shin dot placement. Neither is safe for automatic normalization.",
       "review_rule": "Carry this site as uncertain; do not force an accent or zero mark. Review the original crop and independent editions before adding it to training labels.",
-      "evidence_count": 1,
+      "evidence_count": 2,
       "evidence_ids": [
-        "s83224-dot_below"
+        "s83224-dot_below",
+        "s41197-revia"
       ]
     },
     {
@@ -590,9 +674,9 @@
     {
       "id": "23",
       "title": "Recorded new-edition count errors (explicit reviewer flag)",
-      "interpretation": "The November 19 backup introduces a new_edition_count_wrong boolean field; 32 records carry true. Breakdown: 24 dot_above, four dehi, two qamats and two munah. This flag is separate from the choice, note and corrected_text and must be preserved by import/export/report processing. The field conveys that the NEW EDITION COUNT is believed wrong, not that the answer is invalid.",
+      "interpretation": "43 decisions carry new_edition_count_wrong=true, comprising multiple sign types. These reviewer flags must be preserved independently of the chosen sign count and interpreted as disagreement with the program's NEW-EDITION count, not automatically as an old-versus-new-edition textual variant.",
       "review_rule": "Use new_edition_count_wrong as a first-class review flag; link each to the new-edition image and annotated mark count, and avoid changing the printed-source decision when correcting a comparison count.",
-      "evidence_count": 32,
+      "evidence_count": 43,
       "evidence_ids": [
         "s408-qamats",
         "s21975-qamats",
@@ -625,8 +709,82 @@
         "s69144-dot_above",
         "s77154-dot_above",
         "s77241-dot_above",
-        "s77898-dot_above"
+        "s77898-dot_above",
+        "s4866-revia",
+        "s25017-revia",
+        "s32447-revia",
+        "s33681-revia",
+        "s39462-revia",
+        "s39850-revia",
+        "s43406-revia",
+        "s37814-merkha",
+        "s74134-dot_inside",
+        "s82332-meteg",
+        "s67632-dot_below"
       ]
+    },
+    {
+      "id": "24",
+      "title": "False revia candidate / upper-mark ambiguity",
+      "interpretation": "Six revia decisions are count:0. Other new notes distinguish cholam and revia together (s39850 and s70765) while s41197 is marked unclear concerning a sin/shin-like dot. The zero counts are specific answers, and do not by themselves prove that cholam caused every false revia.",
+      "review_rule": "Classify dot, cholam, shin/sin dot and revia as separate symbol classes; where a location has multiple signs, record their co-occurrence. Keep unclear locations unresolved.",
+      "evidence_ids": [
+        "s4866-revia",
+        "s21198-revia",
+        "s25017-revia",
+        "s32447-revia",
+        "s33681-revia",
+        "s43406-revia",
+        "s39850-revia",
+        "s70765-revia",
+        "s41197-revia"
+      ],
+      "evidence_count": 9
+    },
+    {
+      "id": "25",
+      "title": "Reconstruction glyph placement, punctuation and nikud problems",
+      "interpretation": "Three new human notes describe independent reproduction problems: s32113-dot_inside reports letter placement disrupted; s17746-meteg reports a malformed colon; s35730-meteg reports the reproduced niqqud needs examination. Related earlier notes report missing/misplaced shva or overlapping vowel/accent rendering.",
+      "review_rule": "Compare raw encoded text, rendered HTML/glyphs and original scan separately. Distinguish extraction/OCR errors from font layout, bidi shaping and punctuation placement. Preserve as unresolved engineering checks until reproduced.",
+      "evidence_ids": [
+        "s32113-dot_inside",
+        "s17746-meteg",
+        "s35730-meteg",
+        "s10575-meteg",
+        "s1821-patah",
+        "s26124-dot_below",
+        "s21956-qadma"
+      ],
+      "evidence_count": 7
+    },
+    {
+      "id": "26",
+      "title": "Grouped lower dots: sheva and segol counted as glyphs, not independent dots",
+      "interpretation": "s17205-dot_below explicitly describes two dots as one sheva, while s31634-dot_below describes nine dots as three segols. Earlier examples describe missing sheva dots or extra reconstructed dots. The distinction is between counting individual ink dots and counting vowel symbols.",
+      "review_rule": "Store separate tallies for visible dot components and encoded vowel groups (e.g. two physical dots = one sheva, three dots = one segol); do not infer vowel count from raw dot count alone.",
+      "evidence_ids": [
+        "s17205-dot_below",
+        "s31634-dot_below",
+        "s22069-dot_below",
+        "s13418-dot_below",
+        "s8252-qamats"
+      ],
+      "evidence_count": 5
+    },
+    {
+      "id": "27",
+      "title": "Absent below-dot candidates / zero lower-mark answers",
+      "interpretation": "Six dot_below decisions are count:0. They should be investigated separately from questions that ask for many individual lower dots or from decisions describing a specific qamats, sheva, patah or accent. The export alone does not establish an underlying cause.",
+      "review_rule": "Use the question's mark type and the scan crop; compare the zero lower-dot count with nearby qamats/patah/sheva/segol decisions for the same text location.",
+      "evidence_ids": [
+        "s39670-dot_below",
+        "s48522-dot_below",
+        "s67632-dot_below",
+        "s19611-dot_below",
+        "s48922-dot_below",
+        "s70765-dot_below"
+      ],
+      "evidence_count": 6
     }
   ]
 }
