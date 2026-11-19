@@ -45,7 +45,7 @@ dialog .dcontent{text-align:left;max-height:69dvh}
  .review{padding:9px}
  .topline .subtitle{display:none}
 }
-</style><link rel="stylesheet" href="phone.css?v=5"></head>
+</style><link rel="stylesheet" href="phone.css?v=6"></head>
 <body class="slide-mode">
 <header class="topline"><div><h1>תהלים · Sign Review</h1><div class="subtitle">678 questions · all scans included</div></div>
 <div class="tools"><button id="modeBtn" type="button" aria-pressed="true">Slide mode</button><button id="autoBtn" type="button" aria-pressed="true">Auto-next: ON</button><button id="undoBtn" type="button" title="Undo the last answer (U)">↶ Undo</button><button id="exportBtn" type="button" title="Download ALL saved decisions across batches">Backup answers</button><input type="file" id="importFile" accept="application/json,.json" style="display:none"><button type="button" id="importBtn" title="Import decisions from another session">Restore backup</button><input type="file" id="batchFile" accept="application/json,.json" style="display:none"><button type="button" id="batchBtn" title="Open another review JSON for this session (answers remain saved)">Open another batch</button></div></header>
@@ -53,6 +53,17 @@ dialog .dcontent{text-align:left;max-height:69dvh}
 <div class="filters" id="reviewFilters"><label>Show<select id="statusFilter"><option value="all">All items</option><option value="open" selected>Unanswered</option><option value="answered">Answered</option></select></label><label>Verdict<select id="verdictFilter"><option value="all">B and C</option><option value="B">B only</option><option value="C">C only</option></select></label><label>Sign group<select id="groupFilter"><option value="all">All groups</option></select></label><label>Issue<select id="issueFilter"><option value="all">All issues</option></select></label><label>Search<input id="search" placeholder="Reference, sign, ID…"></label><span class="small">Keys: 1–9 answer · ← → navigate · U undo · A auto-next</span></div>
 <main><section id="slideView" aria-label="Single review item"></section><section id="listView" class="listView" hidden aria-label="All review items"></section></main>
 <div class="toolbar feedback"><span id="statusMsg" role="status"></span></div></div>
+<dialog id="issueDialog" aria-labelledby="issueDialogTitle">
+  <header><b id="issueDialogTitle">Issue complete</b><button type="button" id="issueDialogClose">Close</button></header>
+  <div class="dcontent">
+    <p id="issueDialogHint"></p>
+    <form id="issueDialogForm">
+      <label for="issuePicker">Next issue</label>
+      <select id="issuePicker"></select>
+      <button type="submit" class="primary">Start issue</button>
+    </form>
+  </div>
+</dialog>
 <dialog id="imgModal"><header><b id="modalTitle">Scan</b><button type="button" id="modalClose">Close ✕</button></header><div class="modalcontrols"><button type="button" id="modalMinus">−</button><span id="modalZoomLabel">100%</span><button type="button" id="modalPlus">+</button></div><div class="dcontent" id="modalBody"><img id="modalImage" alt="Enlarged scan"></div></dialog>
 <script type="application/json" id="seedAnswers">[]</script>
-<script src="review.js?v=5" defer></script></body></html>
+<script src="review.js?v=6" defer></script></body></html>

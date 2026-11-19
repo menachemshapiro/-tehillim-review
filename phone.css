@@ -155,3 +155,9 @@
   .slide-mode .counts #newEditionFlag{font-size:10px;min-height:0;padding:1px}
   .slide-mode .counts #newEditionFlag small{font-size:9px}
 }
+
+#issueDialog{width:min(100% - 24px,420px)}
+#issueDialogHint{margin:0 0 12px}
+#issueDialogForm{display:grid;gap:8px}
+#issueDialogForm select{min-height:44px;width:100%;font-size:16px}
+.empty button{margin-top:10px}

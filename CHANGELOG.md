@@ -4,6 +4,13 @@ Dates are in Israel local time. Commit links point to the corresponding GitHub c
 
 ## November 19, 2026
 
+### Continue after finishing an issue
+
+- Kept **Unanswered** selected after the last answer in an issue.
+- Added an **Issue complete** picker for issues that still have unanswered items. Starting a new issue clears any separate search, sign-group, and verdict filters so the full pending list for that issue is available.
+- Added live unanswered counts to the issue menu. The counts are for the whole loaded batch.
+- In Unanswered mode, **Other / note** now keeps the card open until **Save answer** is tapped.
+
 ### Expanded review batch and issue-level review
 [Commit `7cc740d9`](../../commit/7cc740d95f317d0d570713208c8a580a08810c55)
 

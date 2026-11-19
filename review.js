@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
 const $=id=>document.getElementById(id);
-const state={items:[],decisions:{},selected:null,filtered:[],mode:'slide',auto:true,zoom:1,sub:false,family:'accent',busy:false,noteTimer:null,changed:false,modalZoom:1};
+const state={items:[],decisions:{},selected:null,filtered:[],mode:'slide',auto:true,zoom:1,sub:false,family:'accent',busy:false,noteTimer:null,changed:false,modalZoom:1,otherDraft:null};
 const SUB={
  vowel:[['sheva','ְ','שווא'],['hiriq','ִ','חיריק'],['tsere','ֵ','צירי'],['segol','ֶ','סגול'],['patah','ַ','פתח'],['qamats','ָ','קמץ'],['holam','ֹ','חולם'],['kubuts','ֻ','קובוץ'],['hataf-segol','ֱ','חטף סגול'],['hataf-patah','ֲ','חטף פתח'],['hataf-qamats','ֳ','חטף קמץ'],['dagesh','ּ','דגש'],['shin-dot','ׁ','נקודת שין'],['sin-dot','ׂ','נקודת שמאל']],
  accent:[['meteg','ֽ','מתג'],['merkha','֥','מרכא'],['munah','֣','מונח'],['tipha','֖','טפחא'],['etnahta','֑','אתנחתא'],['dehi','֭','דחי'],['revia','֗','רביע'],['mahapakh','֤','מהפך'],['ole','֫','עולה'],['iluy','֬','עילוי'],['geresh-muqdam','֝','גרש מוקדם'],['qadma','֨','קדמא'],['zinor','֮','צינור'],['tsinnorit','֘','צינורית'],['pazer','֡','פזר'],['shalshelet','֓','שלשלת'],['galgal','֪','ירח בן יומו'],['geresh','֜','גרש']],
@@ -180,19 +180,77 @@ async function exportDecisions(){
 }
 
 const signLabels={munah:'Munach',patah:'Patach',qamats:'Kamatz',meteg:'Meteg (Meseg)'};
+let issueLabels=new Map();
 function populateFilters(items){
   const groups=[...new Set(items.map(item=>item.group))].sort();
-  const signs=new Map(items.filter(item=>item.kind).map(item=>[item.kind,item.he]));
   $('groupFilter').replaceChildren(new Option('All groups','all'),
     ...groups.map(group=>new Option(group,group)));
+  const signs=new Map(items.filter(item=>item.kind).map(item=>[item.kind,item.he]));
+  issueLabels=new Map([...signs].sort(([a],[b])=>a.localeCompare(b)).map(([kind,he])=>{
+    const label=signLabels[kind]??kind[0].toUpperCase()+kind.slice(1);
+    return [kind,he?label+' · '+he:label];
+  }));
   $('issueFilter').replaceChildren(new Option('All issues','all'),
-    ...[...signs].sort(([a],[b])=>a.localeCompare(b)).map(([kind,he])=>{
-      const label=signLabels[kind]??kind[0].toUpperCase()+kind.slice(1);
-      return new Option(he?label+' · '+he:label,kind);
-    }));
+    ...[...issueLabels].map(([kind,label])=>new Option(label,kind)));
+}
+function remainingByIssue(){
+  const counts=new Map();
+  let total=0;
+  for(const item of state.items){
+    if(isAnswered(item.id))continue;
+    counts.set(item.kind,(counts.get(item.kind)??0)+1);
+    total++;
+  }
+  return {counts,total};
+}
+function updateIssueCounts(){
+  const {counts,total}=remainingByIssue();
+  for(const option of $('issueFilter').options){
+    option.textContent=option.value==='all'
+      ? 'All issues ('+total+')'
+      : issueLabels.get(option.value)+' ('+(counts.get(option.value)??0)+')';
+  }
+}
+function openNextIssue(){
+  const {counts,total}=remainingByIssue();
+  const current=$('issueFilter').value;
+  const picker=$('issuePicker');
+  $('issueDialogTitle').textContent=!total?'Review complete':counts.get(current)
+    ?'No unanswered items match these filters':'Issue complete';
+  $('issueDialogHint').textContent=total
+    ?'Choose an issue to continue with unanswered items.':'All items in this batch are answered.';
+  const options=[...issueLabels].filter(([kind])=>counts.has(kind))
+    .map(([kind,label])=>new Option(label+' ('+counts.get(kind)+')',kind));
+  picker.replaceChildren(...options,new Option('All issues ('+total+')','all'));
+  $('issueDialogForm').hidden=!total;
+  $('issueDialog').showModal();
+}
+$('issueDialogClose').addEventListener('click',()=>$('issueDialog').close());
+$('issueDialogForm').addEventListener('submit',event=>{
+  event.preventDefault();
+  $('issueFilter').value=$('issuePicker').value;
+  $('statusFilter').value='open';
+  $('search').value='';
+  $('groupFilter').value='all';
+  $('verdictFilter').value='all';
+  $('issueDialog').close();
+  state.selected=null;
+  state.sub=false;
+  render();
+  showCardTop();
+});
+function renderEmpty(container){
+  container.innerHTML='<div class="empty">No items match these filters.</div>';
+  if($('statusFilter').value==='open'&&$('issueFilter').value!=='all'){
+    const button=document.createElement('button');
+    button.type='button';
+    button.textContent='Choose another issue';
+    button.addEventListener('click',openNextIssue);
+    container.firstElementChild.append(document.createElement('br'),button);
+  }
 }
 function filters(){const s=$('search').value.trim().toLocaleLowerCase();state.filtered=state.items.filter(x=>{if($('statusFilter').value==='open'&&isAnswered(x.id))return false;if($('statusFilter').value==='answered'&&!isAnswered(x.id))return false;if($('verdictFilter').value!=='all'&&x.verdict!==$('verdictFilter').value)return false;if($('groupFilter').value!=='all'&&x.group!==$('groupFilter').value)return false;if($('issueFilter').value!=='all'&&x.kind!==$('issueFilter').value)return false;return !s||[x.id,x.heref,x.he,x.kind,x.group,String(x.ps),String(x.v)].some(v=>String(v||'').toLocaleLowerCase().includes(s))});if(!state.filtered.some(x=>x.id===state.selected))state.selected=state.filtered[0]?.id||null}
-function progress(){const n=state.items.filter(x=>isAnswered(x.id)).length;$('counter').textContent=n+' / '+state.items.length+' answered';$('meterFill').style.width=(state.items.length?(100*n/state.items.length):0)+'%';const i=state.filtered.findIndex(x=>x.id===state.selected);$('position').textContent=state.filtered.length?`${i+1} / ${state.filtered.length}`:'0 / 0';$('prev').disabled=i<=0;$('next').disabled=i<0||i>=state.filtered.length-1}
+function progress(){updateIssueCounts();const n=state.items.filter(x=>isAnswered(x.id)).length;$('counter').textContent=n+' / '+state.items.length+' answered';$('meterFill').style.width=(state.items.length?(100*n/state.items.length):0)+'%';const i=state.filtered.findIndex(x=>x.id===state.selected);$('position').textContent=state.filtered.length?`${i+1} / ${state.filtered.length}`:'0 / 0';$('prev').disabled=i<=0;$('next').disabled=i<0||i>=state.filtered.length-1}
 function options(it){const sources=[['P','old print (kit)'],['T','Sefaria'],['N','new edition']];const map=new Map();for(const [key,label] of sources){const n=String(it[key]??'');if(!map.has(n))map.set(n,[]);map.get(n).push(label)}const result=Array.from(map.entries()).sort((a,b)=>Number(a[0])-Number(b[0])).map(([n,labels])=>({key:'count:'+n,sources:labels.map(label=>label==='old print (kit)'?'Kit':label).join(' + '),label:`The old print has ${countWord(n)} ${it.he||it.kind||'sign'}${Number(n)>1?' marks':''}`,sub:`As ${labels.join(' & ')} indicate${labels.length>1?'':'s'}`}));result.push({key:'other_sign',label:'It is a different sign',sub:'Choose the vowel or accent you see in the original scan'});result.push({key:'other',label:'Something else',sub:'Explain in a note'});result.push({key:'unclear',label:'Cannot tell from this scan',sub:'Requires closer examination of the book'});return result}
 const landscapePhone=matchMedia('(max-width: 920px) and (pointer: coarse) and (orientation: landscape)');
 function placeComparison(){
@@ -213,7 +271,7 @@ function transcriptionOptions(item,selected){
     </div>`;
   }).join('')}</div>`;
 }
-function renderSlide(){const box=$('slideView');if(!state.selected){box.innerHTML='<div class="empty">No items match these filters. Change a filter to see more.</div>';progress();return}const it=cur();if(!it){box.innerHTML='<div class="empty">Select an item.</div>';return}const d=decision(it.id);const opts=options(it);
+function renderSlide(){const box=$('slideView');if(!state.selected){renderEmpty(box);progress();return}const it=cur();if(!it){box.innerHTML='<div class="empty">Select an item.</div>';return}const d=decision(it.id);const opts=options(it);
 box.innerHTML=`<article class="review" data-id="${safe(it.id)}"><div class="reviewHead"><span class="ref">Psalm ${it.ps}:${it.v}</span><span class="hebref" lang="he" dir="rtl">${safe(it.heref)}</span><span class="badge ${it.verdict==='C'?'c':''}">Verdict ${safe(it.verdict)}</span>${isAnswered(it.id)?'<span class="badge done">Answered</span>':''}<span class="page">Page ${it.page} · ${safe(it.id)}</span></div>
 <div class="slidegrid"><div class="visuals">${gallery(it)}<div id="comparisonLandscape"></div></div><div class="inspector"><div class="signline"><b>${safe(it.he||it.kind)}</b><span class="signhe" dir="rtl">${safe(it.kind)}</span></div><div id="comparisonDefault"><div id="comparison">${transcriptionOptions(it,d.choice)}</div></div><div class="counts"><div>Sefaria<b>${safe(it.T)}</b></div><div>Old print (kit)<b>${safe(it.P)}</b></div><button type="button" id="newEditionFlag" aria-pressed="${Boolean(d.new_edition_count_wrong)}" aria-label="Flag incorrect new-edition count, reported as ${safe(it.N)}" title="Flag an incorrect count for the new edition">New edition<span><b>${safe(it.N)}</b> <small>${d.new_edition_count_wrong?'Flagged':'Flag count'}</small></span></button></div><div class="pattern">${safe(it.pattern)}</div><div class="question">What does the original print actually show?</div><div class="choices" role="group" aria-label="Choose what the old print shows">${opts.map((o,i)=>`<button type="button" class="answer" data-choice="${safe(o.key)}" aria-pressed="${chosen(it,o)}"><span class="digit">${i+1}</span><span><b class="full-choice">${safe(o.label)}</b><b class="compact-choice">${safe(o.key.startsWith('count:') ? o.key.slice(6)+(o.key==='count:1'?' mark':' marks') : ({other_sign:'Different sign',other:'Other / note',unclear:'Unclear'}[o.key]))}</b>${o.sources?`<span class="source-hint">${safe(o.sources)}</span>`:''}<span class="hint">${safe(o.sub)}</span></span></button>`).join('')}</div><div id="subpick" class="subpicker" ${!state.sub&&!d.detail?'hidden':''}></div>
 <details class="note-panel"><summary>Note</summary><div class="notehead"><label for="note">Note (optional, saved locally)</label><span id="noteStatus" class="small"></span></div><textarea class="notes" id="note" placeholder="For example: appears to be a munah, not a merkha."></textarea>
@@ -230,7 +288,7 @@ for(const tile of box.querySelectorAll('[data-transcription]')){
   });
 }
 $('note').value=d.note||'';$('note').addEventListener('input',()=>{state.changed=true;saved('Unsaved note');$('noteStatus').textContent='Editing…';clearTimeout(state.noteTimer);state.noteTimer=setTimeout(()=>saveNote(),700)});
-$('note').addEventListener('blur',()=>{if(state.changed)saveNote()});$('saveNote').addEventListener('click',()=>saveNote());
+$('note').addEventListener('blur',()=>{if(state.changed)saveNote()});$('saveNote').addEventListener('click',()=>state.otherDraft===it.id?choose('other','',true):saveNote());
 for(const el of box.querySelectorAll('[data-choice]'))el.addEventListener('click',()=>choose(el.dataset.choice));
 for(const el of box.querySelectorAll('[data-zoom-image]')){const fn=()=>{if(it[el.dataset.zoomImage])openImage(it,el.dataset.zoomImage)};el.addEventListener('click',fn);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();fn()}})}
 $('zminus').addEventListener('click',()=>zoomBy(-.25));$('zplus').addEventListener('click',()=>zoomBy(.25));$('zreset').addEventListener('click',()=>zoomBy(1-state.zoom));
@@ -239,8 +297,8 @@ function renderSubpicker(){const node=$('subpick');if(!node)return;node.hidden=f
 for(const btn of node.querySelectorAll('[data-family]'))btn.addEventListener('click',()=>{state.family=btn.dataset.family;renderSubpicker()});
 for(const btn of node.querySelectorAll('[data-sign]'))btn.addEventListener('click',()=>choose('other_sign',btn.dataset.sign));
 $('subCancel').addEventListener('click',()=>{state.sub=false;node.hidden=true})}
-function renderList(){const el=$('listView');el.innerHTML='';if(!state.filtered.length){el.innerHTML='<div class="empty">No items match the current filters.</div>';return}const fragment=document.createDocumentFragment();for(const it of state.filtered){const b=document.createElement('button');b.type='button';b.className='listItem';b.setAttribute('aria-current',String(it.id===state.selected));b.innerHTML=`<span class="top"><span class="ref">${safe(it.heref)}</span><span class="badge ${isAnswered(it.id)?'done':''}">${isAnswered(it.id)?'Answered':'Unanswered'}</span></span><span class="word" lang="he">${safe(it.sef)}</span><span class="meta">${safe(it.he||it.kind)} · ${safe(it.verdict)} · page ${safe(it.page)}</span>`;b.addEventListener('click',async()=>{await saveNote();if(state.changed||state.busy)return;state.selected=it.id;state.mode='slide';state.sub=false;render();showCardTop()});fragment.appendChild(b)}el.appendChild(fragment)}
-function render(){filters();document.body.classList.toggle('slide-mode',state.mode==='slide');$('modeBtn').textContent=state.mode==='slide'?'Slide mode':'List mode';$('modeBtn').setAttribute('aria-pressed',state.mode==='slide'?'true':'false');$('autoBtn').textContent='Auto-next: '+(state.auto?'ON':'OFF');$('autoBtn').setAttribute('aria-pressed',String(state.auto));$('slideView').hidden=state.mode!=='slide';$('listView').hidden=state.mode==='slide';if(state.mode==='slide')renderSlide();else{renderList();progress()}}
+function renderList(){const el=$('listView');el.innerHTML='';if(!state.filtered.length){renderEmpty(el);return}const fragment=document.createDocumentFragment();for(const it of state.filtered){const b=document.createElement('button');b.type='button';b.className='listItem';b.setAttribute('aria-current',String(it.id===state.selected));b.innerHTML=`<span class="top"><span class="ref">${safe(it.heref)}</span><span class="badge ${isAnswered(it.id)?'done':''}">${isAnswered(it.id)?'Answered':'Unanswered'}</span></span><span class="word" lang="he">${safe(it.sef)}</span><span class="meta">${safe(it.he||it.kind)} · ${safe(it.verdict)} · page ${safe(it.page)}</span>`;b.addEventListener('click',async()=>{await saveNote();if(state.changed||state.busy)return;state.selected=it.id;state.mode='slide';state.sub=false;render();showCardTop()});fragment.appendChild(b)}el.appendChild(fragment)}
+function render(){filters();state.otherDraft=null;document.body.classList.toggle('slide-mode',state.mode==='slide');$('modeBtn').textContent=state.mode==='slide'?'Slide mode':'List mode';$('modeBtn').setAttribute('aria-pressed',state.mode==='slide'?'true':'false');$('autoBtn').textContent='Auto-next: '+(state.auto?'ON':'OFF');$('autoBtn').setAttribute('aria-pressed',String(state.auto));$('slideView').hidden=state.mode!=='slide';$('listView').hidden=state.mode==='slide';if(state.mode==='slide')renderSlide();else{renderList();progress()}}
 function zoomBy(x){state.zoom=Math.max(.6,Math.min(4,Math.round((state.zoom+x)*100)/100));const gallery=$('gallery');if(gallery)gallery.style.setProperty('--zoom',state.zoom);const text=$('zoomLabel');if(text)text.textContent=Math.round(state.zoom*100)+'% zoom'}
 async function saveNote(){
   if(!state.changed||state.busy)return;
@@ -306,9 +364,17 @@ async function toggleNewEditionFlag(){
     if(state.changed)saveNote();
   }
 }
-async function choose(choice,detail=''){
+async function choose(choice,detail='',confirmOther=false){
   const item=cur();
   if(!item||state.busy)return;
+  if(choice==='other'&&!confirmOther&&$('statusFilter').value==='open'){
+    state.otherDraft=item.id;
+    const field=$('note');
+    field.closest('details').open=true;
+    $('saveNote').textContent='Save answer';
+    field.focus();
+    return;
+  }
   if(choice==='other_sign'&&!detail){
     state.sub=true;
     state.family=decision(item.id).detail?.split(':')[0]||'accent';
@@ -329,12 +395,18 @@ async function choose(choice,detail=''){
     state.sub=false;
     const next=state.auto&&choice!=='other'?nextOpen(item.id):null;
     if(next)state.selected=next.id;
-    else if($('statusFilter').value==='open')$('statusFilter').value='all';
     render();
     showSaved();
     showCardTop();
-    if(choice==='other'){const field=$('note');if(field){field.closest('details').open=true;field.focus()}msg('Add a note explaining what you see.')}
-    else if(state.auto&&!next)msg('Every matching item is answered.');
+    if(!state.filtered.length&&$('statusFilter').value==='open'&&$('issueFilter').value!=='all'){
+      openNextIssue();
+    }else if(choice==='other'&&!confirmOther){
+      const field=$('note');
+      if(field){field.closest('details').open=true;field.focus()}
+      msg('Add a note explaining what you see.');
+    }else if(!state.filtered.length||(state.auto&&!next&&$('statusFilter').value!=='open')){
+      msg('Every matching item is answered.');
+    }
   }catch(error){
     saved('Unsaved answer · tap your choice to retry',true);
     msg('Could not save answer: '+error.message,true);
@@ -364,12 +436,16 @@ async function undo(){
     if(!id){msg('No earlier answer to undo.');return}
     state.decisions=backing.decisions;
     if(state.items.some(item=>item.id===id)){
-      $('statusFilter').value='all';
-      $('search').value='';
-      $('groupFilter').value='all';
-      $('issueFilter').value='all';
-      $('verdictFilter').value='all';
       state.selected=id;
+      filters();
+      if(state.selected!==id){
+        $('statusFilter').value=isAnswered(id)?'all':'open';
+        $('search').value='';
+        $('groupFilter').value='all';
+        $('issueFilter').value='all';
+        $('verdictFilter').value='all';
+        state.selected=id;
+      }
       state.mode='slide';
       state.sub=false;
       render();
@@ -413,7 +489,7 @@ function toggleAuto(){
   $('autoBtn').setAttribute('aria-pressed',String(state.auto));
 }
 function isTyping(e){const t=e.target;return t&&(['INPUT','TEXTAREA','SELECT'].includes(t.tagName)||t.isContentEditable)}
-function keyboard(e){if(e.ctrlKey||e.metaKey||e.altKey||state.busy||isTyping(e)||$('imgModal').open)return;const k=e.key;if(k==='ArrowRight'||k.toLowerCase()==='j'){e.preventDefault();move(1)}else if(k==='ArrowLeft'||k.toLowerCase()==='k'){e.preventDefault();move(-1)}else if(k.toLowerCase()==='u'||k==='Backspace'){e.preventDefault();undo()}else if(k.toLowerCase()==='a'){e.preventDefault();toggleAuto()}else if(k.toLowerCase()==='s'){e.preventDefault();toggleMode()}
+function keyboard(e){if(e.ctrlKey||e.metaKey||e.altKey||state.busy||isTyping(e)||$('imgModal').open||$('issueDialog').open)return;const k=e.key;if(k==='ArrowRight'||k.toLowerCase()==='j'){e.preventDefault();move(1)}else if(k==='ArrowLeft'||k.toLowerCase()==='k'){e.preventDefault();move(-1)}else if(k.toLowerCase()==='u'||k==='Backspace'){e.preventDefault();undo()}else if(k.toLowerCase()==='a'){e.preventDefault();toggleAuto()}else if(k.toLowerCase()==='s'){e.preventDefault();toggleMode()}
 else if(k==='Escape'){state.sub=false;if($('subpick'))$('subpick').hidden=true}else if(/^[1-9]$/.test(k)&&state.mode==='slide'){e.preventDefault();if(state.sub){const signs=$('subpick')?.querySelectorAll('[data-sign]');const el=signs?.[Number(k)-1];if(el)el.click()}else{const opts=$('slideView').querySelectorAll('[data-choice]');const el=opts[Number(k)-1];if(el)el.click()}}}
 $('modeBtn').addEventListener('click',toggleMode);$('autoBtn').addEventListener('click',()=>{toggleAuto()});$('prev').addEventListener('click',()=>move(-1));$('next').addEventListener('click',()=>move(1));$('undoBtn').addEventListener('click',undo);for(const id of ['statusFilter','groupFilter','issueFilter','verdictFilter','search'])$(id).addEventListener('input',()=>changeView(()=>{state.sub=false}));
 $('exportBtn').addEventListener('click',exportDecisions);$('importBtn').addEventListener('click',()=> $('importFile').click());$('importFile').addEventListener('change',async e=>{await doImport(e.target.files[0]);e.target.value='' });
