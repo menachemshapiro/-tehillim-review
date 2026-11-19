@@ -1,44 +1,43 @@
-TEHILLIM REVIEW — CORRECTION PATTERNS AND COMPLETE EXAMPLE CATALOG
-UPDATED: 2026-11-19 — cumulative review backup, review_v980.json
-Source JSON: data/tehillim_decisions_all_2026-11-19.json
-Previous snapshot: tehillim_decisions_all_2026-11-18 (4).json
-Export at: 2026-11-19T08:23:05.928Z; schema: tehillim-review-sqlite.v1; items_in_source: 678
-GitHub repository: https://github.com/menachemshapiro/-tehillim-review
-============================================================================================
+TEHILLIM REVIEW — COMPLETE CORRECTION PATTERNS AND FULL EVIDENCE CATALOG
+UPDATED: 2026-11-19 — FINAL 678 of 678 question decisions
+Source: data/tehillim_decisions_all_2026-11-19.json
+Exported at: 2026-11-19T08:56:13.227Z | schema: tehillim-review-sqlite.v1 | question set: review_v980.json
+Prior saved GitHub snapshot: 522 decisions from 2026-11-19T08:23:05.928Z
+Repository: https://github.com/menachemshapiro/-tehillim-review
+================================================================================================
 
-DATA-INTEGRITY / REVIEWER COMPATIBILITY
+VALIDATION / CAUTIONS
 
-The backup has 522 unique decisions from 459 text sites in a live 678-ID manifest.
-All 403 previous decisions were preserved. The current export adds 119 new decisions and modifies 0 prior decisions; lost IDs: 0.
-All 522 IDs were compared against review-v980/manifest.json (678 unique IDs) and match. All records have id, choice, detail, note, corrected_text, and updated_at. Hebrew is valid JSON/UTF-8, no Unicode replacement characters were found, and all selected use_kit/use_sefaria words have saved corrected_text.
-The reviewer script review.js serializes new_edition_count_wrong in JSON backups and accepts it on restore. Its local IndexedDB state is device-specific, so committing this JSON to GitHub does NOT automatically replace answers in a user's browser or change the deployed page.
-No original scan crops or candidate texts accompany this backup; full optical correctness, font positioning on every device, and actual site interactions cannot be verified from the backup alone.
+Complete original question-set coverage: 678 unique decision IDs exactly matching 678 unique manifest IDs. Distinct underlying text locations: 582.
+New decisions since prior GitHub backup: 156. Changed earlier decisions: 0. Missing earlier decisions: 0.
+All 678 records contain id, choice, detail, note, corrected_text and updated_at as strings, with valid Unicode/UTF-8. All full-word Kit/Sefaria choices have saved corrected_text. The optional new_edition_count_wrong field is preserved.
+No original scan crops are provided in this decisions export. Recognition/print-chipping hypotheses are derived from the user's saved decisions and handwritten notes; they cannot prove the physical cause of a mark without scanning the original.
+Publishing a backup on GitHub does not itself synchronize the website's device-local IndexedDB answer database; no reviewer application code was changed in this update.
 
 SUMMARY COUNTS
 
-Decisions 522; source questions 678; unaddressed IDs in that manifest 156 (assuming one decision per manifest ID).
-Choices: use_kit 93; use_sefaria 22; other 26; other_sign 4; unclear 3; count:0 139.
-Notes present: 86; full-word corrected_text present: 115; explicit new-edition-count flags: 32.
-Meteg count:0 48; dot_above count:0 32; patah count:0 28; dot_inside count:0 10; munah count:0 8.
-Pattern categories: 23 (categories overlap; supporting-example counts are not additive).
+Decisions 678 / 678 (100% question coverage). Distinct text sites: 582. New since previous: 156.
+Choices: use_kit 96, use_sefaria 22, other 28, other_sign 4, unclear 4, count:0 206.
+Records with notes: 96. Whole-word selections with corrected_text: 118. Flagged newer-edition count errors: 43.
+Zero mark counts: meteg 90, dot_above 32, dot_inside 21, patah 28, dot_below 6, revia 6, munah 8.
+Identified pattern categories: 27. Categories overlap and pattern example totals must not be summed.
 
-IMPORTANT NEW FINDINGS
+MAIN NEW FINDINGS
 
-• A new question-set version review_v980.json has 678 items. Its manifest contains every one of the 522 saved decision IDs.
-• Repeated above-dot count:0 grows to 32; user notes continue to distinguish cholam, revia and combinations.
-• Repeated zero-patah count grows to 28; one note explicitly suspects cross-source vowel proposals unverified against the print.
-• 32 new_edition_count_wrong flags now make comparison-source counting discrepancies a structured category.
-• A new ink-smudge example and a false dot before ק reinforce the need to consider visual artifacts before adding a diacritic.
+• Completed all 678 review questions; all previous 522 choices preserved.
+• False/absent meteg remains largest count:0 category, with 90 records; the source of all 90 misdetections is not proven.
+• Mark grouping matters: two points can constitute one sheva, nine points three segols (s17205, s31634).
+• Revia can be absent or share a location with a real cholam; preserve ambiguity as shown by the new notes.
+• Newly reported reconstruction display issues affect letter placement, colon/punctuation and niqqud positioning.
+• New-edition count disagreement flags rise to 43, and should not be mistaken for proven historical edition differences.
 
-PART I — ALL PATTERNS, INTERPRETATIONS, SUGGESTED RULES AND ALL ASSOCIATED EXAMPLES
+PART I — ALL PATTERNS: EXPLANATIONS, RECOMMENDED CHECKS AND EVERY REFERENCED EXAMPLE
 
-Some IDs appear in more than one category. Count-based answers alone do not identify a cause of a mistaken reconstruction.
-
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 01 — False metegs / over-detection
-Interpretation: Meteg count:0 has grown sharply from 11 in the prior snapshot to 48 now. This makes it an important recurring recognition symptom. The count itself means the user found no meteg in those reviewed spots; the export cannot establish a single common physical chip, font, or detection mechanism for all 48.
-Suggested review / OCR rule: Treat every apparent meteg as a distinct object candidate; compare to actual short strokes of nearby letterforms, vowels and accents. Link the original crop before training from count:0 labels.
-Supporting examples: 48 decisions across 48 text sites:
+Interpretation: The completed 678-question export has 90 meteg records answered count:0 out of 137 meteg questions (48 zero counts in the prior 522-answer snapshot). This is the largest zero-sign cluster. These answers mean that the reviewer chose zero at those specific locations; they do NOT prove all 90 arose from one printing/chipping mechanism.
+Suggested review / OCR rule: Investigate whether suggested meteg marks actually appear in the scan, separating missing marks, nearby munach, letter strokes, and source-transfer issues. Avoid claiming a common cause without original crops.
+Every supporting example (90 decisions across 90 text sites):
     - ID: s47948-meteg
       choice: count:0
       detail: [empty]
@@ -375,12 +374,306 @@ Supporting examples: 48 decisions across 48 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T22:31:02.256Z
+    - ID: s6813-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:02.766Z
+    - ID: s8042-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:04.966Z
+    - ID: s8929-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:07.147Z
+    - ID: s13765-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:15.315Z
+    - ID: s14259-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:21.114Z
+    - ID: s16468-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:43.215Z
+    - ID: s17746-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): Colon is messed up. In recreation. Take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:13.802Z
+    - ID: s20323-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:17.958Z
+    - ID: s21956-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:23.940Z
+    - ID: s25346-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:35.486Z
+    - ID: s31433-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:42.459Z
+    - ID: s33778-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:43:06.066Z
+    - ID: s35208-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:43:40.917Z
+    - ID: s38505-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:15.228Z
+    - ID: s40047-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:17.594Z
+    - ID: s46395-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:24.411Z
+    - ID: s46522-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:26.413Z
+    - ID: s46727-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:29.134Z
+    - ID: s46745-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:31.682Z
+    - ID: s52392-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:38.388Z
+    - ID: s52682-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:45.694Z
+    - ID: s54988-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:49.631Z
+    - ID: s56885-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:55.135Z
+    - ID: s56954-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:00.106Z
+    - ID: s58377-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:13.696Z
+    - ID: s60449-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:18.931Z
+    - ID: s63877-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:21.224Z
+    - ID: s63992-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:25.485Z
+    - ID: s64430-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:36.847Z
+    - ID: s65183-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:38.810Z
+    - ID: s65305-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:42.811Z
+    - ID: s67085-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:45.764Z
+    - ID: s70736-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:47.762Z
+    - ID: s70996-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:50.298Z
+    - ID: s71128-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:46:02.042Z
+    - ID: s72809-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:46:04.508Z
+    - ID: s76460-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:01.760Z
+    - ID: s77524-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:04.360Z
+    - ID: s83790-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:16.658Z
+    - ID: s83876-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:18.732Z
+    - ID: s85188-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:29.755Z
+    - ID: s86056-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:33.752Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 02 — Dots above: cholam vs revia vs another upper sign
-Interpretation: Recorded observations distinguish cholam from revia, including cases where both marks are present and cases where one is specifically denied. Newly reviewed sites include s78604 (one revia where cholam should be), s14632 (unclear choice; note says cholam only), and s71131 (cholam only). Counts of upper marks require knowledge of which sign was being counted.
+Interpretation: Explicit notes distinguish cholam from revia, sometimes identifying one of each. New examples include s39850 (one cholam and one revia, new-edition count flagged) and s70765 (one revia and one cholam); s41197 remains unclear about sin/shin dot positioning and should not be resolved automatically.
 Suggested review / OCR rule: Consult spelling and full cantillation context rather than dot shape alone.
-Supporting examples: 20 decisions across 20 text sites:
+Every supporting example (23 decisions across 23 text sites):
     - ID: s8659-dot_above
       choice: other_sign
       detail: accent:revia
@@ -521,12 +814,33 @@ Supporting examples: 20 decisions across 20 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:22:06.800Z
+    - ID: s39850-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One cholam and one revia 
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:30:51.822Z
+    - ID: s41197-revia
+      choice: unclear
+      detail: [empty]
+      note (verbatim): There is something there. Almost like the word has both a sin and shin dot. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:17.078Z
+    - ID: s70765-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One revia and one cholam. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:47.601Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 03 — Qamats misread as patach + tsere OR as patach over hiriq
 Interpretation: Earlier sites s14516, s15235, and s21989 directly describe qamats mistaken for patach+tsere; s43242 describes qamats interpreted as patach over hiriq. New same-site qamats/patah count pairs are further diagnostic comparisons, not independently proven to share the identical cause.
 Suggested review / OCR rule: If a short vertical stroke adjoins a horizontal vowel stroke, test a single qamats before counting an additional patach, tsere or hiriq.
-Supporting examples: 21 decisions across 10 text sites:
+Every supporting example (21 decisions across 10 text sites):
     - ID: s14516-dot_below
       choice: count:3
       detail: [empty]
@@ -675,11 +989,11 @@ Supporting examples: 21 decisions across 10 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T23:20:48.188Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 04 — Compound vowel / sheva / hiriq / hataf fragmentation
 Interpretation: Notes discuss damaged חטף קמץ and חטף פתח, triple sheva, overlapping hiriq/sheva, and complex lower-mark sequences.
 Suggested review / OCR rule: Group the marks by target letter and retain uncertain dot counts rather than inventing separate signs.
-Supporting examples: 20 decisions across 18 text sites:
+Every supporting example (20 decisions across 18 text sites):
     - ID: s8252-qamats
       choice: count:1
       detail: [empty]
@@ -821,11 +1135,11 @@ Supporting examples: 20 decisions across 18 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:08:45.893Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 05 — Munach misclassified or split into an extra dot
 Interpretation: Multiple explicit munach misclassifications and dot-splitting issues are recorded. The latest batch adds a direct merkha→munach reclassification (s51337) and two paired cases where munach count:1 corresponds to meteg count:0 (s62282 and s63163). These are strong paired diagnostic examples.
 Suggested review / OCR rule: Identify the full munach stroke in context; distinguish its parts from isolated dots.
-Supporting examples: 20 decisions across 13 text sites:
+Every supporting example (21 decisions across 13 text sites):
     - ID: s17741-munah
       choice: other_sign
       detail: accent:merkha
@@ -966,12 +1280,19 @@ Supporting examples: 20 decisions across 13 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T22:06:20.495Z
+    - ID: s63163-dot_below
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:21.140Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 06 — Vertical displacement / overlap of niqqud and taamim
-Interpretation: Reported signs are sometimes positioned beside or above another vowel, and some are partly damaged. The new s75604 note places a meteg after qamats; s83224 is still unclear, describing a possibly half-erased tipcha below mem. Neither alone proves an OCR positioning bug.
+Interpretation: The user reports reconstruction placement problems, including the spacing of letters and adjacent marks. New records explicitly say letter placement is messed up (s32113), punctuation/colon is messed up (s17746), and nikud needs visual inspection (s35730). These are rendering issues reported by the reviewer, not conclusively isolated code defects.
 Suggested review / OCR rule: Preserve relative position of mark and letter; compare decoded text with rendering.
-Supporting examples: 9 decisions across 9 text sites:
+Every supporting example (12 decisions across 12 text sites):
     - ID: s1821-patah
       choice: use_kit
       detail: [empty]
@@ -1035,12 +1356,33 @@ Supporting examples: 9 decisions across 9 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T22:30:39.914Z
+    - ID: s32113-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Recreation placement of letters is messed up. Please take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:38:53.384Z
+    - ID: s17746-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): Colon is messed up. In recreation. Take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:13.802Z
+    - ID: s35730-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Nikkud in recreation needs to be looked at. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:13.280Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 07 — Ink artifacts AND letter-stroke lookalikes (ל, ע, א) falsely treated as signs
 Interpretation: User notes explicitly mark ink blots or letter fragments as false punctuation, including the top of ל, a smudged part of א, and strokes of ע. New examples: s36495 is called an ink smudge; s23956 reports an invented dot before ק. The original scan crops are still needed to establish precise physical causes.
 Suggested review / OCR rule: Use letter-shape-aware rejection for marks that can belong to the glyph; keep ink blob versus font/reconstruction stroke as separate subtypes.
-Supporting examples: 8 decisions across 8 text sites:
+Every supporting example (9 decisions across 8 text sites):
     - ID: s839-dot_below
       choice: other
       detail: [empty]
@@ -1097,12 +1439,19 @@ Supporting examples: 8 decisions across 8 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:12:40.949Z
+    - ID: s10138-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): Under the nun is an ink blotch 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:49:55.789Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 08 — Missing, merged or doubled dots
 Interpretation: Examples include a missing point in sheva, apparent triple sheva, and shin-dot plus cholam.
 Suggested review / OCR rule: Distinguish a physical dot count from the number of linguistic signs; confirm whether print is damaged.
-Supporting examples: 18 decisions across 18 text sites:
+Every supporting example (21 decisions across 21 text sites):
     - ID: s8252-qamats
       choice: count:1
       detail: [empty]
@@ -1229,12 +1578,33 @@ Supporting examples: 18 decisions across 18 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:08:45.893Z
+    - ID: s17205-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): 2 dots == 1 shva
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:51:35.139Z
+    - ID: s31634-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): 9 — three segols
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:53:35.100Z
+    - ID: s41197-revia
+      choice: unclear
+      detail: [empty]
+      note (verbatim): There is something there. Almost like the word has both a sin and shin dot. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:17.078Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 09 — Multiple adjacent marks treated as one unusual symbol
 Interpretation: Complex above/below sequences can resemble one rare accent; shalshelet instance is explained by other signs.
 Suggested review / OCR rule: Parse a cluster as separate signs before assigning a single rare taam.
-Supporting examples: 19 decisions across 19 text sites:
+Every supporting example (21 decisions across 20 text sites):
     - ID: s399-geresh_muqdam
       choice: other
       detail: [empty]
@@ -1368,12 +1738,26 @@ Supporting examples: 19 decisions across 19 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:11:22.878Z
+    - ID: s17205-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): 2 dots == 1 shva
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:51:35.139Z
+    - ID: s31634-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): 9 — three segols
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:53:35.100Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 10 — Reconstruction image/text rendering inconsistency
-Interpretation: The user has reported reconstruction text/image disagreement (s21956), source comparison mismatches (s76367 and s82021), and now a suspected failure to cross-check borrowed source niqqud against the print (s68656). These are distinct diagnoses; a shared software mechanism has not been verified.
+Interpretation: Separately documented problems include disagreement between displayed Kit text and image, suspect comparison-source claims, source-to-scan validation concerns, and new reports that the reconstruction's letter positions, punctuation and nikud are visually wrong. These symptoms should remain distinct when debugging.
 Suggested review / OCR rule: Validate candidate text, glyph rendering and scan image independently; treat this as possibly a presentation bug.
-Supporting examples: 7 decisions across 7 text sites:
+Every supporting example (10 decisions across 10 text sites):
     - ID: s21956-qadma
       choice: count:1
       detail: [empty]
@@ -1423,12 +1807,33 @@ Supporting examples: 7 decisions across 7 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:11:22.878Z
+    - ID: s32113-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Recreation placement of letters is messed up. Please take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:38:53.384Z
+    - ID: s17746-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): Colon is messed up. In recreation. Take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:13.802Z
+    - ID: s35730-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Nikkud in recreation needs to be looked at. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:13.280Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 11 — Older/newer edition differences
-Interpretation: Comparisons of the original print, reconstruction and newer edition can differ in either direction. The latest export includes 32 explicit new_edition_count_wrong=true flags, recorded by the reviewer; these are user-confirmed disagreements with an automated new-edition mark count, not necessarily 32 genuine differences between editions. Preserve the flag independently from the decision.
+Interpretation: The finished export has 43 explicit new_edition_count_wrong=true records, versus 32 previously. The flag signifies a reviewer-identified count discrepancy in the newer edition as represented by the application, not a proven difference between the physical editions.
 Suggested review / OCR rule: Keep each witness and edition separate rather than normalizing old printing to newer text.
-Supporting examples: 50 decisions across 49 text sites:
+Every supporting example (61 decisions across 60 text sites):
     - ID: s8252-qamats
       choice: count:1
       detail: [empty]
@@ -1779,12 +2184,89 @@ Supporting examples: 50 decisions across 49 text sites:
       corrected_text: [none]
       new_edition_count_wrong: true
       updated_at: 2026-11-19T08:22:36.948Z
+    - ID: s4866-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:28:11.236Z
+    - ID: s25017-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:28:56.686Z
+    - ID: s32447-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:42.540Z
+    - ID: s33681-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:48.211Z
+    - ID: s39462-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:58.593Z
+    - ID: s39850-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One cholam and one revia 
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:30:51.822Z
+    - ID: s43406-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:32:22.366Z
+    - ID: s37814-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:33:44.596Z
+    - ID: s74134-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:40:12.815Z
+    - ID: s82332-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:47:12.618Z
+    - ID: s67632-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:48:47.766Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 12 — Recurring word לַמְנַצֵּחַ with site-specific accent changes
 Interpretation: The same heading word appears in multiple review records with differences in marks and accents.
 Suggested review / OCR rule: Use as a search/family match, never overwrite each individual occurrence's accents.
-Supporting examples: 6 decisions across 5 text sites:
+Every supporting example (6 decisions across 5 text sites):
     - ID: s9342-revia
       choice: other
       detail: [empty]
@@ -1828,11 +2310,11 @@ Supporting examples: 6 decisions across 5 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T12:11:04.169Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 13 — Unusual accent signs: tevir, reversed mahapakh, shalshelet lookalike
-Interpretation: The export includes specific observations of tevir and reversed mahapakh, and now several confirmations of mahapakh, including s82021 with an explicit warning about reading the new edition incorrectly. A confirmed sign occurrence is not automatically an error pattern.
+Interpretation: Recorded unusual signs include tevir, reversed mahapakh, and signs initially resembling rare accents. New note s9470 explicitly says 'Backwards mapach'. A correct rare sign occurrence does not in itself establish an extraction error.
 Suggested review / OCR rule: Flag for human inspection and seek more examples before learning a general repair rule.
-Supporting examples: 8 decisions across 8 text sites:
+Every supporting example (9 decisions across 9 text sites):
     - ID: s4248-munah
       choice: other
       detail: [empty]
@@ -1889,12 +2371,19 @@ Supporting examples: 8 decisions across 8 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:12:07.540Z
+    - ID: s9470-mahapakh
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Backwards mapach 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:35:28.232Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 14 — Zero inner-dot count: spurious dagesh / mappiq / internal-dot candidates
-Interpretation: Ten dot_inside questions in the cumulative export have count:0. They are all new in this batch and establish repeated absence of an inner dot at flagged locations. The export lacks images and specific notes on these ten cases, so the physical mechanism (glyph hole, noise, or parser) is unknown; do not assume all were dagesh.
+Interpretation: There are 21 dot_inside count:0 responses in the completed export, up from ten. These should be checked as possible false interior-dot candidates. The choice alone does not explain whether the cause is damage, a letter stroke, or a text-source discrepancy.
 Suggested review / OCR rule: Add an inner-dot false-positive check, verifying the dot is actually inked within the correct letter. Prefer human review until original crops are attached.
-Supporting examples: 10 decisions across 10 text sites:
+Every supporting example (21 decisions across 21 text sites):
     - ID: s33365-dot_inside
       choice: count:0
       detail: [empty]
@@ -1965,12 +2454,89 @@ Supporting examples: 10 decisions across 10 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T12:46:14.503Z
+    - ID: s250-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:36:36.499Z
+    - ID: s19178-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:01.647Z
+    - ID: s21568-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:22.697Z
+    - ID: s28927-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:41.258Z
+    - ID: s32019-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:48.714Z
+    - ID: s34976-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:38:55.674Z
+    - ID: s38238-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:39:15.826Z
+    - ID: s45789-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:39:18.956Z
+    - ID: s47601-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:39:29.368Z
+    - ID: s76291-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:16.740Z
+    - ID: s87816-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:51.002Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 15 — Zero above-dot count / no dot in newer edition
-Interpretation: Thirty-two above-dot review decisions are marked count:0, compared with ten in the prior snapshot. Some notes cite comparison with a newer edition; others lack an explanation. An unclear note s14632 says cholam only, no revia. Count:0 is not proof of a common physical defect.
+Interpretation: There are 32 dot_above count:0 responses. Some other notes distinguish no dot at all versus a real cholam/revia that had been misclassified. Keep those apart; a zero count is specific to the asked sign or mark.
 Suggested review / OCR rule: Flag above-dot false positives separately from cholam/revia substitution; retain an explicit uncertain class when the original crop is ambiguous.
-Supporting examples: 36 decisions across 36 text sites:
+Every supporting example (36 decisions across 36 text sites):
     - ID: s24999-dot_above
       choice: count:0
       detail: [empty]
@@ -2224,11 +2790,11 @@ Supporting examples: 36 decisions across 36 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:22:06.800Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 16 — Zero patach count with competing qamats / sheva / ayin-stroke explanations
-Interpretation: Twenty-eight patah questions have count:0 (formerly 17). Several describe qamats, sheva vs hataf-patah, or letter-stroke alternatives, while s68656 raises the possibility of a general source-cross-check flaw. Missing patach in a specific reviewed question is not evidence of any single universal mechanism.
+Interpretation: There are 28 patah count:0 responses. Earlier notes explicitly describe qamats-vs-patah, sheva-vs-hataf-patah, and mistaken letter strokes. Preserve the exact local reason when given and leave unspecified causes unknown.
 Suggested review / OCR rule: Separate patach false positives into (a) ayin/letter artifact, (b) qamats stroke, (c) sheva vs hataf-patah, and (d) unknown. Use paired qamats decisions when available.
-Supporting examples: 37 decisions across 29 text sites:
+Every supporting example (37 decisions across 29 text sites):
     - ID: s30286-patah
       choice: count:0
       detail: [empty]
@@ -2489,11 +3055,11 @@ Supporting examples: 37 decisions across 29 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T07:52:12.341Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 17 — Sheva read as hataf patach (repeated explicit observation)
 Interpretation: Two separate newly recorded notes explicitly identify שווא incorrectly read as חטף פתח. Unlike bare zero counts, these notes describe the specific mistaken substitution.
 Suggested review / OCR rule: Compare the pair of sheva points with candidate short horizontal strokes; count an extra hataf-patah only when a genuine patach line appears.
-Supporting examples: 2 decisions across 2 text sites:
+Every supporting example (2 decisions across 2 text sites):
     - ID: s51420-patah
       choice: count:0
       detail: [empty]
@@ -2509,11 +3075,11 @@ Supporting examples: 2 decisions across 2 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T13:23:54.185Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 18 — Diagnostic disagreement between source witness and comparison software
 Interpretation: At s21956 the user reports that Kit text does not match the displayed Kit image; at s76367 the user reports that software repeatedly says Sefaria lacks a qamats, although it appears at the end of the word. These are two different diagnostic consistency problems, not evidence of one shared print defect.
 Suggested review / OCR rule: Keep the raw witness text, rendered witness, and generated difference claim as three separately checkable objects. Add automated assertions that difference counts match the decoded and rendered text.
-Supporting examples: 5 decisions across 5 text sites:
+Every supporting example (5 decisions across 5 text sites):
     - ID: s21956-qadma
       choice: count:1
       detail: [empty]
@@ -2550,11 +3116,11 @@ Supporting examples: 5 decisions across 5 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:11:22.878Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 19 — Munach absent, or confused with merkha and meteg
-Interpretation: Eight reviewed munah candidates now have count:0, and there are explicit munach/merkha substitutions (s51337) and same-site munach/meteg comparisons (s62282, s63163, s8868). A new s75604-munah count:1 also pairs with a separate meteg note, but should not be treated as an error without inspecting the scan.
+Interpretation: Eight munah questions have count:0; multiple sites contain paired munah versus meteg/merkha decisions. Where a site carries two questions, the two decisions should be interpreted jointly.
 Suggested review / OCR rule: Validate the full shape and position of munach vs merkha and meteg. Where multiple questions share the same site ID, use them as joint ground truth rather than independent decisions.
-Supporting examples: 18 decisions across 13 text sites:
+Every supporting example (18 decisions across 13 text sites):
     - ID: s40116-munah
       choice: count:0
       detail: [empty]
@@ -2682,11 +3248,11 @@ Supporting examples: 18 decisions across 13 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T22:06:20.495Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 20 — Mahapakh present in newer edition but reported absent by the comparison
 Interpretation: At s82021 the user explicitly says that the new edition DOES have a mahapakh, just as the old edition does, contrary to the reported comparison. It is a concrete example of candidate comparison failure; other mahapakh occurrences provide comparison targets but not proof of identical failures.
 Suggested review / OCR rule: Use decoded Unicode values and their rendered appearance from both editions to verify 'missing accent' claims; create a test case specifically for s82021.
-Supporting examples: 4 decisions across 4 text sites:
+Every supporting example (4 decisions across 4 text sites):
     - ID: s82021-mahapakh
       choice: count:1
       detail: [empty]
@@ -2716,11 +3282,11 @@ Supporting examples: 4 decisions across 4 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T11:58:05.357Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 21 — Unresolved damaged or partly erased lower accent
-Interpretation: The decision at s83224-dot_below is explicitly marked unclear. The note describes something beneath mem after patach, possibly a half-erased tipcha, and calls for examination of additional editions. This is a single uncertain case, NOT a proven recurring defect.
+Interpretation: Unresolved marks continue to require inspection against other editions: s83224 suggests a possibly half-erased tipcha; s41197 is unclear and notes a sign that resembles both sin and shin dot placement. Neither is safe for automatic normalization.
 Suggested review / OCR rule: Carry this site as uncertain; do not force an accent or zero mark. Review the original crop and independent editions before adding it to training labels.
-Supporting examples: 1 decisions across 1 text sites:
+Every supporting example (2 decisions across 2 text sites):
     - ID: s83224-dot_below
       choice: unclear
       detail: [empty]
@@ -2728,12 +3294,19 @@ Supporting examples: 1 decisions across 1 text sites:
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T22:30:39.914Z
+    - ID: s41197-revia
+      choice: unclear
+      detail: [empty]
+      note (verbatim): There is something there. Almost like the word has both a sin and shin dot. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:17.078Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 22 — Comparison-source niqqud proposed without apparent scan cross-check
 Interpretation: At s68656-patah the reviewer observes that the program seems to take niqqud from other sources without checking against the printed scan. The same site also records one qamats and zero patach. Earlier s76367, s82021 and s21956 are related examples of source/representation disagreement but do not prove the same underlying bug.
 Suggested review / OCR rule: For every proposed difference require explicit evidence against the original scan and keep alternative textual witnesses separate. Audit the data pipeline and UI claim generation; this is a user-reported hypothesis, not yet a verified code defect.
-Supporting examples: 5 decisions across 4 text sites:
+Every supporting example (5 decisions across 4 text sites):
     - ID: s68656-patah
       choice: count:0
       detail: [empty]
@@ -2770,11 +3343,11 @@ Supporting examples: 5 decisions across 4 text sites:
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-18T10:50:48.853Z
 
---------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 PATTERN 23 — Recorded new-edition count errors (explicit reviewer flag)
-Interpretation: The November 19 backup introduces a new_edition_count_wrong boolean field; 32 records carry true. Breakdown: 24 dot_above, four dehi, two qamats and two munah. This flag is separate from the choice, note and corrected_text and must be preserved by import/export/report processing. The field conveys that the NEW EDITION COUNT is believed wrong, not that the answer is invalid.
+Interpretation: 43 decisions carry new_edition_count_wrong=true, comprising multiple sign types. These reviewer flags must be preserved independently of the chosen sign count and interpreted as disagreement with the program's NEW-EDITION count, not automatically as an old-versus-new-edition textual variant.
 Suggested review / OCR rule: Use new_edition_count_wrong as a first-class review flag; link each to the new-edition image and annotated mark count, and avoid changing the printed-source decision when correcting a comparison count.
-Supporting examples: 32 decisions across 32 text sites:
+Every supporting example (43 decisions across 43 text sites):
     - ID: s408-qamats
       choice: use_kit
       detail: [empty]
@@ -2999,1083 +3572,1706 @@ Supporting examples: 32 decisions across 32 text sites:
       corrected_text: [none]
       new_edition_count_wrong: true
       updated_at: 2026-11-19T08:22:36.948Z
-
-PART II — NEW ANSWERS SINCE 403-DECISION GITHUB REPORT
-
-119 added decisions, 0 changed prior decisions, 0 dropped prior decisions.
-
-NEW:
-    - ID: s5630-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:14:17.833Z
-
-NEW:
-    - ID: s8252-patah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:14:52.404Z
-
-NEW:
-    - ID: s8433-patah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:15:08.194Z
-
-NEW:
-    - ID: s14017-patah
-      choice: use_sefaria
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: עַד
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:15:42.500Z
-
-NEW:
-    - ID: s14720-patah
-      choice: count:2
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:16:05.473Z
-
-NEW:
-    - ID: s17038-patah
-      choice: other
-      detail: [empty]
-      note (verbatim): One chataf patach 
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:16:39.913Z
-
-NEW:
-    - ID: s21989-patah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:17:10.350Z
-
-NEW:
-    - ID: s27796-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:17:19.275Z
-
-NEW:
-    - ID: s30909-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:17:39.298Z
-
-NEW:
-    - ID: s35415-patah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:17:48.268Z
-
-NEW:
-    - ID: s42694-patah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:17:58.592Z
-
-NEW:
-    - ID: s46363-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:18:06.481Z
-
-NEW:
-    - ID: s48522-patah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:18:16.486Z
-
-NEW:
-    - ID: s49500-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:18:22.899Z
-
-NEW:
-    - ID: s49531-patah
-      choice: count:2
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:18:33.072Z
-
-NEW:
-    - ID: s58629-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:18:39.364Z
-
-NEW:
-    - ID: s60001-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:18:44.911Z
-
-NEW:
-    - ID: s68656-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): It seems like the program is taking nekudot from the other sources without cross checking to see if they match the print. This seems like a general issue we may need to take care of c 
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:20:40.567Z
-
-NEW:
-    - ID: s71631-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:20:44.851Z
-
-NEW:
-    - ID: s79203-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:20:48.188Z
-
-NEW:
-    - ID: s79916-patah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:20:54.898Z
-
-NEW:
-    - ID: s85278-patah
-      choice: count:2
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:21:16.179Z
-
-NEW:
-    - ID: s85663-patah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-18T23:21:36.267Z
-
-NEW:
-    - ID: s408-qamats
-      choice: use_kit
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: לָֽמוֹ
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:49:33.058Z
-
-NEW:
-    - ID: s14516-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:49:49.593Z
-
-NEW:
-    - ID: s18607-qamats
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:50:01.424Z
-
-NEW:
-    - ID: s21975-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:50:21.355Z
-
-NEW:
-    - ID: s42694-qamats
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:50:25.451Z
-
-NEW:
-    - ID: s48522-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:50:35.890Z
-
-NEW:
-    - ID: s48836-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:51:13.052Z
-
-NEW:
-    - ID: s50856-qamats
-      choice: count:2
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:51:36.706Z
-
-NEW:
-    - ID: s68656-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:51:47.481Z
-
-NEW:
-    - ID: s72602-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:51:57.752Z
-
-NEW:
-    - ID: s76005-qamats
-      choice: count:2
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:52:04.780Z
-
-NEW:
-    - ID: s78491-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:52:08.550Z
-
-NEW:
-    - ID: s79203-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:52:12.341Z
-
-NEW:
-    - ID: s81815-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:52:19.033Z
-
-NEW:
-    - ID: s82332-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:52:22.979Z
-
-NEW:
-    - ID: s82437-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:52:25.259Z
-
-NEW:
-    - ID: s82554-qamats
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:52:28.877Z
-
-NEW:
-    - ID: s428-munah
-      choice: use_kit
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: וּבַ֖חֲרוֹנ֣וֹ
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:53:10.845Z
-
-NEW:
-    - ID: s447-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:53:25.958Z
-
-NEW:
-    - ID: s8868-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:53:29.678Z
-
-NEW:
-    - ID: s14587-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:53:49.068Z
-
-NEW:
-    - ID: s14731-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:53:52.795Z
-
-NEW:
-    - ID: s30279-munah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:54:00.116Z
-
-NEW:
-    - ID: s39660-munah
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:54:09.809Z
-
-NEW:
-    - ID: s41050-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:54:19.901Z
-
-NEW:
-    - ID: s44076-munah
-      choice: use_kit
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: וְלֹ֣א
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:54:28.409Z
-
-NEW:
-    - ID: s54988-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:54:35.672Z
-
-NEW:
-    - ID: s54992-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:54:52.323Z
-
-NEW:
-    - ID: s59035-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:54:58.515Z
-
-NEW:
-    - ID: s59907-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:55:02.127Z
-
-NEW:
-    - ID: s66811-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:55:07.409Z
-
-NEW:
-    - ID: s75604-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:55:10.652Z
-
-NEW:
-    - ID: s78634-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:55:17.351Z
-
-NEW:
-    - ID: s85188-munah
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:55:25.085Z
-
-NEW:
-    - ID: s3965-dehi
+    - ID: s4866-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:56:27.538Z
-
-NEW:
-    - ID: s45975-dehi
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:56:42.159Z
-
-NEW:
-    - ID: s59269-dehi
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:56:52.402Z
-
-NEW:
-    - ID: s72384-dehi
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:57:01.036Z
-
-NEW:
-    - ID: s72674-dehi
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:57:08.626Z
-
-NEW:
-    - ID: s84804-dehi
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T07:57:12.667Z
-
-NEW:
-    - ID: s87039-dehi
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T07:57:19.056Z
-
-NEW:
-    - ID: s1691-dot_above
-      choice: use_kit
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: אֱלהִ֗ים
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:06:18.414Z
-
-NEW:
-    - ID: s2301-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:06:29.486Z
-
-NEW:
-    - ID: s7486-dot_above
-      choice: use_kit
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: אֵֽש
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:07:12.366Z
-
-NEW:
-    - ID: s9483-dot_above
-      choice: use_kit
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: וּבְשֵֽם
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:07:22.428Z
-
-NEW:
-    - ID: s11745-dot_above
-      choice: count:2
-      detail: [empty]
-      note (verbatim): 2 cholems and a revia
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:08:45.893Z
-
-NEW:
-    - ID: s12238-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:08:53.240Z
-
-NEW:
-    - ID: s20320-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:09:20.073Z
-
-NEW:
-    - ID: s20795-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:09:36.468Z
-
-NEW:
-    - ID: s22078-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:09:57.821Z
-
-NEW:
-    - ID: s22106-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:10:05.448Z
-
-NEW:
-    - ID: s23956-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): Reconstruction is finding a dot before the kuf that isn’t there.  1 cholam and one revia 
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:11:22.878Z
-
-NEW:
-    - ID: s23964-dot_above
-      choice: count:2
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:11:33.316Z
-
-NEW:
-    - ID: s34318-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): Reverse mapach on top 
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:12:07.540Z
-
-NEW:
-    - ID: s36495-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): Ink smudge 
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:12:40.949Z
-
-NEW:
-    - ID: s48310-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:12:51.786Z
-
-NEW:
-    - ID: s53411-dot_above
-      choice: use_sefaria
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: בַּ֝שַּׁ֗חַק
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:13:05.527Z
-
-NEW:
-    - ID: s54130-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:13:13.273Z
-
-NEW:
-    - ID: s63675-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:13:15.574Z
-
-NEW:
-    - ID: s68453-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:13:18.679Z
-
-NEW:
-    - ID: s73973-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:13:22.405Z
-
-NEW:
-    - ID: s74299-dot_above
-      choice: use_sefaria
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: וְ֝א֗וֹר
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:13:32.758Z
-
-NEW:
-    - ID: s78604-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): One revia where cholam should be 
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:14:40.167Z
-
-NEW:
-    - ID: s80311-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:14:43.667Z
-
-NEW:
-    - ID: s81724-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:15:04.720Z
-
-NEW:
-    - ID: s87092-dot_above
-      choice: use_sefaria
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: כּ֥וֹכְבֵי
-      new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:15:18.279Z
-
-NEW:
-    - ID: s53-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:16:19.213Z
-
-NEW:
-    - ID: s147-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:16:25.859Z
-
-NEW:
-    - ID: s198-dot_above
+      updated_at: 2026-11-19T08:28:11.236Z
+    - ID: s25017-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:16:31.528Z
-
-NEW:
-    - ID: s204-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:16:43.759Z
-
-NEW:
-    - ID: s477-dot_above
+      updated_at: 2026-11-19T08:28:56.686Z
+    - ID: s32447-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:17:02.531Z
-
-NEW:
-    - ID: s488-dot_above
+      updated_at: 2026-11-19T08:29:42.540Z
+    - ID: s33681-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:17:12.850Z
-
-NEW:
-    - ID: s3521-dot_above
+      updated_at: 2026-11-19T08:29:48.211Z
+    - ID: s39462-revia
       choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:58.593Z
+    - ID: s39850-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One cholam and one revia 
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:30:51.822Z
+    - ID: s43406-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:32:22.366Z
+    - ID: s37814-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:33:44.596Z
+    - ID: s74134-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:40:12.815Z
+    - ID: s82332-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:47:12.618Z
+    - ID: s67632-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:48:47.766Z
+
+------------------------------------------------------------------------------------------------
+PATTERN 24 — False revia candidate / upper-mark ambiguity
+Interpretation: Six revia decisions are count:0. Other new notes distinguish cholam and revia together (s39850 and s70765) while s41197 is marked unclear concerning a sin/shin-like dot. The zero counts are specific answers, and do not by themselves prove that cholam caused every false revia.
+Suggested review / OCR rule: Classify dot, cholam, shin/sin dot and revia as separate symbol classes; where a location has multiple signs, record their co-occurrence. Keep unclear locations unresolved.
+Every supporting example (9 decisions across 9 text sites):
+    - ID: s4866-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:28:11.236Z
+    - ID: s21198-revia
+      choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:17:28.099Z
-
-NEW:
-    - ID: s8761-dot_above
+      updated_at: 2026-11-19T08:28:32.783Z
+    - ID: s25017-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:17:35.688Z
-
-NEW:
-    - ID: s11831-dot_above
+      updated_at: 2026-11-19T08:28:56.686Z
+    - ID: s32447-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:17:44.602Z
-
-NEW:
-    - ID: s11848-dot_above
+      updated_at: 2026-11-19T08:29:42.540Z
+    - ID: s33681-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:17:48.303Z
-
-NEW:
-    - ID: s14632-dot_above
+      updated_at: 2026-11-19T08:29:48.211Z
+    - ID: s43406-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:32:22.366Z
+    - ID: s39850-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One cholam and one revia 
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:30:51.822Z
+    - ID: s70765-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One revia and one cholam. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:47.601Z
+    - ID: s41197-revia
       choice: unclear
       detail: [empty]
-      note (verbatim): Only cholam. No revia 
+      note (verbatim): There is something there. Almost like the word has both a sin and shin dot. 
       corrected_text: [none]
       new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:18:56.975Z
+      updated_at: 2026-11-19T08:32:17.078Z
 
-NEW:
-    - ID: s18286-dot_above
+------------------------------------------------------------------------------------------------
+PATTERN 25 — Reconstruction glyph placement, punctuation and nikud problems
+Interpretation: Three new human notes describe independent reproduction problems: s32113-dot_inside reports letter placement disrupted; s17746-meteg reports a malformed colon; s35730-meteg reports the reproduced niqqud needs examination. Related earlier notes report missing/misplaced shva or overlapping vowel/accent rendering.
+Suggested review / OCR rule: Compare raw encoded text, rendered HTML/glyphs and original scan separately. Distinguish extraction/OCR errors from font layout, bidi shaping and punctuation placement. Preserve as unresolved engineering checks until reproduced.
+Every supporting example (7 decisions across 7 text sites):
+    - ID: s32113-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Recreation placement of letters is messed up. Please take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:38:53.384Z
+    - ID: s17746-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): Colon is messed up. In recreation. Take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:13.802Z
+    - ID: s35730-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Nikkud in recreation needs to be looked at. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:13.280Z
+    - ID: s10575-meteg
+      choice: count:2
+      detail: [empty]
+      note (verbatim): In the recreation, besides rhe first Meteg being missing, the shva is in the wrong place. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T06:42:03.605Z
+    - ID: s1821-patah
+      choice: use_kit
+      detail: [empty]
+      note (verbatim): In the reproduction the munach is on top of the tzeirei 
+      corrected_text: לַֽמְֿנַצֵּ֣ח
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T06:19:26.395Z
+    - ID: s26124-dot_below
+      choice: count:2
+      detail: [empty]
+      note (verbatim): The reconstructed image has a chirik on top of a Sheba, not\nEntirely overlapping one of the dots.  
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T12:00:27.786Z
+    - ID: s21956-qadma
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Kit reconstriction text does not match image\nOf kit reconstriction 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T10:50:48.853Z
+
+------------------------------------------------------------------------------------------------
+PATTERN 26 — Grouped lower dots: sheva and segol counted as glyphs, not independent dots
+Interpretation: s17205-dot_below explicitly describes two dots as one sheva, while s31634-dot_below describes nine dots as three segols. Earlier examples describe missing sheva dots or extra reconstructed dots. The distinction is between counting individual ink dots and counting vowel symbols.
+Suggested review / OCR rule: Store separate tallies for visible dot components and encoded vowel groups (e.g. two physical dots = one sheva, three dots = one segol); do not infer vowel count from raw dot count alone.
+Every supporting example (5 decisions across 5 text sites):
+    - ID: s17205-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): 2 dots == 1 shva
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:51:35.139Z
+    - ID: s31634-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): 9 — three segols
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:53:35.100Z
+    - ID: s22069-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): Cholem over the vav. Under the hey is supposed to be a shva, but one of the dots is missing. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T11:04:15.491Z
+    - ID: s13418-dot_below
+      choice: use_sefaria
+      detail: [empty]
+      note (verbatim): The reproduction mistakinglu has a Triple shva under the try
+      corrected_text: תִּטְּשֵׁ֥נִי
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T06:47:07.430Z
+    - ID: s8252-qamats
+      choice: count:1
+      detail: [empty]
+      note (verbatim):  Not sure how accurate the reproduction is, but there are 3 dots under the nun instead of 2
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T05:53:40.256Z
+
+------------------------------------------------------------------------------------------------
+PATTERN 27 — Absent below-dot candidates / zero lower-mark answers
+Interpretation: Six dot_below decisions are count:0. They should be investigated separately from questions that ask for many individual lower dots or from decisions describing a specific qamats, sheva, patah or accent. The export alone does not establish an underlying cause.
+Suggested review / OCR rule: Use the question's mark type and the scan crop; compare the zero lower-dot count with nearby qamats/patah/sheva/segol decisions for the same text location.
+Every supporting example (6 decisions across 6 text sites):
+    - ID: s39670-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): Kometz esnachta kommetz 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T16:23:34.418Z
+    - ID: s48522-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-18T22:15:13.380Z
+    - ID: s67632-dot_below
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:19:05.539Z
-
-NEW:
-    - ID: s18293-dot_above
-      choice: count:1
+      updated_at: 2026-11-19T08:48:47.766Z
+    - ID: s19611-dot_below
+      choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:19:14.678Z
-
-NEW:
-    - ID: s18305-dot_above
-      choice: count:1
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:06.921Z
+    - ID: s48922-dot_below
+      choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:19:23.048Z
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:54:54.776Z
+    - ID: s70765-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:31.665Z
+
+PART II — COMPLETE CHANGE LOG FROM PRIOR 522-ANSWER BACKUP
+
+New: 156; changed: 0; removed: 0. All 156 newly recorded decisions follow, verbatim.
 
 NEW:
-    - ID: s20316-dot_above
+    - ID: s15562-ole
       choice: count:1
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:19:35.395Z
+      updated_at: 2026-11-19T08:27:20.481Z
 
 NEW:
-    - ID: s20887-dot_above
+    - ID: s46973-ole
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:27:34.272Z
+
+NEW:
+    - ID: s77679-ole
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:27:36.580Z
+
+NEW:
+    - ID: s39653-zinor
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:27:44.987Z
+
+NEW:
+    - ID: s4866-revia
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:19:43.296Z
+      updated_at: 2026-11-19T08:28:11.236Z
 
 NEW:
-    - ID: s24059-dot_above
+    - ID: s14256-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:28:23.472Z
+
+NEW:
+    - ID: s21198-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:28:32.783Z
+
+NEW:
+    - ID: s25017-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:28:56.686Z
+
+NEW:
+    - ID: s26169-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:29:12.873Z
+
+NEW:
+    - ID: s31448-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:29:38.198Z
+
+NEW:
+    - ID: s32447-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:42.540Z
+
+NEW:
+    - ID: s33681-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:48.211Z
+
+NEW:
+    - ID: s39462-revia
       choice: count:1
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:20:05.831Z
+      updated_at: 2026-11-19T08:29:58.593Z
 
 NEW:
-    - ID: s29376-dot_above
+    - ID: s39850-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One cholam and one revia 
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:30:51.822Z
+
+NEW:
+    - ID: s41197-revia
+      choice: unclear
+      detail: [empty]
+      note (verbatim): There is something there. Almost like the word has both a sin and shin dot. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:17.078Z
+
+NEW:
+    - ID: s43406-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:32:22.366Z
+
+NEW:
+    - ID: s70765-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One revia and one cholam. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:47.601Z
+
+NEW:
+    - ID: s7212-qadma
       choice: use_kit
       detail: [empty]
       note (verbatim): [none]
-      corrected_text: בָ֗֝לַע
+      corrected_text: לִ֨י
       new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:20:17.346Z
+      updated_at: 2026-11-19T08:33:00.052Z
 
 NEW:
-    - ID: s31508-dot_above
+    - ID: s1861-merkha
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:20:28.827Z
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:19.253Z
 
 NEW:
-    - ID: s33365-dot_above
-      choice: count:0
+    - ID: s8398-merkha
+      choice: count:1
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:20:38.629Z
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:24.206Z
 
 NEW:
-    - ID: s44031-dot_above
-      choice: count:0
+    - ID: s18896-merkha
+      choice: count:1
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:21:08.845Z
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:28.095Z
 
 NEW:
-    - ID: s49613-dot_above
+    - ID: s23179-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:32.046Z
+
+NEW:
+    - ID: s25349-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:35.717Z
+
+NEW:
+    - ID: s28624-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:38.511Z
+
+NEW:
+    - ID: s37814-merkha
       choice: count:1
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:21:15.519Z
+      updated_at: 2026-11-19T08:33:44.596Z
 
 NEW:
-    - ID: s58873-dot_above
+    - ID: s47501-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:46.924Z
+
+NEW:
+    - ID: s54992-merkha
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:21:20.156Z
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:54.994Z
 
 NEW:
-    - ID: s65874-dot_above
+    - ID: s57328-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:33:58.603Z
+
+NEW:
+    - ID: s77921-merkha
       choice: count:0
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:21:24.191Z
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:34:08.796Z
 
 NEW:
-    - ID: s69144-dot_above
+    - ID: s15856-geresh_muqdam
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:34:31.873Z
+
+NEW:
+    - ID: s26169-iluy
+      choice: use_kit
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: קֹ֝רַ֗ח
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:34:59.842Z
+
+NEW:
+    - ID: s8929-mahapakh
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:35:08.044Z
+
+NEW:
+    - ID: s9470-mahapakh
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Backwards mapach 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:35:28.232Z
+
+NEW:
+    - ID: s25346-mahapakh
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:35:32.103Z
+
+NEW:
+    - ID: s31508-mahapakh
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:35:34.084Z
+
+NEW:
+    - ID: s250-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:36:36.499Z
+
+NEW:
+    - ID: s5431-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:36:46.434Z
+
+NEW:
+    - ID: s8152-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:36:52.117Z
+
+NEW:
+    - ID: s19178-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:01.647Z
+
+NEW:
+    - ID: s19728-dot_inside
+      choice: count:2
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:19.185Z
+
+NEW:
+    - ID: s21568-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:22.697Z
+
+NEW:
+    - ID: s22737-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:33.326Z
+
+NEW:
+    - ID: s25204-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:38.745Z
+
+NEW:
+    - ID: s28927-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:41.258Z
+
+NEW:
+    - ID: s32019-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:37:48.714Z
+
+NEW:
+    - ID: s32113-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Recreation placement of letters is messed up. Please take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:38:53.384Z
+
+NEW:
+    - ID: s34976-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:38:55.674Z
+
+NEW:
+    - ID: s38238-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:39:15.826Z
+
+NEW:
+    - ID: s45789-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:39:18.956Z
+
+NEW:
+    - ID: s47364-dot_inside
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:39:25.138Z
+
+NEW:
+    - ID: s47601-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:39:29.368Z
+
+NEW:
+    - ID: s56091-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:00.311Z
+
+NEW:
+    - ID: s74134-dot_inside
       choice: count:1
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:21:28.566Z
+      updated_at: 2026-11-19T08:40:12.815Z
 
 NEW:
-    - ID: s71131-dot_above
+    - ID: s76291-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:16.740Z
+
+NEW:
+    - ID: s79528-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:29.402Z
+
+NEW:
+    - ID: s81910-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:34.632Z
+
+NEW:
+    - ID: s87691-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:45.147Z
+
+NEW:
+    - ID: s87816-dot_inside
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:40:51.002Z
+
+NEW:
+    - ID: s6813-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:02.766Z
+
+NEW:
+    - ID: s8042-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:04.966Z
+
+NEW:
+    - ID: s8929-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:07.147Z
+
+NEW:
+    - ID: s13179-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:13.182Z
+
+NEW:
+    - ID: s13765-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:15.315Z
+
+NEW:
+    - ID: s14259-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:21.114Z
+
+NEW:
+    - ID: s14323-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:27.346Z
+
+NEW:
+    - ID: s15831-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:32.331Z
+
+NEW:
+    - ID: s16468-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:41:43.215Z
+
+NEW:
+    - ID: s17746-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): Colon is messed up. In recreation. Take a look. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:13.802Z
+
+NEW:
+    - ID: s20323-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:17.958Z
+
+NEW:
+    - ID: s21956-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:23.940Z
+
+NEW:
+    - ID: s22078-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:30.468Z
+
+NEW:
+    - ID: s22815-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:33.601Z
+
+NEW:
+    - ID: s25346-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:35.486Z
+
+NEW:
+    - ID: s25399-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:39.955Z
+
+NEW:
+    - ID: s31433-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:42.459Z
+
+NEW:
+    - ID: s31680-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:44.608Z
+
+NEW:
+    - ID: s33440-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:42:49.774Z
+
+NEW:
+    - ID: s33778-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:43:06.066Z
+
+NEW:
+    - ID: s35208-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:43:40.917Z
+
+NEW:
+    - ID: s35730-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): Nikkud in recreation needs to be looked at. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:13.280Z
+
+NEW:
+    - ID: s38505-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:15.228Z
+
+NEW:
+    - ID: s40047-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:17.594Z
+
+NEW:
+    - ID: s43364-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:21.847Z
+
+NEW:
+    - ID: s46395-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:24.411Z
+
+NEW:
+    - ID: s46522-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:26.413Z
+
+NEW:
+    - ID: s46727-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:29.134Z
+
+NEW:
+    - ID: s46745-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:31.682Z
+
+NEW:
+    - ID: s52392-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:38.388Z
+
+NEW:
+    - ID: s52473-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:41.363Z
+
+NEW:
+    - ID: s52682-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:45.694Z
+
+NEW:
+    - ID: s54988-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:49.631Z
+
+NEW:
+    - ID: s56885-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:44:55.135Z
+
+NEW:
+    - ID: s56954-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:00.106Z
+
+NEW:
+    - ID: s58377-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:13.696Z
+
+NEW:
+    - ID: s60449-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:18.931Z
+
+NEW:
+    - ID: s63877-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:21.224Z
+
+NEW:
+    - ID: s63992-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:25.485Z
+
+NEW:
+    - ID: s64430-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:36.847Z
+
+NEW:
+    - ID: s65183-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:38.810Z
+
+NEW:
+    - ID: s65305-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:42.811Z
+
+NEW:
+    - ID: s67085-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:45.764Z
+
+NEW:
+    - ID: s70736-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:47.762Z
+
+NEW:
+    - ID: s70996-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:45:50.298Z
+
+NEW:
+    - ID: s71128-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:46:02.042Z
+
+NEW:
+    - ID: s72809-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:46:04.508Z
+
+NEW:
+    - ID: s74421-meteg
+      choice: count:2
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:46:51.641Z
+
+NEW:
+    - ID: s76460-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:01.760Z
+
+NEW:
+    - ID: s77524-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:04.360Z
+
+NEW:
+    - ID: s82332-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:47:12.618Z
+
+NEW:
+    - ID: s83790-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:16.658Z
+
+NEW:
+    - ID: s83876-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:18.732Z
+
+NEW:
+    - ID: s84834-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:27.417Z
+
+NEW:
+    - ID: s85188-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:29.755Z
+
+NEW:
+    - ID: s86056-meteg
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:47:33.752Z
+
+NEW:
+    - ID: s355-dot_below
+      choice: use_kit
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: אֶת
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:48:20.968Z
+
+NEW:
+    - ID: s67632-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:48:47.766Z
+
+NEW:
+    - ID: s8252-dot_below
+      choice: count:6
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:49:16.499Z
+
+NEW:
+    - ID: s8868-dot_below
+      choice: count:2
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:49:21.090Z
+
+NEW:
+    - ID: s10138-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): Under the nun is an ink blotch 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:49:55.789Z
+
+NEW:
+    - ID: s12961-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:50:06.129Z
+
+NEW:
+    - ID: s13267-dot_below
+      choice: count:2
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:50:19.792Z
+
+NEW:
+    - ID: s13271-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:50:32.070Z
+
+NEW:
+    - ID: s13303-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:50:39.096Z
+
+NEW:
+    - ID: s13459-dot_below
+      choice: count:2
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:50:45.209Z
+
+NEW:
+    - ID: s15807-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:50:48.661Z
+
+NEW:
+    - ID: s16078-dot_below
+      choice: count:8
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:51:03.023Z
+
+NEW:
+    - ID: s17205-dot_below
       choice: other
       detail: [empty]
-      note (verbatim): Cholam only. No revia. 
+      note (verbatim): 2 dots == 1 shva
       corrected_text: [none]
       new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:22:06.800Z
+      updated_at: 2026-11-19T08:51:35.139Z
 
 NEW:
-    - ID: s77154-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:22:24.557Z
-
-NEW:
-    - ID: s77241-dot_above
-      choice: count:1
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:22:33.728Z
-
-NEW:
-    - ID: s77898-dot_above
-      choice: count:0
-      detail: [empty]
-      note (verbatim): [none]
-      corrected_text: [none]
-      new_edition_count_wrong: true
-      updated_at: 2026-11-19T08:22:36.948Z
-
-NEW:
-    - ID: s79324-dot_above
-      choice: count:1
+    - ID: s17718-dot_below
+      choice: count:2
       detail: [empty]
       note (verbatim): [none]
       corrected_text: [none]
       new_edition_count_wrong: [not set]
-      updated_at: 2026-11-19T08:22:48.087Z
+      updated_at: 2026-11-19T08:51:51.294Z
 
-PART III — COMPLETE 522-DECISION LEDGER (VERBATIM NOTES / ALL FIELDS)
+NEW:
+    - ID: s18231-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:51:55.670Z
+
+NEW:
+    - ID: s19611-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:06.921Z
+
+NEW:
+    - ID: s21528-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:12.794Z
+
+NEW:
+    - ID: s22078-dot_below
+      choice: count:2
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:17.285Z
+
+NEW:
+    - ID: s24261-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:26.150Z
+
+NEW:
+    - ID: s28396-dot_below
+      choice: count:5
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:30.570Z
+
+NEW:
+    - ID: s29000-dot_below
+      choice: count:6
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:40.662Z
+
+NEW:
+    - ID: s29977-dot_below
+      choice: count:5
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:52:53.369Z
+
+NEW:
+    - ID: s30279-dot_below
+      choice: count:5
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:53:09.514Z
+
+NEW:
+    - ID: s31634-dot_below
+      choice: other
+      detail: [empty]
+      note (verbatim): 9 — three segols
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:53:35.100Z
+
+NEW:
+    - ID: s35835-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:54:17.995Z
+
+NEW:
+    - ID: s43242-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:54:35.001Z
+
+NEW:
+    - ID: s44942-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:54:43.193Z
+
+NEW:
+    - ID: s46363-dot_below
+      choice: count:5
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:54:49.632Z
+
+NEW:
+    - ID: s48922-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:54:54.776Z
+
+NEW:
+    - ID: s49802-dot_below
+      choice: count:2
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:02.625Z
+
+NEW:
+    - ID: s60763-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:06.310Z
+
+NEW:
+    - ID: s61494-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:10.051Z
+
+NEW:
+    - ID: s61631-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:14.116Z
+
+NEW:
+    - ID: s62282-dot_below
+      choice: count:6
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:18.641Z
+
+NEW:
+    - ID: s63163-dot_below
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:21.140Z
+
+NEW:
+    - ID: s66072-dot_below
+      choice: count:6
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:27.037Z
+
+NEW:
+    - ID: s70765-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:31.665Z
+
+NEW:
+    - ID: s71631-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:38.408Z
+
+NEW:
+    - ID: s79499-dot_below
+      choice: count:4
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:42.270Z
+
+NEW:
+    - ID: s80473-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:53.146Z
+
+NEW:
+    - ID: s82149-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:55:59.257Z
+
+NEW:
+    - ID: s82432-dot_below
+      choice: count:3
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:56:06.720Z
+
+PART III — COMPLETE DECISION LEDGER, ALL 678 ANSWERS
 
 
 001. s1897-yerah_ben_yomo
@@ -8254,8 +9450,1394 @@ PART III — COMPLETE 522-DECISION LEDGER (VERBATIM NOTES / ALL FIELDS)
    new_edition_count_wrong: [not set]
    updated_at: 2026-11-19T08:22:48.087Z
 
-PART IV — EVERY DECISION BY SIGN TYPE
+523. s15562-ole
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:27:20.481Z
 
+524. s46973-ole
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:27:34.272Z
+
+525. s77679-ole
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:27:36.580Z
+
+526. s39653-zinor
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:27:44.987Z
+
+527. s4866-revia
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:28:11.236Z
+
+528. s14256-revia
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:28:23.472Z
+
+529. s21198-revia
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:28:32.783Z
+
+530. s25017-revia
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:28:56.686Z
+
+531. s26169-revia
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:29:12.873Z
+
+532. s31448-revia
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:29:38.198Z
+
+533. s32447-revia
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:29:42.540Z
+
+534. s33681-revia
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:29:48.211Z
+
+535. s39462-revia
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:29:58.593Z
+
+536. s39850-revia
+   choice: count:1
+   detail: [empty]
+   note: One cholam and one revia 
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:30:51.822Z
+
+537. s41197-revia
+   choice: unclear
+   detail: [empty]
+   note: There is something there. Almost like the word has both a sin and shin dot. 
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:32:17.078Z
+
+538. s43406-revia
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:32:22.366Z
+
+539. s70765-revia
+   choice: count:1
+   detail: [empty]
+   note: One revia and one cholam. 
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:32:47.601Z
+
+540. s7212-qadma
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: לִ֨י
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:00.052Z
+
+541. s1861-merkha
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:19.253Z
+
+542. s8398-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:24.206Z
+
+543. s18896-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:28.095Z
+
+544. s23179-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:32.046Z
+
+545. s25349-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:35.717Z
+
+546. s28624-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:38.511Z
+
+547. s37814-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:33:44.596Z
+
+548. s47501-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:46.924Z
+
+549. s54992-merkha
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:54.994Z
+
+550. s57328-merkha
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:33:58.603Z
+
+551. s77921-merkha
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:34:08.796Z
+
+552. s15856-geresh_muqdam
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:34:31.873Z
+
+553. s26169-iluy
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: קֹ֝רַ֗ח
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:34:59.842Z
+
+554. s8929-mahapakh
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:35:08.044Z
+
+555. s9470-mahapakh
+   choice: count:1
+   detail: [empty]
+   note: Backwards mapach 
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:35:28.232Z
+
+556. s25346-mahapakh
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:35:32.103Z
+
+557. s31508-mahapakh
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:35:34.084Z
+
+558. s250-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:36:36.499Z
+
+559. s5431-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:36:46.434Z
+
+560. s8152-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:36:52.117Z
+
+561. s19178-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:37:01.647Z
+
+562. s19728-dot_inside
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:37:19.185Z
+
+563. s21568-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:37:22.697Z
+
+564. s22737-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:37:33.326Z
+
+565. s25204-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:37:38.745Z
+
+566. s28927-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:37:41.258Z
+
+567. s32019-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:37:48.714Z
+
+568. s32113-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: Recreation placement of letters is messed up. Please take a look. 
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:38:53.384Z
+
+569. s34976-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:38:55.674Z
+
+570. s38238-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:39:15.826Z
+
+571. s45789-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:39:18.956Z
+
+572. s47364-dot_inside
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:39:25.138Z
+
+573. s47601-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:39:29.368Z
+
+574. s56091-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:40:00.311Z
+
+575. s74134-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:40:12.815Z
+
+576. s76291-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:40:16.740Z
+
+577. s79528-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:40:29.402Z
+
+578. s81910-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:40:34.632Z
+
+579. s87691-dot_inside
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:40:45.147Z
+
+580. s87816-dot_inside
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:40:51.002Z
+
+581. s6813-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:02.766Z
+
+582. s8042-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:04.966Z
+
+583. s8929-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:07.147Z
+
+584. s13179-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:13.182Z
+
+585. s13765-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:15.315Z
+
+586. s14259-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:21.114Z
+
+587. s14323-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:27.346Z
+
+588. s15831-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:32.331Z
+
+589. s16468-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:41:43.215Z
+
+590. s17746-meteg
+   choice: count:0
+   detail: [empty]
+   note: Colon is messed up. In recreation. Take a look. 
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:13.802Z
+
+591. s20323-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:17.958Z
+
+592. s21956-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:23.940Z
+
+593. s22078-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:30.468Z
+
+594. s22815-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:33.601Z
+
+595. s25346-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:35.486Z
+
+596. s25399-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:39.955Z
+
+597. s31433-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:42.459Z
+
+598. s31680-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:44.608Z
+
+599. s33440-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:42:49.774Z
+
+600. s33778-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:43:06.066Z
+
+601. s35208-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:43:40.917Z
+
+602. s35730-meteg
+   choice: count:1
+   detail: [empty]
+   note: Nikkud in recreation needs to be looked at. 
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:13.280Z
+
+603. s38505-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:15.228Z
+
+604. s40047-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:17.594Z
+
+605. s43364-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:21.847Z
+
+606. s46395-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:24.411Z
+
+607. s46522-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:26.413Z
+
+608. s46727-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:29.134Z
+
+609. s46745-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:31.682Z
+
+610. s52392-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:38.388Z
+
+611. s52473-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:41.363Z
+
+612. s52682-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:45.694Z
+
+613. s54988-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:49.631Z
+
+614. s56885-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:44:55.135Z
+
+615. s56954-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:00.106Z
+
+616. s58377-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:13.696Z
+
+617. s60449-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:18.931Z
+
+618. s63877-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:21.224Z
+
+619. s63992-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:25.485Z
+
+620. s64430-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:36.847Z
+
+621. s65183-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:38.810Z
+
+622. s65305-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:42.811Z
+
+623. s67085-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:45.764Z
+
+624. s70736-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:47.762Z
+
+625. s70996-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:45:50.298Z
+
+626. s71128-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:46:02.042Z
+
+627. s72809-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:46:04.508Z
+
+628. s74421-meteg
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:46:51.641Z
+
+629. s76460-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:47:01.760Z
+
+630. s77524-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:47:04.360Z
+
+631. s82332-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:47:12.618Z
+
+632. s83790-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:47:16.658Z
+
+633. s83876-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:47:18.732Z
+
+634. s84834-meteg
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:47:27.417Z
+
+635. s85188-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:47:29.755Z
+
+636. s86056-meteg
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:47:33.752Z
+
+637. s355-dot_below
+   choice: use_kit
+   detail: [empty]
+   note: [empty]
+   corrected_text: אֶת
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:48:20.968Z
+
+638. s67632-dot_below
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: true
+   updated_at: 2026-11-19T08:48:47.766Z
+
+639. s8252-dot_below
+   choice: count:6
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:49:16.499Z
+
+640. s8868-dot_below
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:49:21.090Z
+
+641. s10138-dot_below
+   choice: count:4
+   detail: [empty]
+   note: Under the nun is an ink blotch 
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:49:55.789Z
+
+642. s12961-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:50:06.129Z
+
+643. s13267-dot_below
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:50:19.792Z
+
+644. s13271-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:50:32.070Z
+
+645. s13303-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:50:39.096Z
+
+646. s13459-dot_below
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:50:45.209Z
+
+647. s15807-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:50:48.661Z
+
+648. s16078-dot_below
+   choice: count:8
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:51:03.023Z
+
+649. s17205-dot_below
+   choice: other
+   detail: [empty]
+   note: 2 dots == 1 shva
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:51:35.139Z
+
+650. s17718-dot_below
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:51:51.294Z
+
+651. s18231-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:51:55.670Z
+
+652. s19611-dot_below
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:52:06.921Z
+
+653. s21528-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:52:12.794Z
+
+654. s22078-dot_below
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:52:17.285Z
+
+655. s24261-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:52:26.150Z
+
+656. s28396-dot_below
+   choice: count:5
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:52:30.570Z
+
+657. s29000-dot_below
+   choice: count:6
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:52:40.662Z
+
+658. s29977-dot_below
+   choice: count:5
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:52:53.369Z
+
+659. s30279-dot_below
+   choice: count:5
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:53:09.514Z
+
+660. s31634-dot_below
+   choice: other
+   detail: [empty]
+   note: 9 — three segols
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:53:35.100Z
+
+661. s35835-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:54:17.995Z
+
+662. s43242-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:54:35.001Z
+
+663. s44942-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:54:43.193Z
+
+664. s46363-dot_below
+   choice: count:5
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:54:49.632Z
+
+665. s48922-dot_below
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:54:54.776Z
+
+666. s49802-dot_below
+   choice: count:2
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:02.625Z
+
+667. s60763-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:06.310Z
+
+668. s61494-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:10.051Z
+
+669. s61631-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:14.116Z
+
+670. s62282-dot_below
+   choice: count:6
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:18.641Z
+
+671. s63163-dot_below
+   choice: count:1
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:21.140Z
+
+672. s66072-dot_below
+   choice: count:6
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:27.037Z
+
+673. s70765-dot_below
+   choice: count:0
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:31.665Z
+
+674. s71631-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:38.408Z
+
+675. s79499-dot_below
+   choice: count:4
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:42.270Z
+
+676. s80473-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:53.146Z
+
+677. s82149-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:55:59.257Z
+
+678. s82432-dot_below
+   choice: count:3
+   detail: [empty]
+   note: [empty]
+   corrected_text: [empty]
+   new_edition_count_wrong: [not set]
+   updated_at: 2026-11-19T08:56:06.720Z
+
+PART IV — ALL DECISIONS SORTED BY SIGN TYPE
+
+meteg (137):
+    s47948-meteg => count:0
+    s60049-meteg => count:0
+    s8868-meteg => count:0
+    s9264-meteg => count:0
+    s7905-meteg => use_kit
+    s10575-meteg => count:2
+    s10642-meteg => count:1
+    s13600-meteg => use_kit
+    s14156-meteg => use_kit
+    s14537-meteg => use_kit
+    s15716-meteg => use_kit
+    s15720-meteg => use_kit
+    s16304-meteg => use_kit
+    s16718-meteg => use_kit
+    s16916-meteg => count:0
+    s17288-meteg => use_kit
+    s17396-meteg => use_sefaria
+    s17997-meteg => count:0
+    s18709-meteg => use_kit
+    s18945-meteg => use_kit
+    s22627-meteg => use_kit
+    s24261-meteg => count:0
+    s24834-meteg => count:0
+    s25599-meteg => count:0
+    s26732-meteg => count:1
+    s28396-meteg => count:0
+    s31634-meteg => count:1
+    s31915-meteg => use_kit
+    s33953-meteg => count:0
+    s34725-meteg => use_kit
+    s35835-meteg => count:1
+    s39622-meteg => count:0
+    s42157-meteg => count:0
+    s42376-meteg => count:0
+    s44722-meteg => count:0
+    s45203-meteg => count:0
+    s45873-meteg => count:0
+    s46714-meteg => count:0
+    s47204-meteg => count:1
+    s48766-meteg => count:0
+    s49167-meteg => count:0
+    s52098-meteg => count:0
+    s55105-meteg => count:1
+    s55177-meteg => count:1
+    s56418-meteg => count:0
+    s41214-meteg => count:0
+    s57328-meteg => count:0
+    s61759-meteg => count:0
+    s61892-meteg => count:0
+    s61986-meteg => count:0
+    s62282-meteg => count:0
+    s63163-meteg => count:0
+    s64110-meteg => count:0
+    s66585-meteg => count:0
+    s67786-meteg => count:0
+    s72065-meteg => count:0
+    s74002-meteg => count:1
+    s74120-meteg => count:0
+    s75604-meteg => other
+    s75844-meteg => count:0
+    s76899-meteg => count:0
+    s77761-meteg => count:0
+    s78133-meteg => count:0
+    s79473-meteg => count:0
+    s79664-meteg => count:0
+    s80226-meteg => count:0
+    s85096-meteg => count:0
+    s86493-meteg => count:0
+    s86882-meteg => count:0
+    s44084-meteg => count:1
+    s47130-meteg => count:1
+    s47934-meteg => count:1
+    s49432-meteg => count:0
+    s49505-meteg => count:1
+    s55382-meteg => count:2
+    s57688-meteg => count:1
+    s73071-meteg => count:1
+    s76302-meteg => count:1
+    s79702-meteg => count:0
+    s84917-meteg => count:0
+    s85044-meteg => count:0
+    s6813-meteg => count:0
+    s8042-meteg => count:0
+    s8929-meteg => count:0
+    s13179-meteg => count:1
+    s13765-meteg => count:0
+    s14259-meteg => count:0
+    s14323-meteg => count:1
+    s15831-meteg => count:1
+    s16468-meteg => count:0
+    s17746-meteg => count:0
+    s20323-meteg => count:0
+    s21956-meteg => count:0
+    s22078-meteg => count:1
+    s22815-meteg => count:1
+    s25346-meteg => count:0
+    s25399-meteg => count:1
+    s31433-meteg => count:0
+    s31680-meteg => count:1
+    s33440-meteg => count:1
+    s33778-meteg => count:0
+    s35208-meteg => count:0
+    s35730-meteg => count:1
+    s38505-meteg => count:0
+    s40047-meteg => count:0
+    s43364-meteg => count:1
+    s46395-meteg => count:0
+    s46522-meteg => count:0
+    s46727-meteg => count:0
+    s46745-meteg => count:0
+    s52392-meteg => count:0
+    s52473-meteg => count:1
+    s52682-meteg => count:0
+    s54988-meteg => count:0
+    s56885-meteg => count:0
+    s56954-meteg => count:0
+    s58377-meteg => count:0
+    s60449-meteg => count:0
+    s63877-meteg => count:0
+    s63992-meteg => count:0
+    s64430-meteg => count:0
+    s65183-meteg => count:0
+    s65305-meteg => count:0
+    s67085-meteg => count:0
+    s70736-meteg => count:0
+    s70996-meteg => count:0
+    s71128-meteg => count:0
+    s72809-meteg => count:0
+    s74421-meteg => count:2
+    s76460-meteg => count:0
+    s77524-meteg => count:0
+    s82332-meteg => count:1 | new-edition-count-wrong
+    s83790-meteg => count:0
+    s83876-meteg => count:0
+    s84834-meteg => count:1
+    s85188-meteg => count:0
+    s86056-meteg => count:0
 dot_above (135):
     s74048-dot_above => count:1
     s143-dot_above => use_kit
@@ -8392,89 +10974,7 @@ dot_above (135):
     s77241-dot_above => count:1 | new-edition-count-wrong
     s77898-dot_above => count:0 | new-edition-count-wrong
     s79324-dot_above => count:1
-meteg (81):
-    s47948-meteg => count:0
-    s60049-meteg => count:0
-    s8868-meteg => count:0
-    s9264-meteg => count:0
-    s7905-meteg => use_kit
-    s10575-meteg => count:2
-    s10642-meteg => count:1
-    s13600-meteg => use_kit
-    s14156-meteg => use_kit
-    s14537-meteg => use_kit
-    s15716-meteg => use_kit
-    s15720-meteg => use_kit
-    s16304-meteg => use_kit
-    s16718-meteg => use_kit
-    s16916-meteg => count:0
-    s17288-meteg => use_kit
-    s17396-meteg => use_sefaria
-    s17997-meteg => count:0
-    s18709-meteg => use_kit
-    s18945-meteg => use_kit
-    s22627-meteg => use_kit
-    s24261-meteg => count:0
-    s24834-meteg => count:0
-    s25599-meteg => count:0
-    s26732-meteg => count:1
-    s28396-meteg => count:0
-    s31634-meteg => count:1
-    s31915-meteg => use_kit
-    s33953-meteg => count:0
-    s34725-meteg => use_kit
-    s35835-meteg => count:1
-    s39622-meteg => count:0
-    s42157-meteg => count:0
-    s42376-meteg => count:0
-    s44722-meteg => count:0
-    s45203-meteg => count:0
-    s45873-meteg => count:0
-    s46714-meteg => count:0
-    s47204-meteg => count:1
-    s48766-meteg => count:0
-    s49167-meteg => count:0
-    s52098-meteg => count:0
-    s55105-meteg => count:1
-    s55177-meteg => count:1
-    s56418-meteg => count:0
-    s41214-meteg => count:0
-    s57328-meteg => count:0
-    s61759-meteg => count:0
-    s61892-meteg => count:0
-    s61986-meteg => count:0
-    s62282-meteg => count:0
-    s63163-meteg => count:0
-    s64110-meteg => count:0
-    s66585-meteg => count:0
-    s67786-meteg => count:0
-    s72065-meteg => count:0
-    s74002-meteg => count:1
-    s74120-meteg => count:0
-    s75604-meteg => other
-    s75844-meteg => count:0
-    s76899-meteg => count:0
-    s77761-meteg => count:0
-    s78133-meteg => count:0
-    s79473-meteg => count:0
-    s79664-meteg => count:0
-    s80226-meteg => count:0
-    s85096-meteg => count:0
-    s86493-meteg => count:0
-    s86882-meteg => count:0
-    s44084-meteg => count:1
-    s47130-meteg => count:1
-    s47934-meteg => count:1
-    s49432-meteg => count:0
-    s49505-meteg => count:1
-    s55382-meteg => count:2
-    s57688-meteg => count:1
-    s73071-meteg => count:1
-    s76302-meteg => count:1
-    s79702-meteg => count:0
-    s84917-meteg => count:0
-    s85044-meteg => count:0
-dot_below (61):
+dot_below (103):
     s55076-dot_below => other
     s8547-dot_below => other
     s839-dot_below => other
@@ -8536,6 +11036,106 @@ dot_below (61):
     s85188-dot_below => count:2
     s85721-dot_below => count:4
     s86056-dot_below => count:5
+    s355-dot_below => use_kit
+    s67632-dot_below => count:0 | new-edition-count-wrong
+    s8252-dot_below => count:6
+    s8868-dot_below => count:2
+    s10138-dot_below => count:4
+    s12961-dot_below => count:3
+    s13267-dot_below => count:2
+    s13271-dot_below => count:3
+    s13303-dot_below => count:4
+    s13459-dot_below => count:2
+    s15807-dot_below => count:3
+    s16078-dot_below => count:8
+    s17205-dot_below => other
+    s17718-dot_below => count:2
+    s18231-dot_below => count:4
+    s19611-dot_below => count:0
+    s21528-dot_below => count:4
+    s22078-dot_below => count:2
+    s24261-dot_below => count:3
+    s28396-dot_below => count:5
+    s29000-dot_below => count:6
+    s29977-dot_below => count:5
+    s30279-dot_below => count:5
+    s31634-dot_below => other
+    s35835-dot_below => count:4
+    s43242-dot_below => count:4
+    s44942-dot_below => count:4
+    s46363-dot_below => count:5
+    s48922-dot_below => count:0
+    s49802-dot_below => count:2
+    s60763-dot_below => count:3
+    s61494-dot_below => count:4
+    s61631-dot_below => count:3
+    s62282-dot_below => count:6
+    s63163-dot_below => count:1
+    s66072-dot_below => count:6
+    s70765-dot_below => count:0
+    s71631-dot_below => count:3
+    s79499-dot_below => count:4
+    s80473-dot_below => count:3
+    s82149-dot_below => count:3
+    s82432-dot_below => count:3
+dot_inside (57):
+    s46571-dot_inside => count:3
+    s2339-dot_inside => count:1
+    s3505-dot_inside => count:1
+    s6444-dot_inside => count:1
+    s7079-dot_inside => count:2
+    s8055-dot_inside => count:1
+    s9162-dot_inside => count:1
+    s13427-dot_inside => use_kit
+    s15109-dot_inside => use_kit
+    s16304-dot_inside => use_kit
+    s16718-dot_inside => use_kit
+    s19371-dot_inside => use_kit
+    s19710-dot_inside => use_kit
+    s30629-dot_inside => count:1
+    s32229-dot_inside => use_kit
+    s32583-dot_inside => count:1
+    s33365-dot_inside => count:0
+    s37870-dot_inside => count:0
+    s40531-dot_inside => count:2
+    s40831-dot_inside => count:2
+    s41319-dot_inside => count:2
+    s44305-dot_inside => count:0
+    s45803-dot_inside => count:0
+    s47085-dot_inside => count:2
+    s47122-dot_inside => count:0
+    s50566-dot_inside => count:1
+    s63187-dot_inside => count:0
+    s80973-dot_inside => count:0
+    s81777-dot_inside => count:0
+    s86751-dot_inside => count:0
+    s86857-dot_inside => count:0
+    s42134-dot_inside => count:2
+    s49140-dot_inside => use_kit
+    s82258-dot_inside => use_kit
+    s250-dot_inside => count:0
+    s5431-dot_inside => count:1
+    s8152-dot_inside => count:1
+    s19178-dot_inside => count:0
+    s19728-dot_inside => count:2
+    s21568-dot_inside => count:0
+    s22737-dot_inside => count:1
+    s25204-dot_inside => count:1
+    s28927-dot_inside => count:0
+    s32019-dot_inside => count:0
+    s32113-dot_inside => count:1
+    s34976-dot_inside => count:0
+    s38238-dot_inside => count:0
+    s45789-dot_inside => count:0
+    s47364-dot_inside => count:3
+    s47601-dot_inside => count:0
+    s56091-dot_inside => count:1
+    s74134-dot_inside => count:1 | new-edition-count-wrong
+    s76291-dot_inside => count:0
+    s79528-dot_inside => count:1
+    s81910-dot_inside => count:1
+    s87691-dot_inside => count:1
+    s87816-dot_inside => count:0
 patah (52):
     s30286-patah => count:0
     s36973-patah => count:0
@@ -8682,42 +11282,7 @@ munah (43):
     s75604-munah => count:1
     s78634-munah => count:1 | new-edition-count-wrong
     s85188-munah => count:1
-dot_inside (34):
-    s46571-dot_inside => count:3
-    s2339-dot_inside => count:1
-    s3505-dot_inside => count:1
-    s6444-dot_inside => count:1
-    s7079-dot_inside => count:2
-    s8055-dot_inside => count:1
-    s9162-dot_inside => count:1
-    s13427-dot_inside => use_kit
-    s15109-dot_inside => use_kit
-    s16304-dot_inside => use_kit
-    s16718-dot_inside => use_kit
-    s19371-dot_inside => use_kit
-    s19710-dot_inside => use_kit
-    s30629-dot_inside => count:1
-    s32229-dot_inside => use_kit
-    s32583-dot_inside => count:1
-    s33365-dot_inside => count:0
-    s37870-dot_inside => count:0
-    s40531-dot_inside => count:2
-    s40831-dot_inside => count:2
-    s41319-dot_inside => count:2
-    s44305-dot_inside => count:0
-    s45803-dot_inside => count:0
-    s47085-dot_inside => count:2
-    s47122-dot_inside => count:0
-    s50566-dot_inside => count:1
-    s63187-dot_inside => count:0
-    s80973-dot_inside => count:0
-    s81777-dot_inside => count:0
-    s86751-dot_inside => count:0
-    s86857-dot_inside => count:0
-    s42134-dot_inside => count:2
-    s49140-dot_inside => use_kit
-    s82258-dot_inside => use_kit
-merkha (17):
+merkha (28):
     s29338-merkha => count:1
     s6682-merkha => use_kit
     s6864-merkha => use_kit
@@ -8735,6 +11300,45 @@ merkha (17):
     s52462-merkha => count:1
     s53467-merkha => count:1
     s60117-merkha => count:1
+    s1861-merkha => count:0
+    s8398-merkha => count:1
+    s18896-merkha => count:1
+    s23179-merkha => count:1
+    s25349-merkha => count:1
+    s28624-merkha => count:1
+    s37814-merkha => count:1 | new-edition-count-wrong
+    s47501-merkha => count:1
+    s54992-merkha => count:0
+    s57328-merkha => count:1
+    s77921-merkha => count:0
+revia (27):
+    s9342-revia => other
+    s459-revia => use_kit
+    s990-revia => use_kit
+    s1821-revia => use_kit
+    s9680-revia => use_kit
+    s10091-revia => use_kit
+    s10138-revia => other
+    s13065-revia => count:1
+    s26751-revia => count:1
+    s27836-revia => use_kit
+    s40234-revia => other
+    s42181-revia => other
+    s51478-revia => count:1
+    s39206-revia => use_kit
+    s4866-revia => count:0 | new-edition-count-wrong
+    s14256-revia => count:1
+    s21198-revia => count:0
+    s25017-revia => count:0 | new-edition-count-wrong
+    s26169-revia => count:1
+    s31448-revia => count:1
+    s32447-revia => count:0 | new-edition-count-wrong
+    s33681-revia => count:0 | new-edition-count-wrong
+    s39462-revia => count:1 | new-edition-count-wrong
+    s39850-revia => count:1 | new-edition-count-wrong
+    s41197-revia => unclear
+    s43406-revia => count:0 | new-edition-count-wrong
+    s70765-revia => count:1
 dehi (15):
     s14175-dehi => use_kit
     s18033-dehi => use_sefaria
@@ -8751,55 +11355,51 @@ dehi (15):
     s72674-dehi => count:1 | new-edition-count-wrong
     s84804-dehi => count:1 | new-edition-count-wrong
     s87039-dehi => count:1
-revia (14):
-    s9342-revia => other
-    s459-revia => use_kit
-    s990-revia => use_kit
-    s1821-revia => use_kit
-    s9680-revia => use_kit
-    s10091-revia => use_kit
-    s10138-revia => other
-    s13065-revia => count:1
-    s26751-revia => count:1
-    s27836-revia => use_kit
-    s40234-revia => other
-    s42181-revia => other
-    s51478-revia => count:1
-    s39206-revia => use_kit
-zinor (5):
+mahapakh (8):
+    s25303-mahapakh => other
+    s82021-mahapakh => count:1
+    s46781-mahapakh => count:1
+    s68446-mahapakh => use_kit
+    s8929-mahapakh => count:1
+    s9470-mahapakh => count:1
+    s25346-mahapakh => count:1
+    s31508-mahapakh => count:1
+zinor (6):
     s15940-zinor => count:1
     s29398-zinor => count:1
     s29480-zinor => count:1
     s35021-zinor => count:1
     s58524-zinor => use_kit
-mahapakh (4):
-    s25303-mahapakh => other
-    s82021-mahapakh => count:1
-    s46781-mahapakh => count:1
-    s68446-mahapakh => use_kit
+    s39653-zinor => count:1
+ole (5):
+    s19437-ole => use_kit
+    s81742-ole => count:0
+    s15562-ole => count:1
+    s46973-ole => count:0
+    s77679-ole => count:1
 yerah_ben_yomo (4):
     s1897-yerah_ben_yomo => count:1
     s22918-yerah_ben_yomo => use_sefaria
     s27456-yerah_ben_yomo => use_kit
     s58558-yerah_ben_yomo => count:1
-ole (2):
-    s19437-ole => use_kit
-    s81742-ole => count:0
-qadma (2):
+qadma (3):
     s21956-qadma => count:1
     s32873-qadma => count:1
+    s7212-qadma => use_kit
+geresh_muqdam (2):
+    s399-geresh_muqdam => other
+    s15856-geresh_muqdam => count:1
+iluy (2):
+    s8932-iluy => other
+    s26169-iluy => use_kit
 etnahta (1):
     s73360-etnahta => count:1
-geresh_muqdam (1):
-    s399-geresh_muqdam => other
-iluy (1):
-    s8932-iluy => other
 pazer (1):
     s17533-pazer => count:1
 shalshelet (1):
     s32100-shalshelet => count:0
 
-PART V — ALL ZERO-COUNT DECISIONS
+PART V — EVERY COUNT:0 DECISION
 
 s30286-patah
 s36973-patah
@@ -8940,8 +11540,75 @@ s58873-dot_above | flagged new-edition count
 s65874-dot_above | flagged new-edition count
 s77154-dot_above | flagged new-edition count
 s77898-dot_above | flagged new-edition count
+s46973-ole
+s4866-revia | flagged new-edition count
+s21198-revia
+s25017-revia | flagged new-edition count
+s32447-revia | flagged new-edition count
+s33681-revia | flagged new-edition count
+s43406-revia | flagged new-edition count
+s1861-merkha
+s54992-merkha
+s77921-merkha
+s250-dot_inside
+s19178-dot_inside
+s21568-dot_inside
+s28927-dot_inside
+s32019-dot_inside
+s34976-dot_inside
+s38238-dot_inside
+s45789-dot_inside
+s47601-dot_inside
+s76291-dot_inside
+s87816-dot_inside
+s6813-meteg
+s8042-meteg
+s8929-meteg
+s13765-meteg
+s14259-meteg
+s16468-meteg
+s17746-meteg | Colon is messed up. In recreation. Take a look. 
+s20323-meteg
+s21956-meteg
+s25346-meteg
+s31433-meteg
+s33778-meteg
+s35208-meteg
+s38505-meteg
+s40047-meteg
+s46395-meteg
+s46522-meteg
+s46727-meteg
+s46745-meteg
+s52392-meteg
+s52682-meteg
+s54988-meteg
+s56885-meteg
+s56954-meteg
+s58377-meteg
+s60449-meteg
+s63877-meteg
+s63992-meteg
+s64430-meteg
+s65183-meteg
+s65305-meteg
+s67085-meteg
+s70736-meteg
+s70996-meteg
+s71128-meteg
+s72809-meteg
+s76460-meteg
+s77524-meteg
+s83790-meteg
+s83876-meteg
+s85188-meteg
+s86056-meteg
+s67632-dot_below | flagged new-edition count
+s19611-dot_below
+s48922-dot_below
+s70765-dot_below
 
-PART VI — ALL NEW-EDITION-COUNT DISAGREEMENT FLAGS
+PART VI — ALL NEW-EDITION COUNT-ERROR FLAGS
 
     - ID: s408-qamats
       choice: use_kit
@@ -9167,8 +11834,85 @@ PART VI — ALL NEW-EDITION-COUNT DISAGREEMENT FLAGS
       corrected_text: [none]
       new_edition_count_wrong: true
       updated_at: 2026-11-19T08:22:36.948Z
+    - ID: s4866-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:28:11.236Z
+    - ID: s25017-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:28:56.686Z
+    - ID: s32447-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:42.540Z
+    - ID: s33681-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:48.211Z
+    - ID: s39462-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:29:58.593Z
+    - ID: s39850-revia
+      choice: count:1
+      detail: [empty]
+      note (verbatim): One cholam and one revia 
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:30:51.822Z
+    - ID: s43406-revia
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:32:22.366Z
+    - ID: s37814-merkha
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:33:44.596Z
+    - ID: s74134-dot_inside
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:40:12.815Z
+    - ID: s82332-meteg
+      choice: count:1
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:47:12.618Z
+    - ID: s67632-dot_below
+      choice: count:0
+      detail: [empty]
+      note (verbatim): [none]
+      corrected_text: [none]
+      new_edition_count_wrong: true
+      updated_at: 2026-11-19T08:48:47.766Z
 
-PART VII — UNCLEAR / NEEDS RECHECK
+PART VII — ALL UNCLEAR DECISIONS
 
     - ID: s53842-dot_above
       choice: unclear
@@ -9191,13 +11935,20 @@ PART VII — UNCLEAR / NEEDS RECHECK
       corrected_text: [none]
       new_edition_count_wrong: [not set]
       updated_at: 2026-11-19T08:18:56.975Z
+    - ID: s41197-revia
+      choice: unclear
+      detail: [empty]
+      note (verbatim): There is something there. Almost like the word has both a sin and shin dot. 
+      corrected_text: [none]
+      new_edition_count_wrong: [not set]
+      updated_at: 2026-11-19T08:32:17.078Z
 
-PRIORITIES / NEXT STEPS
+PART VIII — SUGGESTED FURTHER WORK
 
-1. Investigate cross-source proposed niqqud that may not have been visually checked against the original print; first confirm s68656 rather than claiming a confirmed systematic bug.
-2. Verify all 32 new-edition count mismatches against the newer-edition image and literal text, including the four dehi cases.
-3. Continue testing false meteg, zero-patah, zero-above-dot, munach/merkha/meteg, and ink artifacts using the original crop.
-4. Treat unclear entries (including s83224 and s14632) as unresolved until further edition images are checked.
-5. Preserve all review-site IDs and raw Unicode; do not normalize away accents or merge multiple sign questions into a single decision.
+1. Link each decision ID to the original scan crop and alternative witness renderings, so hypotheses about damaged ink vs reconstructed font can be tested.
+2. Audit the reconstruction rendering for glyph layout, punctuation and vowel/taamim positioning at s32113, s17746, s35730.
+3. Cross-check 43 newer-edition-count error flags using literal Hebrew codepoints and actual rendered images; do not assume a counted difference proves a textual variant.
+4. Keep all individual Unicode marks and printed sign positions; distinguish dot components from complete nikud units.
+5. Keep all unclear decisions unresolved even though all 678 questions now have a saved response.
 
-END OF REPORT — 522 / 522 decisions, 119 new, 23 pattern categories, 32 new-edition flags.
+END OF REPORT: 678/678 decisions; 27 pattern categories; 156 newly answered; no earlier answers lost.
